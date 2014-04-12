@@ -6,5 +6,6 @@
    "description-en": "auto-generated project",
    "category": "lazy-template",
    "platform": ["ios", "android"],
-   "num_screenshots": 0
+   "num_screenshots": 0,
+   "preview_url": "http://monaca.github.io/project-templates/99-lazy/assets/www/index.html"
 }

@@ -6,5 +6,6 @@
    "description-ja": "Sliding Menu と Navigator を用いたサンプルです。",
    "category": "template",
    "platform": ["ios", "android", "winrt"],
-   "num_screenshots": 1
+   "num_screenshots": 1,
+   "preview_url": "http://monaca.github.io/project-templates/9-ons-sliding-menu-nav/assets/www/index.html"
 }

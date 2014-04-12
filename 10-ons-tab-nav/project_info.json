@@ -6,5 +6,6 @@
    "description-ja": "Tabbar と Navigator を用いたサンプルです。",
    "category": "template",
    "platform": ["ios", "android", "winrt"],
-   "num_screenshots": 1
+   "num_screenshots": 1,
+   "preview_url": "http://monaca.github.io/project-templates/10-ons-tab-nav/assets/www/index.html"
 }

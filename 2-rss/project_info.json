@@ -6,5 +6,6 @@
    "description-en": "This is a project with RSS reader sample.",
    "category": "template",
    "platform": ["ios", "android"],
-   "num_screenshots": 1
+   "num_screenshots": 1,
+   "preview_url": "http://monaca.github.io/project-templates/2-rss/assets/www/index.html"
 }

@@ -6,5 +6,6 @@
    "description-ja": "Split View を用いて画面を左右に分割するサンプルです。タブレットなどに最適です。",
    "category": "template",
    "platform": ["ios", "android", "winrt"],
-   "num_screenshots": 1
+   "num_screenshots": 1,
+   "preview_url": "http://monaca.github.io/project-templates/11-ons-split/assets/www/index.html"
 }

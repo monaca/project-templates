@@ -6,5 +6,6 @@
    "description-en": "Tutorial for NIFTY Cloud mobile backend",
    "category": "lazy-template",
    "platform": ["ios", "android"],
-   "num_screenshots": 0
+   "num_screenshots": 0,
+   "preview_url": "http://monaca.github.io/project-templates/98-mbaas/assets/www/index.html"
 }

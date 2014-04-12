@@ -6,5 +6,6 @@
    "description-en": "This is a sample game application using motion sensor. Feel free to modify the source code to adjust game difficulty.",
    "category": "template",
    "platform": ["ios", "android"],
-   "num_screenshots": 2
+   "num_screenshots": 2,
+   "preview_url": "http://monaca.github.io/project-templates/5-monacanoid/assets/www/index.html"
 }

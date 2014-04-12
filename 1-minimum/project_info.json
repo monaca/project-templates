@@ -6,5 +6,6 @@
    "description-en": "This is a project with minimum files.",
    "category": "template",
    "platform": ["ios", "android", "winrt"],
-   "num_screenshots": 1
+   "num_screenshots": 1,
+   "preview_url": "http://monaca.github.io/project-templates/1-minimum/assets/www/index.html"
 }
