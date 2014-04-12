@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="plugins/plugin-loader.js"></script>
+<link rel="stylesheet" href="plugins/plugin-loader.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/feed-reader.js"></script>
+<script>
+    monaca.viewport({ width: 400 });
+
+    // CHANGE HERE!
+    Feed.feedUrl = "http://feeds.bbci.co.uk/news/technology/rss.xml";
+
+    $(function() {
+        Feed.watchClick();
+        Feed.load();
+    });
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        // Enable reload button
+        monaca.updateUIStyle("reload-button", "disable", false);
+    }
+</script>
+</head>
+<body>
+    <div id="mask">
+      <div id="loading"><img src="loading.gif"></div>
+    </div>
+
+    <ul id="feed-list"></ul>
+
+    <p id="error-message"></p>
+</body>
+</html>

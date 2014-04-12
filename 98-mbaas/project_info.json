@@ -1,0 +1,10 @@
+{
+   "name": "mbaas-tutorial",
+   "title-ja": "mBaaSチュートリアル",
+   "title-en": "mBaaS Tutorial",
+   "description-ja": "NIFTY Cloud mobile backend のチュートリアル",
+   "description-en": "Tutorial for NIFTY Cloud mobile backend",
+   "category": "lazy-template",
+   "platform": ["ios", "android"],
+   "num_screenshots": 0
+}

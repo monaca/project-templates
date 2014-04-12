@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>snaphome</title>
+
+    <!-- WinJS 参照 -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="snaphome.css" rel="stylesheet" />
+    <script src="snaphome.js"></script>
+</head>
+<body>
+    <div class="fragment homepage">
+    <header  aria-label="Header content" role="banner">
+        <h1 class="titlearea win-type-ellipsis">
+            <span class="pagetitle">RSS NEWS </span>
+        </h1>
+    </header>
+    <section aria-label="Main content" role="main" style="margin-left:20px">   
+                    <!-- calc(100%-40px) -->
+            <div data-win-control="WinJS.Binding.Template" id="itemTemplate">
+                <div style="width:260px; margin-bottom:10px;">
+                    <img data-win-bind="src:pictute" alt="Alternate Text" style="height:150px" />
+                    <div data-win-bind="innerText:title" ></div>
+                    <div data-win-bind="innerText:pubDateDisplay" style="text-align:right" ></div>
+                </div>
+            </div>
+            <div id="itemListView" 
+                data-win-control="WinJS.UI.ListView"
+                data-win-options="{layout: { type: WinJS.UI.ListLayout }}"
+                style="height:100%"></div>
+    </section>
+</div>
+</body>
+</html>

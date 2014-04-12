@@ -1,0 +1,10 @@
+{
+   "name": "monacanoid",
+   "title-ja": "ブロック崩し",
+   "title-en": "Break the Bricks",
+   "description-ja": "enchant.jsを用いたブロック崩しゲームです。難易度やシナリオはプレイ後ご自由に調整してください。",
+   "description-en": "This is a sample game application using motion sensor. Feel free to modify the source code to adjust game difficulty.",
+   "category": "template",
+   "platform": ["ios", "android"],
+   "num_screenshots": 2
+}

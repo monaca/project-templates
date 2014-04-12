@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="plugins/plugin-loader.js"></script>
+    <link rel="stylesheet" href="plugins/plugin-loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // Set virtual screen width size to 640 pixels
+        monaca.viewport({width: 640});
+
+        // PhoneGap event handler
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            // Update Toolbar Header
+            monaca.updateUIStyle("header", "title", "Your First App");
+            monaca.updateUIStyle("tapme-button", "disable", false);
+            
+            console.log("PhoneGap is ready");
+        }
+        function onTapButton(){
+            // Triggers when button is tapped: defined in index.ui
+            navigator.notification.alert("HelloWorld", function() {}, " ", "OK")
+        }
+    </script>
+</head>
+<body>
+    <h1>HelloWorld!</h1>
+</body>
+</html>

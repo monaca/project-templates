@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+
+    <title>ユーザー</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="plugins/plugin-loader.js"></script>
+    <script>monaca.viewport({width : 640})</script>
+</head>
+<body>
+
+<header id="top-toolbar">
+    <h1>ユーザー</h1>
+
+    <div class="top-toolbar-right">
+        <div class="toolbar-button tappable" id="logout">ログアウト</div>
+    </div>
+</header>
+
+<div class="table">
+    <div class="table-header">
+        <h2>ユーザー情報</h2>
+    </div>
+    <div class="table-body">
+        <div class="table-cell">
+            <div class="table-cell-inner">
+                <p class="label">ユーザー名</p>
+                <div class="table-cell-content-right">
+                    <p class="bold" id="user-name"></p>
+                </div>
+            </div>
+        </div>
+
+        <!--
+        <div class="table-cell">
+            <div class="table-cell-inner">
+                <p class="label">メールアドレス</p>
+                <div class="table-cell-content-right">
+                    <p>taro@example.com</p>
+                </div>
+            </div>
+        </div>
+        -->
+
+        <div class="table-cell">
+            <div class="table-cell-inner">
+                <p class="label">日付</p>
+                <div class="table-cell-content-right">
+                    <p id="create-date"><!-- 2012/10/10 --></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="table">
+    <div class="table-header">
+        <h2>メモ</h2>
+    </div>
+    <div class="table-body">
+        <div class="table-cell tappable" id="memo-cell">
+            <div class="table-cell-inner">
+                <textarea id="memo"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+
+<script src="js/vendor/ncmb-1.0.1.min.js"></script>
+<script src="js/vendor/tappable.js"></script>
+<script src="js/vendor/zepto.min.js"></script>
+<script src="js/vendor/spin.min.js"></script>
+<script src="js/base.js"></script>
+<script src="js/user.js"></script>
+<script>UserPageController.init();</script>
+
+</body>
+</html>
+

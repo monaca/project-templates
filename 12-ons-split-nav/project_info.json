@@ -1,0 +1,10 @@
+{
+   "name": "ons-split-nav",
+   "title-en": "Onsen UI Split View & Navigator",
+   "title-ja": "Onsen UI Split View & Navigator",
+   "description-en": "Use Split View and Navigator",
+   "description-ja": "Split View と Navigator を用いたサンプルです。",
+   "category": "template",
+   "platform": ["ios", "android", "winrt"],
+   "num_screenshots": 1
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+
+    <title>ニフティクラウドmobile backend チュートリアルアプリ</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="plugins/plugin-loader.js"></script>
+    <script>monaca.viewport({width : 640})</script>
+</head>
+<body>
+
+<header id="top-toolbar">
+    <h1>TODOリスト</h1>
+    <div class="top-toolbar-left">
+        <div class="toolbar-button tappable" id="back">← 戻る</div>
+    </div>
+</header>
+
+<div class="table">
+    <div class="table-body">
+
+        <!--
+        <div class="table-cell">
+            <div class="table-cell-inner">
+                <p>
+                    早起きする
+                </p>
+            </div>
+        </div>
+
+        <div class="table-cell">
+            <div class="table-cell-inner">
+                <p>
+                    買い物に行く
+                </p>
+            </div>
+        </div>
+
+        <div class="table-cell">
+            <div class="table-cell-inner">
+                <p>
+                    レンタルビデオを返す
+                </p>
+            </div>
+        </div>
+        -->
+
+    </div>
+</div>
+
+<div class="no-border-button tappable" id="add-todo">
+    ＋ TODOを追加する
+</div>
+
+<div class="templates">
+
+    <div class="table-cell" id="table-cell-template">
+        <div class="table-cell-inner">
+            <p>
+                早起きする
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/vendor/ncmb-1.0.1.min.js"></script>
+<script src="js/vendor/tappable.js"></script>
+<script src="js/vendor/zepto.min.js"></script>
+<script src="js/vendor/spin.min.js"></script>
+<script src="js/base.js"></script>
+<script src="js/todo.js"></script>
+<script>TODOListController.init();</script>
+
+</body>
+</html>

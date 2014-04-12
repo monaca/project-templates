@@ -1,0 +1,50 @@
+{
+    "top" : {
+        "container" : "toolbar",
+        "id" : "header",
+        "style" : {
+            "title" : ""
+        },
+        "right": [
+            {
+                "component": "button",
+                "style": {
+                        "text": "Tap Me!"
+                },
+                "androidStyle" : {
+                    "backgroundColor" : "#314A78"
+                },
+                "event": {
+                    "onTap": "onTapButton();"
+                },
+                "id": "tapme-button"
+            }
+        ]
+    },
+    "bottom" : {
+        "container" : "tabbar",
+        "id" : "footer",
+        "style" : {
+            "visibility" : true
+        },
+        "items":
+            [
+                {
+                    "component": "tabbarItem",
+                    "style": {
+                        "text": "Home",
+                        "image": "img/icon/cube.png"
+                    },
+                     "link": "index.html"
+                },
+                {
+                    "component": "tabbarItem",
+                    "style": {
+                        "text": "PhoneGap Demo",
+                        "image": "img/icon/page.png"
+                    },
+                    "link": "phonegap-demo.html"
+                }
+            ]
+    }
+}

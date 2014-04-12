@@ -1,0 +1,10 @@
+{
+   "name": "helloworld",
+   "title-ja": "HelloWorld",
+   "title-en": "HelloWorld",
+   "description-ja": "HelloWorldを表示するだけのアプリです。Monacaアプリのひな形としてお使いください。PhoneGapのデモも同梱しています。",
+   "description-en": "This is a simple HelloWorld demo program.",
+   "category": "template",
+   "platform": ["ios", "android"],
+   "num_screenshots": 2
+}

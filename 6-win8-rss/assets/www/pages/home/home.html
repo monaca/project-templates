@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>ホーム ページ</title>
+
+    <!-- WinJS 参照 -->
+    
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+   
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/home/home.css" rel="stylesheet" />
+    
+    <script src="../../js/data.js"></script>
+    <script src="/pages/home/home.js"></script>
+    
+</head>
+<body>
+    <!-- 読み込まれて表示されるコンテンツです。 -->
+    <div class="fragment homepage">
+        <header aria-label="Header content" role="banner">
+             <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">RSS ニュースリーダー</span>
+            </h1>
+            <div id="updateCaption" style="left:300px; margin: 91.04px 532.56px 3px 466.57px; -ms-grid-column-span: 1; -ms-grid-column: 2;">2012年9月24日</div>
+        </header>
+        <section aria-label="Main content" role="main">
+       
+             <div id="grpHeaderTemplate" class="headerTemplate" data-win-control="WinJS.Binding.Template" >
+                <p class="group-title win-type-x-large" data-win-bind="innerText:title;" role="link">
+                </p>
+            </div>
+
+        <div data-win-control="WinJS.Binding.Template" id="itemTemplate">
+            <div style="width:300px; margin:10px;">
+                <img data-win-bind="src:pictute" alt="Alternate Text" style="height:180px" />
+                <div data-win-bind="innerText:title" ></div>
+                <div data-win-bind="innerText:pubDateDisplay" style="text-align:right" ></div>
+            </div>
+        </div>
+                <div id="itemListView" 
+                    data-win-control="WinJS.UI.ListView" ></div>
+        </section>
+
+    <div id="offlineBox">
+        <div>ネットワークは現在オフラインです。<br>
+            ネットワークがインターネットに接続されていることを確認し [再試行] をタッチしてください。<br>
+            <div id="retryButtonArea">
+                <button id="retryButton" style="height:50px">[再試行]</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+       
+
+    <progress id="progressPoint" class="win-ring" style=""></progress>
+     <div id="appbar" data-win-control="WinJS.UI.AppBar">
+         <!-- Filter ボタン-->
+        <button id="Button1" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRefresh',label:'フィルター',icon:'filter',section:'selection',tooltip:'フィルタ',type:'flyout',flyout:select('#respondFlyout')}">
+        </button>
+        <!-- Refresh ボタン-->
+        <button id="cmdRefresh" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRefresh',label:'情報の更新',icon:'refresh',section:'global',tooltip:'更新'}">
+        </button>
+    </div> 
+
+    <!-- Define the respond menu -->
+    <div id="respondFlyout" data-win-control="WinJS.UI.Menu">
+        <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'filterMenu0',label:'すべて',type:'toggle',selected:true}">
+        </button>
+        <hr data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'separator',type:'separator'}" />
+        <button id="filterMenu1" data-win-control="WinJS.UI.MenuCommand" data-win-options="{type:'toggle'}">デベロッパー
+        </button>
+        <button id="filterMenu2" data-win-control="WinJS.UI.MenuCommand" data-win-options="{type:'toggle'}">IT プロ
+        </button>
+    </div>
+
+</body>
+</html>

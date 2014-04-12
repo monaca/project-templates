@@ -1,0 +1,37 @@
+{
+	"plugins": {
+		"jQuery": {
+			"jquery-js": [
+				"jquery-min.js"
+			]
+		},
+		"jQuery Mobile": {
+			"jquery-mobile-js": [
+				"jquery-mobile-min.js"
+			],
+			"jquery-mobile-css": [
+				"jquery-mobile-min.css"
+			]
+		},
+		"phonegap\/cordova.js": [
+		],
+		"monaca.js": [
+		],
+		"monaca.viewport.js": [
+		],
+		"phonegap-plugins\/iOSStatusBar": [
+		],
+		"winjs\/Microsoft.WinJS": {
+			"ui-color": [
+				"CSS-UI-DARK"
+			]
+		}
+	},
+	"splash": {
+		"android": {
+			"background": "#cccccc",
+      "autoHide": false
+		}
+	},
+	"version": "1.0"
+}

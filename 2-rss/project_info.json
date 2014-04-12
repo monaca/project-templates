@@ -1,0 +1,10 @@
+{
+   "name": "rss",
+   "title-ja": "RSSリーダーのサンプル",
+   "title-en": "RSS Reader Sample",
+   "description-ja": "jQueryとMonacaの機能で作成したRSSリーダーです。RSSフィードのURLを書き換えるだけで、あなたのブログをアプリ化できます。",
+   "description-en": "This is a project with RSS reader sample.",
+   "category": "template",
+   "platform": ["ios", "android"],
+   "num_screenshots": 1
+}

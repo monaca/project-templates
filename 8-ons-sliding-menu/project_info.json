@@ -1,0 +1,10 @@
+{
+   "name": "ons-sliding-menu",
+   "title-en": "Onsen UI Sliding Menu",
+   "title-ja": "Onsen UI Sliding Menu",
+   "description-en": "Minimum starting template for sliding menu",
+   "description-ja": "Sliding Menu を用いたサンプルです。",
+   "category": "template",
+   "platform": ["ios", "android", "winrt"],
+   "num_screenshots": 1
+}

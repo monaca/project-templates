@@ -1,0 +1,10 @@
+{
+   "name": "ons-tab-nav",
+   "title-en": "Onsen UI Tabbar & Navigator",
+   "title-ja": "Onsen UI Tabbar & Navigator",
+   "description-en": "A template that use Tabbar with Navigator",
+   "description-ja": "Tabbar と Navigator を用いたサンプルです。",
+   "category": "template",
+   "platform": ["ios", "android", "winrt"],
+   "num_screenshots": 1
+}

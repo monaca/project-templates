@@ -1,0 +1,15 @@
+body {
+    background-color: #ccc;
+    font-family: 'Helvetica';
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    text-shadow: 0 -2px 0 #999;
+    padding: 0;
+    margin: 300px 0 0 0;
+}

@@ -1,0 +1,21 @@
+{
+    "top" : {
+        "container" : "toolbar",
+        "style" : {
+            "title" : "RSS Reader"
+        },
+        "right": [
+            {
+                "id": "reload-button",
+                "component": "button",
+                "style": {
+                        "text": "Reload",
+                        "disable": true
+                },
+                "event": {
+                    "onTap": "Feed.load();"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+
+    <title>ニフティクラウドmobile backend チュートリアルアプリ</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="plugins/plugin-loader.js"></script>
+    <script>monaca.viewport({width : 640})</script>
+</head>
+<body>
+
+<header id="top-toolbar">
+    <h1>サンプルアプリ</h1>
+    <div class="subtitle"></div>
+</header>
+
+<br />
+
+<div class="table">
+    <div class="table-header">
+        <h2>サンプルコード</h2>
+    </div>
+    <div class="table-body">
+        <div class="table-cell tappable right-arrow" id="todo-page">
+            <div class="table-cell-inner">
+                <h3 class="table-cell-title">TODOリスト</h3>
+                <p class="table-cell-subtitle">
+                    データストアの使い方を学ぶ
+                </p>
+            </div>
+        </div>
+        <div class="table-cell tappable right-arrow" id="gallery-page">
+            <div class="table-cell-inner">
+                <h3 class="table-cell-title">画像ギャラリー</h3>
+                <p class="table-cell-subtitle">
+                    ファイルストアの使い方を学ぶ
+                </p>
+            </div>
+        </div>
+        <div class="table-cell tappable right-arrow" id="login-page">
+            <div class="table-cell-inner">
+                <h3 class="table-cell-title">ログイン・ログアウトの実装</h3>
+                <p class="table-cell-subtitle">
+                    会員管理の使い方を学ぶ
+                </p>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/vendor/ncmb-1.0.1.min.js"></script>
+<script src="js/vendor/tappable.js"></script>
+<script src="js/vendor/zepto.min.js"></script>
+<script src="js/base.js"></script>
+<script src="js/index.js"></script>
+<script>IndexPageController.init();</script>
+
+</body>
+</html>

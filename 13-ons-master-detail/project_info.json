@@ -1,0 +1,10 @@
+{
+   "name": "ons-master-detail",
+   "title-en": "Onsen UI Master-Detail",
+   "title-ja": "Onsen UI Master-Detail",
+   "description-en": "Master-Detail styled template",
+   "description-ja": "一覧・詳細ページのサンプルです。",
+   "category": "template",
+   "platform": ["ios", "android", "winrt"],
+   "num_screenshots": 1
+}

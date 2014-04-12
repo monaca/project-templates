@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>article</title>
+
+    <!-- WinJS 参照 -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="article.css" rel="stylesheet" />
+    <script src="article.js"></script>
+</head>
+<body>
+    <div class="article fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">
+                    <a id="pagetitleLink" href="#">article へようこそ</a>
+                </span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main" >
+            <div id="pubDateDisplay" style="margin-left:140px;float:left"></div>
+            <div id="sourceTitle" style="font-size:15px;float:left;"></div>
+
+            <div style="overflow-y:scroll;height:100%;width:100%">
+           <div id="contentArea" style="margin-left:120px">
+               
+               <div id="article" style="font-size:20px;padding:30px;"></div>
+             <img id="carImage" src="#" alt="Alternate Text" />     
+           </div>
+           
+            <br /><br /><br />
+            <br /><br />
+            </div>
+        </section>
+    </div>
+</body>
+</html>

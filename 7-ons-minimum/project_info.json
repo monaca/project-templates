@@ -1,0 +1,10 @@
+{
+   "name": "ons-minimum",
+   "title-en": "Onsen UI Minimum Project",
+   "title-ja": "Onsen UI 最小限のプロジェクト",
+   "description-en": "A simple template for application that want to use Onsen UI.",
+   "description-ja": "Onsen UIを用いた最小限のプロジェクトです。",
+   "category": "template",
+   "platform": ["ios", "android", "winrt"],
+   "num_screenshots": 1
+}

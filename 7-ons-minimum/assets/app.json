@@ -1,0 +1,16 @@
+{
+	"plugins":{
+		"phonegap\/cordova.js":[],
+		"monaca.js":[],
+		"monaca.viewport.js":[],
+		"winjs\/Microsoft.WinJS":{"ui-color":["CSS-UI-DARK"]},
+    "phonegap-plugins\/iOSStatusBar": [],
+		"OnsenUI_1.0.1": { "theme": [ "topcoat-mobile-onsen-ios7.css" ] }
+	},
+	"splash":{
+		"android":{
+			"background":"#cccccc"
+		}
+	},
+	"version":"1.0"
+}

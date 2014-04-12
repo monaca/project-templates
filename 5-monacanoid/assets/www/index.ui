@@ -1,0 +1,28 @@
+{
+    "top" : {
+        "container" : "toolbar",
+        "style" : {
+            "backgroundColor" : "#502c00",
+            "title" : "Monacanoid"
+        }
+    },
+    "bottom": {
+        "container" : "toolbar",
+        "style" : {
+            "backgroundColor" : "#502c00"
+        },
+        "right": [
+            {
+                "component": "button",
+                "style": {
+                        "backgroundColor": "#000000",
+                        "text": "Reset"
+                },
+                "event": {
+                    "onTap": "reset();"
+                }
+            }
+        ]
+    }
+}
+

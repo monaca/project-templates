@@ -1,0 +1,23 @@
+{
+	"version": "1.0",
+	"splash": {
+		"android": {
+			"background": "#000000"
+		}
+	},
+	"plugins": {
+		"phonegap\/cordova.js": [
+		],
+		"monaca.js": [
+		],
+		"monaca.viewport.js": [
+		],
+		"phonegap-plugins\/iOSStatusBar": [
+		],
+		"winjs\/Microsoft.WinJS": {
+			"ui-color": [
+				"CSS-UI-DARK"
+			]
+		}
+	}
+}

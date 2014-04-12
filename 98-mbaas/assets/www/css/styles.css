@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  font-family: 'Helvetica';
+}
+*:not(input) {
+  -webkit-user-select: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 100;
+  font-size: 34px;
+  line-height: 1;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+body {
+  background-color: #F0F0F0;
+  color: #333;
+  font-size: 34px;
+  font-weight: 100;
+  width: 640px;
+  font-family: 'Helvetica';
+  padding-top: 87px;
+  position: relative;
+  z-index: 2;
+}
+.screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  bottom: 50%;
+  z-index: 0;
+}
+.bold {
+  font-weight: bold;
+}
+.templates {
+  display: none;
+}
+body > header#top-toolbar {
+  height: 88px;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #F7F7F7;
+  margin-bottom: -1px;
+  z-index: 2;
+}
+body > header#top-toolbar > h1 {
+  text-align: center;
+  position: absolute;
+  font-size: 34px;
+  font-weight: bold;
+  width: 100%;
+  height: 88px;
+  line-height: 88px;
+  color: black;
+}
+body > header#top-toolbar > .top-toolbar-left,
+body > header#top-toolbar > .top-toolbar-right {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #007aff;
+}
+body > header#top-toolbar > .top-toolbar-left > *,
+body > header#top-toolbar > .top-toolbar-right > * {
+  display: inline-block;
+}
+body > header#top-toolbar > .top-toolbar-left > div.toolbar-button,
+body > header#top-toolbar > .top-toolbar-right > div.toolbar-button {
+  position: relative;
+  height: 88px;
+  line-height: 88px;
+  -webkit-transition: opacity 0.3s linear;
+}
+body > header#top-toolbar > .top-toolbar-left > div.toolbar-button.tap-active,
+body > header#top-toolbar > .top-toolbar-right > div.toolbar-button.tap-active {
+  -webkit-transition: opacity 0s linear;
+  opacity: 0.2;
+}
+body > header#top-toolbar > .top-toolbar-left {
+  text-align: left;
+  margin-left: 16px;
+}
+body > header#top-toolbar > .top-toolbar-right {
+  text-align: right;
+  margin-right: 16px;
+  right: 0px;
+}
+body > div.table > .table-header {
+  height: 88px;
+  position: relative;
+}
+body > div.table > .table-header > h2 {
+  font-size: 30px;
+  font-weight: 100;
+  color: #999;
+  position: absolute;
+  left: 30px;
+  top: 44px;
+}
+body > div.table > div.table-body {
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+body > div.table > div.table-body > div.table-cell {
+  height: 88px;
+  position: relative;
+  -webkit-transition: background-color 0.3s linear;
+}
+body > div.table > div.table-body > div.table-cell.tap-active {
+  background-color: #ddd;
+  -webkit-transition: background-color 0s linear;
+}
+body > div.table > div.table-body > div.table-cell:first-child > div.table-cell-inner {
+  border-top: 0px solid #cccccc;
+}
+body > div.table > div.table-body > div.table-cell.right-arrow > div.table-cell-inner {
+  background-image: url(../img/table-cell-right-arrow.png);
+  background-repeat: no-repeat;
+  background-position: 560px 34px;
+}
+body > div.table > div.table-body > div.table-cell > div.table-cell-inner {
+  margin-left: 30px;
+  position: relative;
+  border-top: 1px solid #ccc;
+  height: 88px;
+  overflow: hidden;
+}
+body > div.table > div.table-body > div.table-cell > div.table-cell-inner > .table-cell-title {
+  position: absolute;
+  left: 0px;
+  top: 12px;
+  font-size: 34px;
+}
+body > div.table > div.table-body > div.table-cell > div.table-cell-inner > .table-cell-subtitle {
+  position: absolute;
+  top: 48px;
+  left: 0px;
+  font-size: 24px;
+  color: #ccc;
+}
+body > div.table > div.table-body > div.table-cell > div.table-cell-inner > p {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+}
+body > div.table > div.table-body > div.table-cell > div.table-cell-inner > p.form-label {
+  color: #999;
+  top: 30px;
+  font-size: 24px;
+  width: 200px;
+  text-align: right;
+}
+body > div.table > div.table-body > div.table-cell > div.table-cell-inner > p.label {
+  color: #999;
+  top: 30px;
+  font-size: 24px;
+}
+body > div.table > div.table-body > div.table-cell > div.table-cell-inner > input[type=text],
+body > div.table > div.table-body > div.table-cell > div.table-cell-inner > input[type=password] {
+  border-width: 0px;
+  background-color: transparent;
+  position: absolute;
+  font-size: 34px;
+  top: 0px;
+  height: 88px;
+  width: 400px;
+  right: 0px;
+  color: #666;
+}
+body > div.table > div.table-body > div.table-cell > div.table-cell-inner > textarea {
+  border-width: 0px;
+  background-color: transparent;
+  position: absolute;
+  font-size: 34px;
+  top: 0px;
+  height: 88px;
+  left: 0px;
+  right: 30px;
+  color: #666;
+  padding-top: 24px;
+}
+body > div.table > div.table-body > div.table-cell > div.table-cell-inner > div.table-cell-content-right {
+  text-align: right;
+  margin-right: 30px;
+  height: 88px;
+  position: relative;
+}
+body > div.table > div.table-body > div.table-cell > div.table-cell-inner > div.table-cell-content-right > p {
+  position: absolute;
+  top: 24px;
+  right: 0px;
+  width: 500px;
+}
+body > div.grid-table > div.grid-table-body {
+  font-size: 0px;
+}
+body > div.grid-table > div.grid-table-body > div.grid-table-cell {
+  width: 160px;
+  height: 160px;
+  display: inline-block;
+  background-color: #ddd;
+  font-size: 34px;
+  overflow: hidden;
+}
+body > div.grid-table > div.grid-table-body > div.grid-table-cell > img {
+  height: 160px;
+}
+body > div.no-border-button {
+  font-size: 34px;
+  height: 88px;
+  text-align: center;
+  line-height: 88px;
+  color: #007aff;
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+}
+body > div.no-border-button.tap-active {
+  -webkit-transition: background-color 0s linear, color 0s linear;
+  background-color: #cccccc;
+  color: white;
+}

@@ -1,0 +1,10 @@
+{
+   "name": "jqm-memo",
+   "title-ja": "メモ帳アプリ",
+   "title-en": "Memo Application",
+   "description-ja": "jQuery Mobileとローカルストレージを用いた簡単なメモ帳アプリです。",
+   "description-en": "Simple memo app on top of jQuery Mobile and localStorage.",
+   "category": "template",
+   "platform": ["ios", "android"],
+   "num_screenshots": 1
+}

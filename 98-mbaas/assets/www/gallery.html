@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+
+    <title>ニフティクラウドmobile backend チュートリアルアプリ</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="plugins/plugin-loader.js"></script>
+    <script>monaca.viewport({width : 640})</script>
+</head>
+<body>
+
+<header id="top-toolbar">
+    <h1>画像ギャラリー</h1>
+    <div class="top-toolbar-left">
+        <div class="toolbar-button tappable" id="back">← 戻る</div>
+    </div>
+</header>
+
+<div class="grid-table">
+    <div class="grid-table-body">
+
+        <!--
+        <div class="grid-table-cell">
+            <img src="">
+        </div>
+        <div class="grid-table-cell">
+            <img src="">
+        </div>
+        <div class="grid-table-cell">
+            <img src="">
+        </div>
+        -->
+
+    </div>
+</div>
+
+<div class="no-border-button tappable" style="position : relative">
+    ＋ 画像をアップロードする
+    <form action="">
+    <input type="file" id="image-file" name="image" style="opacity: 0.0; position : absolute; left : 0; right : 0; top : 0; bottom : 0; z-index : 20;" />
+    </form>
+</div>
+
+<div class="templates">
+    
+    <div class="grid-table-cell" id="grid-table-cell-template">
+        <img src="" >
+    </div>
+
+</div>
+
+
+<script src="js/vendor/ncmb-1.0.1.min.js"></script>
+<script src="js/vendor/tappable.js"></script>
+<script src="js/vendor/zepto.min.js"></script>
+<script src="js/vendor/spin.min.js"></script>
+<script src="js/base.js"></script>
+<script src="js/gallery.js"></script>
+
+<script>
+GalleryController.init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: vt;
+    src: url(../res/VT323-Regular.ttf) format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+span.invisible {
+    display: none;
+}
+
+body {
+    background-color:black;
+    overflow: hidden;
+}

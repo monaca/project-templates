@@ -1,0 +1,10 @@
+{
+   "name": "lazy-registration",
+   "title-ja": "はじめてのMonacaアプリ",
+   "title-en": "My First Monaca App",
+   "description-ja": "このアプリは会員登録時に自動作成されました。MonacaでHelloWorldを表示する内容となっています。",
+   "description-en": "auto-generated project",
+   "category": "lazy-template",
+   "platform": ["ios", "android"],
+   "num_screenshots": 0
+}

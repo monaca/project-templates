@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+
+    <title>ログイン</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="plugins/plugin-loader.js"></script>
+    <script>monaca.viewport({width : 640})</script>
+</head>
+<body>
+
+<header id="top-toolbar">
+    <h1>ログイン</h1>
+    <div class="top-toolbar-left">
+        <div class="toolbar-button tappable" id="back">← 戻る</div>
+    </div>
+</header>
+
+<br />
+<br />
+<br />
+
+<div class="table">
+    <div class="table-body">
+
+        <div class="table-cell tappable">
+            <div class="table-cell-inner">
+                <p class="form-label">ユーザーID</p>
+                <input type="text" id="user-name" />
+            </div>
+        </div>
+
+        <div class="table-cell tappable">
+            <div class="table-cell-inner">
+                <p class="form-label">パスワード</p>
+                <input type="password" id="password" />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="no-border-button tappable" id="login">
+    ログイン
+</div>
+
+<br />
+
+<!--
+<div class="no-border-button tappable" style="color : #666">
+    アカウント作成
+</div>
+-->
+
+<script src="js/vendor/ncmb-1.0.1.min.js"></script>
+<script src="js/vendor/tappable.js"></script>
+<script src="js/vendor/zepto.min.js"></script>
+<script src="js/vendor/spin.min.js"></script>
+<script src="js/base.js"></script>
+<script src="js/login.js"></script>
+
+<script>
+LoginPageController.init();
+</script>
+
+</body>
+</html>
+
