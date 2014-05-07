@@ -7,5 +7,5 @@
    "category": "template",
    "platform": ["ios", "android"],
    "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/4-jqm-memo/assets/www/index.html"
+   "preview_url": "https://monaca.github.io/project-templates/4-jqm-memo/www/index.html"
 }
