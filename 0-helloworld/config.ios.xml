@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
-        id        = "mobi.monaca.app"
-        version   = "2.0.0">
-  <name>Monaca Application</name>
-  <description></description>
+        id        = "com.example.helloworld"
+        version   = "1.0.0">
+  <name>HelloWorld</name>
+  <description>Hello World App</description>
   <author></author>
-
+  
   <access origin="*"/>
   
+  <preference name="monaca:iosApplicationName" value="Hello World" />
+  <preference name="monaca:targetFamilyiPhone" value="1" />
+  <preference name="monaca:targetFamilyiPad" value="1" />
   <preference name="AutoHideSplashScreen" value="true" />
   <preference name="EnableViewportScale" value="true" />
   <preference name="FadeSplashScreen" value="true" />
