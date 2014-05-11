@@ -6,6 +6,6 @@
    "description-en": "This is a simple HelloWorld demo program.",
    "category": "Sample App",
    "platform": ["ios", "android"],
-   "preview_url": "https://monaca.github.io/project-templates/0-helloworld/assets/www/index.html",
+   "preview_url": "https://monaca.github.io/project-templates/0-helloworld/www/index.html",
    "framework_version": "2.9"
 }
