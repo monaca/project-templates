@@ -6,6 +6,6 @@
    "description-en": "Onsen UI app that has a list and a detail view.",
    "category": "Onsen UI",
    "platform": ["ios", "android"],
-   "preview_url": "https://monaca.github.io/project-templates/11-ons-master-detail/www/index.html",
+   "preview_url": "https://monaca.github.io/project-templates/13-ons-master-detail/www/index.html",
    "framework_version": "2.9"
 }
