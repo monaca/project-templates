@@ -1,11 +1,11 @@
 {
    "name": "minimum",
-   "title-ja": "最小限のプロジェクト",
-   "title-en": "Minimum Project",
-   "description-ja": "最小限のファイルで構成されたプロジェクトです。",
-   "description-en": "This is a project with minimum files.",
-   "category": "template",
-   "platform": ["ios", "android", "winrt"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/1-minimum/www/index.html"
+   "title-ja": "最小限のテンプレート",
+   "title-en": "Minimum Template",
+   "description-ja": "Monacaアプリのひな形としてお使いいただけます。",
+   "description-en": "Minimum template for Monaca.",
+   "category": "Template",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/1-minimum/www/index.html",
+   "framework_version": "2.9"
 }

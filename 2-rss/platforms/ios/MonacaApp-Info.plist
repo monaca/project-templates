@@ -65,7 +65,7 @@
   <key>LSRequiresIPhoneOS</key>
   <true/>
   <key>UIStatusBarHidden</key>
-  <true/>
+  <false/>
   <key>UIViewControllerBasedStatusBarAppearance</key>
   <true/>
   <key>UISupportedInterfaceOrientations</key>

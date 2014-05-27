@@ -1,11 +1,11 @@
 {
-   "name": "rss",
-   "title-ja": "RSSリーダーのサンプル",
-   "title-en": "RSS Reader Sample",
-   "description-ja": "jQueryとMonacaの機能で作成したRSSリーダーです。RSSフィードのURLを書き換えるだけで、あなたのブログをアプリ化できます。",
-   "description-en": "This is a project with RSS reader sample.",
-   "category": "template",
+   "name": "helloworld",
+   "title-ja": "Hello Worldアプリ",
+   "title-en": "Hello World App",
+   "description-ja": "HelloWorldを表示するだけのアプリです。Monacaアプリのひな形としてお使いください。PhoneGapのデモも同梱しています。",
+   "description-en": "This is a simple HelloWorld demo program.",
+   "category": "Sample App",
    "platform": ["ios", "android"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/2-rss/www/index.html"
+   "preview_url": "https://monaca.github.io/project-templates/0-helloworld/assets/www/index.html",
+   "framework_version": "2.9"
 }

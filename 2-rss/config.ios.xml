@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        id        = "mobi.monaca.app"
-        version   = "2.0.0">
-  <name>Monaca Application</name>
-  <description></description>
-  <author></author>
-
+<widget xmlns="http://www.w3.org/ns/widgets" id="com.example.helloworld" version="1.0.0">
+  <name>HelloWorld</name>
+  <description>Hello World App</description>
+  <author/>
+  
   <access origin="*"/>
   
-  <preference name="AutoHideSplashScreen" value="true" />
-  <preference name="EnableViewportScale" value="true" />
-  <preference name="FadeSplashScreen" value="true" />
-  <preference name="FadeSplashScreenDuration" value=".25" />
-  <preference name="ShowSplashScreenSpinner" value="false" />
-  <preference name="BackupWebStorage" value="cloud" />
-  <preference name="HideKeyboardFormAccessoryBar" value="false" />
-  <preference name="AllowInlineMediaPlayback" value="false" />
-  <preference name="KeyboardDisplayRequiresUserAction" value="true" />
-  <preference name="KeyboardShrinksView" value="false" />
-  <preference name="MediaPlaybackRequiresUserAction" value="false" />
-  <preference name="SuppressesIncrementalRendering" value="false" />
-  <preference name="TopActivityIndicator" value="gray" />
-  <preference name="DisallowOverscroll" value="true" />
+  
+  <preference name="monaca:targetFamilyiPhone" value="1"/>
+  <preference name="monaca:targetFamilyiPad" value="1"/>
+  <preference name="AutoHideSplashScreen" value="true"/>
+  <preference name="EnableViewportScale" value="true"/>
+  <preference name="FadeSplashScreen" value="true"/>
+  <preference name="FadeSplashScreenDuration" value=".25"/>
+  <preference name="ShowSplashScreenSpinner" value="false"/>
+  <preference name="BackupWebStorage" value="cloud"/>
+  <preference name="HideKeyboardFormAccessoryBar" value="false"/>
+  <preference name="AllowInlineMediaPlayback" value="false"/>
+  <preference name="KeyboardDisplayRequiresUserAction" value="true"/>
+  <preference name="KeyboardShrinksView" value="false"/>
+  <preference name="MediaPlaybackRequiresUserAction" value="false"/>
+  <preference name="SuppressesIncrementalRendering" value="false"/>
+  <preference name="TopActivityIndicator" value="gray"/>
+  <preference name="DisallowOverscroll" value="true"/>
   
   <feature name="Geolocation">
     <param name="ios-package" value="CDVLocation"/>
@@ -45,7 +46,7 @@
     <param name="ios-package" value="CDVContacts"/>
   </feature>
   <feature name="File">
-    <param name="ios-package"  value="CDVFile"/>
+    <param name="ios-package" value="CDVFile"/>
   </feature>
   <feature name="NetworkStatus">
     <param name="ios-package" value="CDVConnection"/>
@@ -87,15 +88,15 @@
     <param name="ios-package" value="MFTransitPlugin"/>
   </feature>
   <feature name="ChildBrowserCommand">
-    <param name="ios-package" value="ChildBrowserCommand" />
+    <param name="ios-package" value="ChildBrowserCommand"/>
   </feature>
   <feature name="org.apache.cordova.barcodeScanner">
-    <param name="ios-package" value="CDVBarcodeScanner" />
+    <param name="ios-package" value="CDVBarcodeScanner"/>
   </feature>
   <feature name="DatePicker">
-    <param name="ios-package" value="DatePicker" />
+    <param name="ios-package" value="DatePicker"/>
   </feature>
   <feature name="Monaca">
-    <param name="ios-package" value="MFDevicePlugin" />
+    <param name="ios-package" value="MFDevicePlugin"/>
   </feature>
-</widget>
+<preference name="monaca:iosApplicationName" value="RSS Reader Sample"/></widget>
