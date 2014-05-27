@@ -1,11 +1,11 @@
 {
    "name": "ons-sliding-menu",
+   "title-ja": "Onsen UIスライドメニュー",
    "title-en": "Onsen UI Sliding Menu",
-   "title-ja": "Onsen UI Sliding Menu",
-   "description-en": "Minimum starting template for sliding menu",
-   "description-ja": "Sliding Menu を用いたサンプルです。",
-   "category": "template",
-   "platform": ["ios", "android", "winrt"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/8-ons-sliding-menu/www/index.html"
+   "description-ja": "メイン画面とメニュー画面のあるテンプレートです。",
+   "description-en": "Onsen UI sliding menu example.",
+   "category": "Onsen UI",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/8-ons-sliding-menu/www/index.html",
+   "framework_version": "2.9"
 }

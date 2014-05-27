@@ -1,11 +1,11 @@
 {
    "name": "ons-split",
-   "title-en": "Onsen UI Split View",
-   "title-ja": "Onsen UI Split View",
-   "description-en": "Split the screen into left and right section which is useful for device with large screen.",
-   "description-ja": "Split View を用いて画面を左右に分割するサンプルです。タブレットなどに最適です。",
-   "category": "template",
-   "platform": ["ios", "android", "winrt"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/11-ons-split/www/index.html"
+   "title-ja": "Onsen UIスプリッター",
+   "title-en": "Onsen UI Split Menu",
+   "description-ja": "スプリットメニューの含まれたアプリの例です。",
+   "description-en": "Split-bar style Onsen UI app.",
+   "category": "Onsen UI",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/11-ons-split/www/index.html",
+   "framework_version": "2.9"
 }

@@ -168,6 +168,10 @@ function reset() {
 }
 
 function init() {    
+    $( ".button" ).click(function() {
+          reset();
+    });
+    
     game = new Monacanoid();
     game.fps = SETTINGS_FPS;
     game.rootScene.backgroundColor = 'black';

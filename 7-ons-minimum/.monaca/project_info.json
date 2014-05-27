@@ -1,11 +1,11 @@
 {
    "name": "ons-minimum",
-   "title-en": "Onsen UI Minimum Project",
-   "title-ja": "Onsen UI 最小限のプロジェクト",
-   "description-en": "A simple template for application that want to use Onsen UI.",
-   "description-ja": "Onsen UIを用いた最小限のプロジェクトです。",
-   "category": "template",
-   "platform": ["ios", "android", "winrt"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/7-ons-minimum/www/index.html"
+   "title-ja": "Onsen UI最小限のテンプレート",
+   "title-en": "Onsen UI Minimum Template",
+   "description-ja": "Onsen UIを使用したMonacaアプリのひな形としてお使いいただけます。",
+   "description-en": "Onsen UI Minimum template for Monaca.",
+   "category": "Onsen UI",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/7-ons-minimum/www/index.html",
+   "framework_version": "2.9"
 }

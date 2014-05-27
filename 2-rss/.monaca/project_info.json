@@ -1,11 +1,12 @@
 {
-   "name": "helloworld",
-   "title-ja": "Hello Worldアプリ",
-   "title-en": "Hello World App",
-   "description-ja": "HelloWorldを表示するだけのアプリです。Monacaアプリのひな形としてお使いください。PhoneGapのデモも同梱しています。",
-   "description-en": "This is a simple HelloWorld demo program.",
+   "name": "rss",
+   "title-ja": "RSSリーダー",
+   "title-en": "RSS Reader Example",
+   "description-ja": "RSSを読み込み一覧で表示するアプリです。",
+   "description-en": "RSS reader sample app made of jQuery Mobile.",
    "category": "Sample App",
    "platform": ["ios", "android"],
-   "preview_url": "https://monaca.github.io/project-templates/0-helloworld/assets/www/index.html",
-   "framework_version": "2.9"
+   "preview_url": "https://monaca.github.io/project-templates/2-rss/www/index.html",
+   "framework_version": "2.9",
+   "plugins": ["mobi.monaca.plugins.ChildBrowser"]
 }

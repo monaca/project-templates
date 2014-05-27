@@ -1,11 +1,11 @@
 {
    "name": "ons-master-detail",
-   "title-en": "Onsen UI Master-Detail",
-   "title-ja": "Onsen UI Master-Detail",
-   "description-en": "Master-Detail styled template",
-   "description-ja": "一覧・詳細ページのサンプルです。",
-   "category": "template",
-   "platform": ["ios", "android", "winrt"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/13-ons-master-detail/www/index.html"
+   "title-ja": "Onsen UI Master-Detailアプリ",
+   "title-en": "Onsen UI Master Detail App",
+   "description-ja": "一覧画面と詳細画面で構成されているアプリです",
+   "description-en": "Onsen UI app that has a list and a detail view.",
+   "category": "Onsen UI",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/11-ons-master-detail/www/index.html",
+   "framework_version": "2.9"
 }

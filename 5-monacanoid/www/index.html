@@ -3,11 +3,13 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>Monacanoid</title>
+    <script type="text/javascript" src="components/loader.js"></script>
+    <link rel="stylesheet" type="text/css" href="components/loader.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="plugins/plugin-loader.js"></script>
     <script type="text/javascript" src="js/enchant.min.js"></script>
     <script type="text/javascript" src="js/zepto.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script> 
+    
     <script type="text/javascript">
         if (navigator.userAgent.indexOf('iPad') > 0) {
             var initialScale = Math.round(window.screen.width * 10 / 320) / 10;
@@ -16,6 +18,10 @@
             monaca.viewport({width : 320});
         }
     </script>
+</head>
 <body onload="callinit();">
+    <div class="footer">
+        <div class="button">Reset</div>
+    </div>
 </body>
 </html>

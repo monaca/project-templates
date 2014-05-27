@@ -4,7 +4,7 @@
    "title-en": "Memo Application",
    "description-ja": "jQuery Mobileとローカルストレージを用いた簡単なメモ帳アプリです。",
    "description-en": "Simple memo app on top of jQuery Mobile and localStorage.",
-   "category": "template",
+   "category": "Sample App",
    "platform": ["ios", "android"],
    "num_screenshots": 1,
    "preview_url": "https://monaca.github.io/project-templates/4-jqm-memo/www/index.html"

@@ -1,11 +1,11 @@
 {
    "name": "ons-split-nav",
-   "title-en": "Onsen UI Split View & Navigator",
-   "title-ja": "Onsen UI Split View & Navigator",
-   "description-en": "Use Split View and Navigator",
-   "description-ja": "Split View と Navigator を用いたサンプルです。",
-   "category": "template",
-   "platform": ["ios", "android", "winrt"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/12-ons-split-nav/www/index.html"
+   "title-ja": "Onsen UI Navスプリッター",
+   "title-en": "Onsen UI Nv Split Menu",
+   "description-ja": "ナビゲーションが含まれたアプリの例です。",
+   "description-en": "Split-bar style Onsen UI app.",
+   "category": "Onsen UI",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/12-ons-split-nav/www/index.html",
+   "framework_version": "2.9"
 }
