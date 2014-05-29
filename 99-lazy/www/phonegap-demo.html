@@ -20,10 +20,11 @@
 <html>
   <head>
     <title>PhoneGap</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <script type="text/javascript" src="plugins/plugin-loader.js"></script>
+    <script type="text/javascript" src="components/loader.js"></script>
+    <link rel="stylesheet" type="text/css" href="components/loader.css">
     <script type="text/javascript">
-        monaca.viewport({width: 320});
         document.addEventListener("deviceready", onDeviceReady, false);
         function onDeviceReady(){
             console.log("PhoneGap is ready.");

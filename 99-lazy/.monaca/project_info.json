@@ -1,11 +1,11 @@
 {
-   "name": "lazy-registration",
-   "title-ja": "はじめてのMonacaアプリ",
-   "title-en": "My First Monaca App",
-   "description-ja": "このアプリは会員登録時に自動作成されました。MonacaでHelloWorldを表示する内容となっています。",
-   "description-en": "auto-generated project",
-   "category": "lazy-template",
+   "name": "helloworld",
+   "title-ja": "Hello Worldアプリ",
+   "title-en": "Hello World App",
+   "description-ja": "HelloWorldを表示するだけのアプリです。Monacaアプリのひな形としてお使いください。PhoneGapのデモも同梱しています。",
+   "description-en": "This is a simple HelloWorld demo program.",
+   "category": "Sample App",
    "platform": ["ios", "android"],
-   "num_screenshots": 0,
-   "preview_url": "https://monaca.github.io/project-templates/99-lazy/www/index.html"
+   "preview_url": "https://monaca.github.io/project-templates/0-helloworld/www/index.html",
+   "framework_version": "2.9"
 }
