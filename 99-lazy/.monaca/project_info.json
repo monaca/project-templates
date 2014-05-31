@@ -1,5 +1,5 @@
 {
-   "name": "helloworld",
+   "name": "lazy-registration",
    "title-ja": "Hello Worldアプリ",
    "title-en": "Hello World App",
    "description-ja": "HelloWorldを表示するだけのアプリです。Monacaアプリのひな形としてお使いください。PhoneGapのデモも同梱しています。",
