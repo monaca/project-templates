@@ -20,6 +20,8 @@
 * This css is customized for Onsen UI Theming by Mitsunori KUBOTA<mitsunori@asial.co.jp>.
 */
 
+@import url("font_awesome/css/font-awesome.min.css");
+
 * {
   font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -2671,7 +2673,6 @@ limitations under the License.
 
 */
 
-@import url("font_awesome/css/font-awesome.min.css");
 
 [ng-cloak],
 [x-ng-cloak],
