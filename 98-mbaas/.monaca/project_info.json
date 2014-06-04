@@ -1,10 +1,10 @@
 {
    "name": "mbaas-tutorial",
-   "title-ja": "mBaaSチュートリアル",
-   "title-en": "mBaaS Tutorial",
+   "title-ja": "Nifty mBaaSチュートリアル",
+   "title-en": "Nifty mBaaS Tutorial",
    "description-ja": "NIFTY Cloud mobile backend のチュートリアル",
    "description-en": "Tutorial for NIFTY Cloud mobile backend",
-   "category": "lazy-template",
+   "category": "Sample App",
    "platform": ["ios", "android"],
    "num_screenshots": 0,
    "preview_url": "https://monaca.github.io/project-templates/98-mbaas/www/index.html"
