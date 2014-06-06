@@ -1,15 +1,106 @@
 body {
+    margin: 0;
+    padding: 10px;
     background-color: #ccc;
     font-family: 'Helvetica';
-    margin: 0;
-    padding: 0;
 }
 
 h1 {
+    text-shadow: 0 -2px 0 #999;
     text-align: center;
     font-size: 40px;
-    color: white;
-    text-shadow: 0 -2px 0 #999;
     padding: 0;
-    margin: 300px 0 0 0;
+    margin: 200px 0 30px 0;
+    color: white;
+}
+
+/**
+ * Large Button Component
+ * http://components.onsenui.io/
+ */
+.button--large {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: auto;
+  text-decoration: none;
+  padding: 4px 20px;
+  font-size: 16px;
+  line-height: 36px;
+  letter-spacing: 0;
+  color: #fff;
+  text-shadow: 0 1px none;
+  vertical-align: middle;
+  background-color: #1284ff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  -moz-transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  -o-transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 36px;
+  padding: 4px 20px;
+  display: block;
+  width: 100%;
+}
+.button--large:active {
+  background-color: #1284ff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  opacity: 0.6;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.button--large:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.button--large:hover {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.button--large:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
 }
