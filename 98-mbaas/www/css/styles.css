@@ -27,7 +27,6 @@ body {
   color: #333;
   font-size: 34px;
   font-weight: 100;
-  width: 640px;
   font-family: 'Helvetica';
   padding-top: 87px;
   position: relative;
@@ -132,7 +131,7 @@ body > div.table > div.table-body > div.table-cell:first-child > div.table-cell-
 body > div.table > div.table-body > div.table-cell.right-arrow > div.table-cell-inner {
   background-image: url(../img/table-cell-right-arrow.png);
   background-repeat: no-repeat;
-  background-position: 560px 34px;
+  background-position: right 60px top 34px;
 }
 body > div.table > div.table-body > div.table-cell > div.table-cell-inner {
   margin-left: 30px;
@@ -180,7 +179,7 @@ body > div.table > div.table-body > div.table-cell > div.table-cell-inner > inpu
   top: 0px;
   height: 88px;
   width: 400px;
-  right: 0px;
+  left: 222px;
   color: #666;
 }
 body > div.table > div.table-body > div.table-cell > div.table-cell-inner > textarea {
