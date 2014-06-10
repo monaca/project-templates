@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="mobi.monaca.app" version="2.0.0">
-  <name>Monaca Application</name>
-  <description/>
-  <author/>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        id        = "com.example.memo"
+        version   = "1.0.0">
+  <name>Memo Application</name>
+  <description>Memo Application</description>
+  <author></author>
+  
   <access origin="*"/>
-  <preference name="loglevel" value="ERROR"/>
-  <preference name="keepRunning" value="true"/>
-  <preference name="disallowOverscroll" value="true"/>
+  
+  <preference name="monaca:androidVersionCode" value="1"/>
+  <preference name="monaca:ExtractAssets" value="false"/>
+  <preference name="monaca:DisableCookie" value="false"/>
+  <preference name="monaca:SplashBackground" value="#FFFFFF"/>
+  <preference name="monaca:AutoHideSplashScreen" value="true"/>
+  <preference name="KeepRunning" value="true"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  
   <feature name="App">
     <param name="android-package" value="org.apache.cordova.App"/>
   </feature>
