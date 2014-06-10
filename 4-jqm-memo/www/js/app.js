@@ -65,10 +65,8 @@ function onDeleteLink() {
 function onReady() {
     initTopPage();
     $("#SaveBtn").click(onSaveBtn);
-    $("#TopListView a.show").live("click", onShowLink);
-    $("#TopListView a.delete").live("click", onDeleteLink);
-    
-    monaca.splashScreen.hide();
+    $("#TopListView").on("click", "a.show", onShowLink);
+    $("#TopListView").on("click", "a.delete", onDeleteLink);
 }
 
 $(onReady); // on DOMContentLoaded
