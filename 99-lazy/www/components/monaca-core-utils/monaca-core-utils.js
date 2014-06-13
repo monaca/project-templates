@@ -564,31 +564,27 @@ window.monaca.cloud = window.monaca.cloud || {};
      */
     monaca.cloud.Push = {};
     monaca.cloud.Push.callback = null;
-    
-    monaca.cloud.Push.delayedSend = function(data,time) {
+    monaca.cloud.Push.callbackData = null;
+
+    monaca.cloud.Push.send = function(data) {
         if (typeof monaca.cloud.Push.callback === "function") {
             monaca.cloud.Push.callback(data);
-            return;
-        }
-        var now = new Date().getTime();
-        if (now-time<10000) {
-            setTimeout( function(){ monaca.cloud.Push.delayedSend(data,time) } , 500 );
         } else {
-            console.log("push notification setHandler timeout");
-        }            
-    }
-    monaca.cloud.Push.send = function(data) {
-        var start = new Date().getTime();
-        monaca.cloud.Push.delayedSend( data , start );
+            monaca.cloud.Push.callbackData = data;
+        }
     };
-
     monaca.cloud.Push.setHandler = function(fn) {
         if (typeof fn !== "function") {
             console.warn("Push callback must be a function");
         } else {
             monaca.cloud.Push.callback = fn;
+            if (monaca.cloud.Push.callbackData) {
+                monaca.cloud.Push.callback(monaca.cloud.Push.callbackData);
+                monaca.cloud.Push.callbackData = null;
+            }
         }
-    };
+    }; 
+    
 })();
 
 
