@@ -11,6 +11,7 @@
   <preference name="monaca:iosApplicationName" value="Memo Application" />
   <preference name="monaca:targetFamilyiPhone" value="1" />
   <preference name="monaca:targetFamilyiPad" value="1" />
+  <preference name="monaca:DisableCookie" value="false"/>
   <preference name="AutoHideSplashScreen" value="true" />
   <preference name="EnableViewportScale" value="true" />
   <preference name="FadeSplashScreen" value="true" />
