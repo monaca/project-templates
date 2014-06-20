@@ -11,7 +11,7 @@
   <preference name="monaca:androidVersionCode" value="1"/>
   <preference name="monaca:ExtractAssets" value="false"/>
   <preference name="monaca:DisableCookie" value="false"/>
-  <preference name="monaca:SplashBackground" value="#FFFFFF"/>
+  <preference name="monaca:SplashBackground" value="#CCCCCC"/>
   <preference name="monaca:AutoHideSplashScreen" value="true"/>
   <preference name="KeepRunning" value="true"/>
   <preference name="DisallowOverscroll" value="true"/>
