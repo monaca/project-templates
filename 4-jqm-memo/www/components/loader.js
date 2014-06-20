@@ -21342,6 +21342,66 @@ window.monaca = window.monaca || {};
 })();
 
 /**
+ * iOS Status Bar Plugin
+ *
+ * @author Asial Corporation
+ * @date   2014/1/15
+ */
+window.StatusBar = window.StatusBar || {};
+
+(function() {
+
+  /*
+    hideStatusBar
+    support : iOS6,iOS7
+  */
+  StatusBar.hideStatusBar = function() {
+    monaca.apiQueue.exec(null, null, "mobi.monaca.nativecomponent", 'hideStatusBar', []);
+  }
+
+  /*
+    showStatusBar
+    support : iOS6,iOS7
+  */
+  StatusBar.showStatusBar = function() {
+    monaca.apiQueue.exec(null, null, "mobi.monaca.nativecomponent", 'showStatusBar', []);
+  }
+
+  /* 
+    statusBarStyleDefault
+    support : iOS6,iOS7
+  */
+  StatusBar.statusBarStyleDefault = function() {
+    monaca.apiQueue.exec(null, null, "mobi.monaca.nativecomponent", 'statusBarStyleDefault', []);
+  }
+
+  /* 
+    statusBarStyleLightContent
+    support : iOS7
+  */
+  StatusBar.statusBarStyleLightContent = function() {
+    monaca.apiQueue.exec(null, null, "mobi.monaca.nativecomponent", 'statusBarStyleLightContent', []);
+  }
+
+  /* 
+    statusBarStyleBlackOpaque
+    support : iOS6
+  */
+  StatusBar.statusBarStyleBlackOpaque = function() {
+    monaca.apiQueue.exec(null, null, "mobi.monaca.nativecomponent", 'statusBarStyleBlackOpaque', []);
+  }
+
+  /* 
+    statusBarStyleBlackTranslucent
+    support : iOS6
+  */
+  StatusBar.statusBarStyleBlackTranslucent = function() {
+    monaca.apiQueue.exec(null, null, "mobi.monaca.nativecomponent", 'statusBarStyleBlackTranslucent', []);
+  }
+
+})();
+
+/**
  * Monaca Cloud Functions
  *  Version 1.5.0
  *
