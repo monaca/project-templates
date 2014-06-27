@@ -1,5 +1,5 @@
 /**
- * This is a auto-generated code by Monaca HTML5 component manager.
+ * This is an auto-generated code by Monaca JS/CSS Components.
  * Please do not edit by hand.
  */
 
