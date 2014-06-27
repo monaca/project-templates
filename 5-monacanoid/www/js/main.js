@@ -1,28 +1,20 @@
-enchant();
-
-function callinit() {
-    if(getUa() === false) init();
-    else document.addEventListener("deviceready", init, false);
-}
-
-var SETTINGS_GRAVITY = 0.18,
+(function() {
+    
+var SETTINGS_GRAVITY = 0.07,
     SETTINGS_FPS = 30,
-    SETTINGS_BOUND_X = 0.16,
-    SETTINGS_BOUND_Y = 1.1,
-    SETTINGS_ACCELEROMETER_RELOAD_FREQ = 150,
+    SETTINGS_BALL_NUM = 1,
+    SETTINGS_BOUND_X = 0.13,
+    SETTINGS_BOUND_Y = 1.04,
+    SETTINGS_ACCELEROMETER_RELOAD_FREQ = 100,
     SETTINGS_PADDLE_ACCEL = 2.8,
-    SETTINGS_INJECTION_SPEED = 13,
-    SETTINGS_FONT = '18px/1.2 vt',
     SETTINGS_POINT = 1000,
     SETTINGS_POINT_SILVER = 200,
     SETTINGS_POINT_GOLD = 3000000;
+    
+var GAMESTATE_STOP = 0,
+    GAMESTATE_PLAY = 1;
 
-var game = null,
-    ball = null,
-    paddle = null,
-    scoreLabel = null,
-    accelerationWatch = null,
-    accelText = '0';
+//var accelerationWatch = null;
 
 var imgPath = {
     'ball' : 'img/ball.png',
@@ -33,88 +25,23 @@ var imgPath = {
     'block_silver' : 'img/block_silver.png',
     'block_gold' : 'img/block_gold.png'
 };
-
-Monacanoid = Class.create(Core,{
-    block: null,
     
-    initialize: function() {
-        var self = this;
-        
-        this.screenSize = {
-            width: 320,
-            height: 480,
-            zoom: 1
-        };
+
+var BB = {
+    stage: new PIXI.Stage(0x000000),
+    renderer: null,
+    screenSize: null,
+    paddle: null,
+    balls: [],
+    blocks: [],
+    score: 0,
+    scoreLabel: null,
+    accelLabel: null,
+    isMouseDown: false,
     
-        // Set screen size
-        if (getUa() == 'iPhone') {
-            this.screenSize.height = window.screen.height - 108; 
-        } else if(getUa() == 'iPad') {
-            this.screenSize.height = 382;
-        } else if(getUa() == 'Android') {
-            this.screenSize.zoom = screen.availWidth / this.screenSize.width;
-            this.screenSize.height = screen.availHeight ? ~~((screen.availHeight - 76*4) / this.screenSize.zoom) : 420;
-        } else this.screenSize.height = 480;
-
-        // Accelerometer
-        if (typeof(navigator.accelerometer) !== 'undefined') {
-            if (accelerationWatch !== null) {
-                navigator.accelerometer.clearWatch(accelerationWatch);
-                updateAcceleration({
-                    x : "",
-                    y : "",
-                    z : ""
-                });
-                accelerationWatch = null;
-            } else {
-                var options = {};
-                options.frequency = SETTINGS_ACCELEROMETER_RELOAD_FREQ;
-                accelerationWatch = navigator.accelerometer.watchAcceleration(
-                        self.updateAcceleration, function(ex) {
-                            alert("accel fail (" + ex.name + ": " + ex.message + ")");
-                        }, options);
-            }
-        }
-    
-        Core.call(this,this.screenSize.width,this.screenSize.height);
-    },
-
-    updateAcceleration: function(a) {
-        var self = this.game,
-            ac = a.x.toFixed(2);
-            
-        if(a.x > 0) accelText = '+' + String(ac);
-        else accelText = String(ac);
-
-        // Use parameter x to move paddle
-        if (paddle !== null) {
-          if (paddle.accel / ac > 2.0) {
-            ;
-          } else if (paddle.accel / ac > 0) {
-            paddle.accel += ac * SETTINGS_PADDLE_ACCEL;
-          } else {
-            paddle.accel = ac * SETTINGS_PADDLE_ACCEL;
-          }
-        }
-        self.updateScoreLabel();
-    },
-    
-    updateScoreLabel: function() {
-        if (scoreLabel !== null) scoreLabel.text = accelText + '               ' + game.score;
-    },
-
+    // Create blocks map
     setMap: function() {
-        var numBlock,blockMap;
-        // Delete all existing blocks
-        if(this.block !== null) {
-            for(i = 0, numBlock = this.block.length; i < numBlock; i++) {
-                this.rootScene.removeChild(game.block[i]);
-            }
-            this.block.length = 0;
-        }
-        
-        if(typeof(blockMap) !== 'undefined') blockMap.length = 0;
-        blockMap = [
+        var blockMap = [
             [null,      null,       null,       null,       null,       'blue',     null,       null,       null,       null],
             [null,      null,       null,       null,       'red',      'red',      'blue',     null,       null,       null],
             [null,      null,       null,       'red',      'red',      null,       null,       'blue',     null,       null],
@@ -126,221 +53,402 @@ Monacanoid = Class.create(Core,{
             [null,      null,       null,       null,       null,       'silver',   null,       null,       null,       null]
         ];
         
-        this.block = [];
-        numBlock = 0;
         for(j = 0; j < blockMap.length; j++) {
             for(i = 0; i < blockMap[j].length; i++) {
                 if(blockMap[j][i] !== null) {
-                    this.block[numBlock] = new Block(30*i, 36+(12*j), blockMap[j][i]);
-                    this.rootScene.addChild(this.block[numBlock]);
-                    numBlock++;
+                    var block = BB.addBlock(10 + (30 * i), 80 + (12 * j), blockMap[j][i]);
                 }
             }
         }
     },
-    defeatBlock : function(num) {
-        this.rootScene.removeChild(game.block[num]);
-        if(this.block[num].color === 'gold') this.score += SETTINGS_POINT_GOLD;
-        if(this.block[num].color === 'silver') this.score += SETTINGS_POINT_SILVER;
-        else this.score += SETTINGS_POINT;
-        this.updateScoreLabel();
-        game.block.splice(num,1); 
+    
+    /**
+     * @param {int} x
+     * @param {int} y
+     * @param {String} color red,blue,silver,gold
+     * @return {Object} block
+     **/
+    addBlock: function(x, y, color) {
+        switch (color) {
+            case "red":
+            case "blue":
+                var point = SETTINGS_POINT;
+                break;
+            case "silver":
+                var point = SETTINGS_POINT_SILVER;
+                break;
+            case "gold":
+                var point = SETTINGS_POINT_GOLD;
+                break;    
+            default:
+                var point = SETTINGS_POINT;
+                color = "red";
+                break;
+        }
+        
+        var texture = PIXI.Texture.fromImage(imgPath["block_" + color]);
+        var block = new PIXI.Sprite(texture);
+     
+        block.anchor.x = 0.5;
+        block.anchor.y = 0.5;
+     
+        block.position.x = x;
+        block.position.y = y;
+        
+        block.width = 30;
+        block.height = 12;
+        
+        block.point = point;
+     
+        BB.stage.addChild(block);
+        BB.blocks.push(block);
+        
+        return block;
     },
-    clear: function() {
-        setTimeout(function() {
-            if(typeof(navigator.notification) !== 'undefined') navigator.notification.alert("Cleared!", function(){}, "Congraturations");
-            else alert("Cleared!");
-            game.end("Cleared!");
-            game.stop();
-        }, 100);               
-    }
-});
-
-
-function reset() {
-    game.pause();
-    game.setMap();
-    game.score = 0;
-    scoreLabel.text = '0';
-    ball.reset();
-    paddle.reset();
-    game.resume();
-}
-
-function init() {    
-    $( ".button" ).click(function() {
-          reset();
-    });
     
-    game = new Monacanoid();
-    game.fps = SETTINGS_FPS;
-    game.rootScene.backgroundColor = 'black';
-    game.scale = 1;
-    game.score = 0;
-    
-    
-    for(var i in imgPath) {
-        game.preload(imgPath[i]);
-    }
-
-    $("#enchant-stage > div").css('-webkit-transform','none');
-    
-    game.onload = function(){
-        //Header, display the score and so on 
-        var label = new Label("ACCEL            SCORE");
-        label.font = SETTINGS_FONT;
-        label.color = "red";
-        label.x = 30;
-        label.y = 5;
-        game.rootScene.addChild(label);
-
-        //Label for the score
-        scoreLabel = new Label("0");
-        scoreLabel.font = SETTINGS_FONT;
-        scoreLabel.color = "white";
-        scoreLabel.textAlign = "left";
-        scoreLabel.x = 80;
-        scoreLabel.y = 5;
-        scoreLabel.width = 240;
-        game.rootScene.addChild(scoreLabel);
+    // Create a ball and add it to PIXI.Stage
+    addBall: function() {
+        var texture = PIXI.Texture.fromImage(imgPath["ball"]);
+        var ball = new PIXI.Sprite(texture);
+     
+        ball.anchor.x = 0.5;
+        ball.anchor.y = 0.5;
+     
+        ball.position.x = parseInt(BB.renderer.width * 0.5);
+        ball.position.y = 200;
         
-        ball = new Ball();
-        game.rootScene.addChild(ball);
-
-        paddle = new Paddle();
-        game.rootScene.addChild(paddle);
+        ball.width = 10;
+        ball.height = 10;
         
-        game.setMap();
-        
-        // Stick the ball on the paddle...
-        game.rootScene.addEventListener(Event.TOUCH_START,function() {
-            if(ball.within(paddle, paddle.width * 0.5 + 10)) {
-                ball.x = paddle.x + paddle.width*0.5;
-                ball.y = paddle.y - paddle.height;
-                ball.isSticked = true;
-            }
-        });
-        
-        // ...and launch it
-        game.rootScene.addEventListener(Event.TOUCH_END,function() {
-            if(ball.isSticked == 1) {
-                ball.delta.y = SETTINGS_INJECTION_SPEED * -1;
-                ball.delta.x = -1 * paddle.accel;
-                ball.isSticked = false;
-            }   
-        });
-        
-        // Main loop
-        game.rootScene.addEventListener(Event.ENTER_FRAME,function() {
-
-            //the paddle
-            paddle.x -= paddle.accel;
-            if (paddle.x < 0) {
-                paddle.accel = 0;
-                paddle.x = 0;
-            } else if (paddle.x + paddle.width > game.screenSize.width) {
-                paddle.accel = 0;
-                paddle.x = game.screenSize.width - paddle.width; 
-            }
-            if(ball.isSticked) ball.x = paddle.x + paddle.width*0.5;
-            else {
-                ball.x += ball.delta.x;
-                if (ball.x + ball.width > game.screenSize.width || ball.x < 0) {
-                    ball.delta.x *= -1;
-                    // ball.x = game.screenSize.width - (ball.x + ball.width); // make loop
-                }
-                ball.delta.y += SETTINGS_GRAVITY;
-                ball.y += ball.delta.y;
-                if (ball.y < 0) {
-                    ball.y = 0;
-                    ball.delta.y *= -1;
-                } else if (ball.y > game.screenSize.height - ball.height) {
-                    vibrate();
-                    game.stop();
-                }
-            }           
-            if(paddle.intersect(ball)) {
-                ball.delta.x += -1 * SETTINGS_BOUND_X * (((paddle.x + paddle.width) - ball.x) - (paddle.width * 0.5));
-                ball.delta.y *= -1 * SETTINGS_BOUND_Y;
-            }
-            //Hit Detection
-            for(i = 0; i < game.block.length; i++) {
-                if(ball.intersect(game.block[i])) {
-                    game.defeatBlock(i);
-                    i--;
-                    ball.delta.y *= -1;     
-                    if(game.block.length === 0) {
-                        game.clear();
-                    }
-                }
-            }
-        });
-    };
-
-    game.start();
-}
-
-
-// Classes
-Ball = Class.create(Sprite, {
-    initialize: function() {
-        Sprite.call(this,10,10);    
-        this.image = game.assets[imgPath.ball];
-        this.frame = 0;
-        this.isSticked = false; 
-        this.reset();
+        ball.delta = {
+            'x' : Math.random() - 0.5,
+            'y' : -0.4 
+        };
+     
+        BB.stage.addChild(ball);
+        BB.balls.push(ball);
     },
-    reset: function() {
-        this.x = game.screenSize.width * 0.5;
-        this.y = game.screenSize.height * 0.5;
-        this.isSticked = false;
-        this.delta = {
+    
+    // Create a paddle and add it to PIXI.Stage
+    addPaddle: function() {
+        var texture = PIXI.Texture.fromImage(imgPath["paddle"]);
+        BB.paddle = new PIXI.Sprite(texture);
+     
+        BB.paddle.anchor.x = 0.5;
+        BB.paddle.anchor.y = 0.5;
+     
+        BB.paddle.position.x = parseInt(BB.renderer.width * 0.5);
+        BB.paddle.position.y = BB.renderer.height - 60;
+        
+        BB.paddle.width = 60;
+        BB.paddle.height = 10;
+        
+        BB.paddle.accel = 0;
+        BB.paddle.delta = {
             'x' : Math.random() - 0.5,
             'y' : -3.8 
         };
-    }
-});
-
-Paddle = Class.create(Sprite, {
-    initialize: function() {
-        Sprite.call(this,60,10);    
-        this.image = game.assets[imgPath.paddle];
-        this.x = game.screenSize.width * 0.4;
-        this.y = game.screenSize.height * 0.94;
-        this.frame = 0;
-        this.accel = 0;
+     
+        BB.stage.addChild(BB.paddle);
     },
+    
+    /**
+     * Add points to current score
+     * @param {int} val points to add
+     */
+    addScore: function(val) {
+        BB.score += parseInt(val);
+        BB.scoreLabel.setText(BB.score);        
+    },
+    
+    /**
+     * Set score
+     * @param {int} val new score
+     */
+    setScore: function(val) {
+        BB.score = val;
+        BB.scoreLabel.setText(BB.score);
+    },
+    
+    /**
+     * callback for PhoneGap Acceleration Watch
+     * @param {Object} a a.x, a.y, a.z
+     */
+    updateAcceleration: function(a) {
+        var accelText = "", ac = a.x.toFixed(2);
+            
+        if(a.x > 0) accelText = '+' + String(ac);
+        else accelText = String(ac);
+    
+        // Use parameter x to move paddle
+        if (BB.paddle !== null) {
+          if (BB.paddle.accel / ac > 2.0) {
+            
+          } else if (BB.paddle.accel / ac > 0) {
+            BB.paddle.accel += ac * SETTINGS_PADDLE_ACCEL;
+          } else {
+            BB.paddle.accel = ac * SETTINGS_PADDLE_ACCEL;
+          }
+        }
+        
+        BB.accelLabel.setText(accelText);
+    },
+
+    // Reset current game and start new one
     reset: function() {
-        this.x = game.screenSize.width * 0.4;
-        this.y = game.screenSize.height * 0.94;
-        this.accel = 0;
+        //Reset (remove all children in the stage if exists)
+        for (var i = BB.stage.children.length - 1; i >= 0; i--) {
+            BB.stage.removeChildAt(i);
+        }
+        
+        BB.balls = [];
+        BB.blocks = [];
+        BB.setMap();
+        for (var i = 0; i < SETTINGS_BALL_NUM; i++) {
+            BB.addBall();
+        }
+        BB.addPaddle();
+        
+        var resetLabel = new PIXI.Text("RESET", {font: "24px/1.2 vt", fill: "red"});
+        resetLabel.position.x = 18;
+        resetLabel.position.y = BB.renderer.height - 52;
+        BB.stage.addChild(resetLabel);
+        resetLabel.buttonMode = true;
+        resetLabel.interactive = true;
+        resetLabel.click = resetLabel.tap = function(data) {
+            BB.reset();  
+        };
+        setTimeout(function() {
+            resetLabel.setText("RESET"); //for Android
+        }, 1000, resetLabel);
+        
+        var label = new PIXI.Text("SCORE:", {font: "24px/1.2 vt", fill: "red"});
+        label.position.x = 20;
+        label.position.y = 20;
+        BB.stage.addChild(label);
+        setTimeout(function() {
+            label.setText("SCORE:"); //for Android
+        }, 1000, label);
+        
+        BB.scoreLabel = new PIXI.Text("0", {font: "24px/1.2 vt", fill: "white"});
+        BB.scoreLabel.position.x = 90;
+        BB.scoreLabel.position.y = 20;
+        BB.stage.addChild(BB.scoreLabel);
+        BB.setScore(0);
+        
+        /*
+        var label = new PIXI.Text("ACCEL:", {font: "24px/1.2 vt", fill: "red"});
+        label.position.x = 160;
+        label.position.y = 20;
+        BB.stage.addChild(label);
+        label.setText("ACCEL:"); //for Android
+        
+        BB.accelLabel = new PIXI.Text("0", {font: "24px/1.2 vt", fill: "white"});
+        BB.accelLabel.position.x = 230;
+        BB.accelLabel.position.y = 20;
+        BB.stage.addChild(BB.accelLabel);
+        */
+        
+        BB.gameState = GAMESTATE_PLAY;
+    },
+    
+    /**
+     * Check whether the ball hits the object
+     * @param {PIXI.Sprite} ball
+     * @param {PIXI.Sprite} obj target object
+     */
+    isBallHit: function(ball, obj) {
+        return (ball.position.x > (obj.position.x - (obj.width * 0.5))) &&
+            (ball.position.x < (obj.position.x + (obj.width * 0.5))) &&
+            (ball.position.y > (obj.position.y - (obj.height * 0.5))) &&
+            (ball.position.y < (obj.position.y + (obj.height * 0.5)));
+    },
+    
+    // Game Over        
+    endGame: function() {
+        BB.gameState = GAMESTATE_STOP;
+        vibrate();
+    },
+    
+    // Game Clear
+    clearGame: function() {
+        if(typeof navigator.notification !== 'undefined') navigator.notification.alert("Cleared!", function(){}, "Congraturations");
+        else alert("Cleared!");
+        
+        BB.gameState = GAMESTATE_STOP;
     }
-});
-
-Block = Class.create(Sprite, {
-    initialize: function(x, y, color) {
-        this.color = color || 'green'; 
-        Sprite.call(this,30,12);
-        this.image = game.assets[imgPath['block_' + color]];
-        this.x = x;
-        this.y = y;
-        this.frame = 0;
-    }
-});
-
-
-// Public functions
-function printProperties(obj) {
-    var properties = '';
-    for (var prop in obj){
-        properties += prop + "=" + obj[prop] + "\n";
-    }
-    alert(properties);
 }
 
 
-function vibrate() {
-    if(typeof(navigator.notification) !== 'undefined') navigator.notification.vibrate(500);
+function init() {
+    // Accelerometer
+    /*
+    if (typeof navigator.accelerometer !== 'undefined' && !accelerationWatch) {
+        accelerationWatch = navigator.accelerometer.watchAcceleration(
+            BB.updateAcceleration, 
+            function(ex) {
+                alert("accel fail (" + ex.name + ": " + ex.message + ")");
+            }, 
+            {frequency: SETTINGS_ACCELEROMETER_RELOAD_FREQ}
+        );
+    }
+    */
+    BB.screenSize = setBound();
+ 
+    BB.renderer = (getUa() === "Android") ? new PIXI.CanvasRenderer(BB.screenSize.width, BB.screenSize.height) : new PIXI.autoDetectRenderer(BB.screenSize.width, BB.screenSize.height),
+    BB.renderer.transparent = false;
+    document.body.appendChild(BB.renderer.view);
+    
+    setScale(BB.screenSize);
+    
+    BB.reset();
+    
+    // Event listeners to control the paddle
+    window.addEventListener("touchmove", function(e) {
+        BB.paddle.position.x = e.touches[0].clientX / BB.screenSize.zoom;
+    });
+    
+    window.addEventListener("mousedown", function(e) {
+        BB.isMouseDown = true;
+    });
+    
+    window.addEventListener("mouseup", function(e) {
+        BB.isMouseDown = false;
+    });
+    
+    window.addEventListener("mousemove", function(e) {
+        if(BB.isMouseDown) BB.paddle.position.x = e.clientX;
+    });
+    
+    window.addEventListener("keydown", function(e) {
+        switch (e.which) {
+            case 37:
+                BB.paddle.position.x -= 4;
+                BB.paddle.accel += (SETTINGS_PADDLE_ACCEL * 0.1);
+                break;
+            case 39:
+                BB.paddle.position.x += 4;
+                BB.paddle.accel -= (SETTINGS_PADDLE_ACCEL * 0.1);
+                break;
+            case 38:
+                BB.paddle.position.y -= 1;
+                break;
+        }
+    });
+
+    requestAnimFrame(animate);
+}
+
+
+// Render callback
+function animate() {
+    if (BB.gameState === GAMESTATE_PLAY) {
+    
+        //Move the paddle
+        BB.paddle.position.x -= BB.paddle.accel;
+        if (BB.paddle.position.x - (BB.paddle.width * 0.5) < 0) {
+            BB.paddle.position.x = BB.paddle.width * 0.5;
+            BB.paddle.accel = 0;
+        } else if (BB.paddle.position.x + (BB.paddle.width * 0.5) > BB.renderer.width) {
+            BB.paddle.position.x = BB.renderer.width - (BB.paddle.width * 0.5); 
+            BB.paddle.accel = 0;
+        }
+        
+        //Move balls
+        for (var i = BB.balls.length - 1; i >= 0; i--) {
+            var ball = BB.balls[i];
+            
+            ball.position.x += ball.delta.x;
+            if ((ball.position.x > BB.renderer.width) || (ball.position.x < 0)) {
+                ball.delta.x *= -1;
+            }
+            ball.delta.y += SETTINGS_GRAVITY;
+            ball.y += ball.delta.y;
+            if (ball.y < 0) {
+                ball.y = 0;
+                ball.delta.y *= -1;
+            } else if (ball.y > BB.renderer.height + 40) {
+                BB.stage.removeChild(ball);
+                BB.balls.splice(i, 1);
+                if (BB.balls.length <= 0) {
+                    BB.endGame();
+                }
+                continue;
+            }
+                
+            // Ball&Paddle hit detection
+            if (BB.isBallHit(ball, BB.paddle)) {
+                ball.delta.x += -1 * SETTINGS_BOUND_X * (BB.paddle.position.x - ball.position.x);
+                ball.delta.y *= -1 * SETTINGS_BOUND_Y;
+            }
+            
+            //Ball&blocks hit detection
+            for(var j = BB.blocks.length - 1; j >= 0; j--) {
+                var block = BB.blocks[j];
+                if(BB.isBallHit(ball, block)) {
+                    BB.addScore(block.point);
+                    ball.delta.y *= -1;
+                    if ((ball.position.x < 4 + block.position.x - (block.width * 0.5)) || (ball.position.x > -4 + block.position.x + (block.width * 0.5))) {
+                        ball.delta.x *= -1; //ball hits side of the block
+                    }
+                    BB.stage.removeChild(block);
+                    BB.blocks.splice(j, 1);
+                    if (BB.blocks.length <= 0) {
+                        BB.clearGame();
+                    }
+                }
+            }
+        }
+    }
+    
+    requestAnimFrame(animate);
+    BB.renderer.render(BB.stage);
+}
+
+window.onload = function() {
+    if(getUa() === false) init();
+    else document.addEventListener("deviceready", init, false);
+}
+
+function setScale(bound) {
+    switch (getUa()) {
+        case "Android":
+        case "iPad":
+        case "iPhone":
+            document.getElementsByTagName("canvas")[0].style["-webkit-transform"] = "scale(" + bound.zoom + "," + bound.zoom + ")";
+            break;
+        default:
+            break;
+    }
+    
+    return bound;
+}
+
+
+function setBound() {
+    var bound = {
+        width: 320,
+        height: 460,
+        zoom: 1
+    };
+    switch (getUa()) {
+        case "Android":
+        case "iPad":
+        case "iPhone":
+            bound.height = screen.availHeight * (bound.width / screen.availWidth);
+            bound.zoom = screen.availWidth / bound.width;
+            break;
+        default:
+            bound.height = window.innerHeight;
+            break;
+    }
+
+    return bound;
+}
+
+function vibrate(duration) {
+    if (typeof duration === 'undefined') duration = 500;
+    if (typeof navigator.notification !== 'undefined') navigator.notification.vibrate(duration);
 }
 
 function getUa() {
@@ -352,3 +460,5 @@ function getUa() {
         return 'Android';
     } else return false;
 }
+
+})();

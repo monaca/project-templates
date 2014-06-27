@@ -1,27 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
     <title>Monacanoid</title>
-    <script type="text/javascript" src="components/loader.js"></script>
-    <link rel="stylesheet" type="text/css" href="components/loader.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="js/enchant.min.js"></script>
-    <script type="text/javascript" src="js/zepto.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script> 
-    
-    <script type="text/javascript">
-        if (navigator.userAgent.indexOf('iPad') > 0) {
-            var initialScale = Math.round(window.screen.width * 10 / 320) / 10;
-            document.write('<meta name="viewport" content="width=320,maximum-scale=' + initialScale + ',minimum-scale=' + initialScale + ',user-scalable=no" />');
-        } else {
-            monaca.viewport({width : 320});
-        }
-    </script>
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=320,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="components/loader.js"></script>
+    <script src="js/main.js"></script> 
 </head>
-<body onload="callinit();">
-    <div class="footer">
-        <div class="button">Reset</div>
-    </div>
+<body>
 </body>
 </html>
