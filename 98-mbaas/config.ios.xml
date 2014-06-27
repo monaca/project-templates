@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         id        = "com.example.mbaas"
         version   = "1.0.0">
-  <name>Nifty mBaaS Tutorial</name>
+  <name>MobileBaaSTutorial</name>
   <description>Nifty mBaaS Tutorial</description>
   <author></author>
   

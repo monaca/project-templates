@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         id        = "com.example.monacanoid"
         version   = "1.0.0">
-  <name>Break the Bricks</name>
+  <name>BreakTheBricks</name>
   <description>Game Application</description>
   <author></author>
   

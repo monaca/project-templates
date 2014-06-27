@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         id        = "com.example.memo"
         version   = "1.0.0">
-  <name>Memo Application</name>
+  <name>MemoApplication</name>
   <description>Memo Application</description>
   <author></author>
   
