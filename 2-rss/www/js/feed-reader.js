@@ -9,7 +9,7 @@ var Feed = Feed || {
   // Start to watch click event
   watchClick: function() {
     $('#feed-list').on('click', 'li', function() {
-      var url = this.dataset.link;
+      var url = $(this).data('link');
       if (/^http/.test(url)) {
         window.plugins.childBrowser.onClose = function() {};
         window.plugins.childBrowser.showWebPage(url);
