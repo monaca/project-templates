@@ -7,5 +7,5 @@
    "category": "Onsen UI",
    "platform": ["ios", "android"],
    "preview_url": "https://monaca.github.io/project-templates/9-ons-sliding-menu-nav/www/index.html",
-   "framework_version": "2.9"
+   "framework_version": "3.5"
 }
