@@ -9,6 +9,7 @@
    "preview_url": "https://monaca.github.io/project-templates/0-helloworld/www/index.html",
    "framework_version": "3.5",
    "plugins": [
+      "mobi.monaca.plugins.Monaca",
       "org.apache.cordova.device-motion",
       "org.apache.cordova.camera",
       "org.apache.cordova.device-orientation",

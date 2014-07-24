@@ -8,5 +8,10 @@
    "platform": ["ios", "android"],
    "preview_url": "https://monaca.github.io/project-templates/2-rss/www/index.html",
    "framework_version": "3.5",
-   "plugins": ["mobi.monaca.plugins.ChildBrowser"]
+   "plugins": [
+        "mobi.monaca.plugins.Monaca",
+        "org.apache.cordova.inappbrowser",
+        "org.apache.cordova.statusbar.StatusBar",
+        "org.apache.cordova.splashscreen"
+      ]
 }
