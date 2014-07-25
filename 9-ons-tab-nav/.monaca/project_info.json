@@ -1,7 +1,7 @@
 {
    "name": "ons-tab-nav",
    "title-ja": "Onsen UIタブバー",
-   "title-en": "Onsen UI Tabbar Navigation",
+   "title-en": "Onsen UI Tabbar",
    "description-ja": "タブバーの含まれたアプリの例です。",
    "description-en": "Tab-bar style Onsen UI app.",
    "category": "Onsen UI",
