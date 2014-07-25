@@ -7,5 +7,10 @@
    "category": "Sample App",
    "platform": ["ios", "android"],
    "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/4-jqm-memo/www/index.html"
+   "preview_url": "https://monaca.github.io/project-templates/4-jqm-memo/www/index.html",
+   "plugins": [
+      "mobi.monaca.plugins.Monaca",
+      "org.apache.cordova.splashscreen",                                                                                                                                                   
+      "org.apache.cordova.statusbar.StatusBar"
+   ]
 }

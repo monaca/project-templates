@@ -6,11 +6,11 @@
    "description-en": "Tab-bar style Onsen UI app.",
    "category": "Onsen UI",
    "platform": ["ios", "android"],
-<<<<<<< HEAD:10-ons-tab-nav/.monaca/project_info.json
    "preview_url": "https://monaca.github.io/project-templates/10-ons-tab-nav/www/index.html",
-   "framework_version": "3.5"
-=======
-   "preview_url": "https://monaca.github.io/project-templates/9-ons-tab-nav/www/index.html",
-   "framework_version": "2.9"
->>>>>>> master:9-ons-tab-nav/.monaca/project_info.json
+   "framework_version": "3.5",
+   "plugins": [
+      "mobi.monaca.plugins.Monaca",
+      "org.apache.cordova.splashscreen",                                                                                                                                                   
+      "org.apache.cordova.statusbar.StatusBar"
+   ]
 }

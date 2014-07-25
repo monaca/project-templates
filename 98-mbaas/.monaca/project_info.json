@@ -7,5 +7,10 @@
    "category": "Sample App",
    "platform": ["ios", "android"],
    "num_screenshots": 0,
-   "preview_url": "https://monaca.github.io/project-templates/98-mbaas/www/index.html"
+   "preview_url": "https://monaca.github.io/project-templates/98-mbaas/www/index.html",
+   "plugins": [
+      "mobi.monaca.plugins.Monaca",
+      "org.apache.cordova.splashscreen",                                                                                                                                                   
+      "org.apache.cordova.statusbar.StatusBar"
+   ]
 }

@@ -7,5 +7,10 @@
    "category": "Template",
    "platform": ["ios", "android"],
    "preview_url": "https://monaca.github.io/project-templates/1-minimum/www/index.html",
-   "framework_version": "3.5"
+   "framework_version": "3.5",
+   "plugins": [
+      "mobi.monaca.plugins.Monaca",
+      "org.apache.cordova.splashscreen",                                                                                                                                                   
+      "org.apache.cordova.statusbar.StatusBar"
+   ]
 }
