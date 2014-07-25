@@ -1,15 +1,11 @@
 {
-    "plugins": [
-
-    ],
-    "framework_version": "2.9",
-    "title-ja": "",
-    "title-en": "",
-    "description-ja": "",
-    "description-en": "",
-    "category": "User Template",
-    "platform": [
-
-    ],
-    "name": "generated-1406202305-53d0d3d0fd1734d946f58361"
+   "name": "ons-tab-nav",
+   "title-ja": "Onsen UIタブバー",
+   "title-en": "Onsen UI Tabbar Navigation",
+   "description-ja": "タブバーの含まれたアプリの例です。",
+   "description-en": "Tab-bar style Onsen UI app.",
+   "category": "Onsen UI",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/9-ons-tab-nav/www/index.html",
+   "framework_version": "2.9"
 }
