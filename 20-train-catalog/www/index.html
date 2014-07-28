@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function showDetail(filename, trainname) {
+            $("#title").text(trainname);
+            $("#train-image").attr("src", "images/"+filename+".jpg");
+            $.mobile.changePage('#detail-page');
+        }
+        
+        function goToFlickrPage() {
+            var url = "http://www.flickr.com/photos/kimuchi583/";
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+<body>
+    <div data-role="page" id="tokaido-page">
+        <div data-role="header" data-position="fixed">
+            <h1>Train Catalog</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li data-role="list-divider">Tokaido Shinkansen Trains</li>
+                <li><a href="#" onclick="showDetail('0kei', 'Series 0')">Series 0</a></li>
+                <li><a href="#" onclick="showDetail('300kei', 'Series 300')">Series 300</a></li>
+                <li><a href="#" onclick="showDetail('700kei', 'Series 700')">Series 700</a></li>
+                <li><a href="#" onclick="showDetail('n700kei', 'Series N700')">Series N700</a></li>
+            </ul>
+            <p id="credit">Photos by <a href="#" onclick="goToFlickrPage();">kimuchi583</a></p>
+        </div>
+    
+        <div data-role="footer" data-position="fixed"> 
+            <div data-role="navbar" class="tabbar">
+                <ul>
+            		<li><a href="#tokaido-page" class="ui-btn-active ui-state-persist" data-icon="custom" id="train">Tokaido</a></li>
+        			<li><a href="#tohoku-page" data-icon="custom" id="train">Tohoku</a></li>
+        		</ul>
+        	</div>
+        </div> 
+    </div>
+    
+    <div data-role="page" id="tohoku-page">
+        <div data-role="header" data-position="fixed">
+            <h1>Train Catalog</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li data-role="list-divider">Tohoku Shinkansen Trains</li>
+                <li><a href="#" onclick="showDetail('200kei', 'Series 200')">Series 200</a></li>
+                <li><a href="#" onclick="showDetail('e5kei', 'Series E5')">Series E5</a></li>
+                <li><a href="#" onclick="showDetail('e6kei', 'Series E6')">Series E6</a></li>
+            </ul>
+            <p id="credit">Photos by <a href="#" onclick="goToFlickrPage();">kimuchi583</a></p>
+        </div>
+        
+        <div data-role="footer" data-position="fixed"> 
+            <div data-role="navbar" class="tabbar">
+                <ul>
+        			<li><a href="#tokaido-page" data-icon="custom" id="train">Tokaido</a></li>
+        			<li><a href="#tohoku-page" class="ui-btn-active ui-state-persist" data-icon="custom" id="train">Tohoku</a></li>
+        		</ul>
+        	</div>
+        </div> 
+    </div>
+    
+    <div data-role="page" id="detail-page">
+        <div data-role="header" data-position="fixed">
+            <h1 id="title"></h1> 
+            <a href="index.html" data-icon="back" data-rel="back" class="ui-btn-left">Back</a>
+        </div>
+        
+        <div data-role="content">
+            <img src="" alt="" id="train-image">
+        </div>
+    </div>
+</body>
+</html>

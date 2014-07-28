@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+  <script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    function calculate() {
+        var myname = $("#myname").val();
+        var myage = $("#myage").val();
+        var birthyear = new Date().getFullYear() - myage;
+        var text = myname + " was born in " + birthyear + "!";
+        navigator.notification.alert(text, null, "Welcome to Monaca！");
+    }
+  </script>
+</head>
+<body>
+  <div data-role="page" id="TopPage"> 
+    <header data-role="header" data-position="fixed">
+      <h1>BirthYear App</h1>
+    </header>
+  	<section data-role="content">
+
+        What's your name?
+        <input type="text" id="myname" class="input-text" style="width: 40%">
+        
+        How old are you?
+        <input type="text" id="myage" class="input-text" style="width: 20%">
+
+        <a class="button" onclick="calculate();">calculate your birth year!</a>
+  	</section> 
+  </div> 
+</body>
+</html>

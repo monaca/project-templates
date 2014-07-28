@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": null,
+    "description": null,
+    "version": null,
+    "app": {
+        "background": {
+            "scripts": [
+                "background.js"
+            ]
+        }
+    },
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": [
+
+    ],
+    "short_name": null,
+    "offline_enabled": false,
+    "optional_permissions": [
+
+    ],
+    "externally_connectable": {
+        "ids": [
+
+        ],
+        "matches": [
+
+        ],
+        "accepts_tls_channel_id": false
+    }
+}

@@ -1,0 +1,24 @@
+html, body{
+  height: 100%;
+  text-align: center;
+}
+
+#main{
+  overflow:auto;
+  padding-top : 50px;
+  padding-bottom: 150px;
+  float: center;
+}
+
+#footer{
+  position: relative;
+  margin-top: -150px;
+  height: 150px;
+  clear:both;
+  float: center;
+  padding-top : 150px;
+}
+
+#ads_slot{
+  margin: 0 auto;
+}
