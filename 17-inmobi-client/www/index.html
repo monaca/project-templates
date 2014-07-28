@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        var inmobi_conf = {
+            siteid : "", // your Property ID
+            slot: 15,
+            test: true,
+            manual: true,
+            autoRefresh: 20,
+            targetWindow : "_blank", // default "_top"
+            onError : function(code){
+                if(code == "nfr"){
+                    console.log("Error getting the ads!");
+                }
+            }
+        };
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady(){
+            console.log('device ready');
+            $.getScript("js/inmobi.js", function(){
+                showAds();
+            });
+        }
+
+        function showAds(){
+            var adsElement = document.getElementById('ads');
+            _inmobi.getNewAd(adsElement);
+        }
+    </script>
+</head>
+
+<body>
+  
+    <div data-role="page">
+        <header data-role="header" data-position="fixed">
+          <h1>Inmobi Client</h1>
+        </header>
+
+        <section data-role="content">
+            <div id="wrap">
+                <div id="main">
+                    <img src="images/logo.png" width="300px">
+                </div>
+            </div>
+
+            <div id="footer">
+                <div id="ads" class="ads_slot"></div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

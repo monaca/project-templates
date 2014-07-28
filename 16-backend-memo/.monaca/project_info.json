@@ -1,0 +1,15 @@
+{
+    "plugins": [
+        "mobi.monaca.plugins.MonacaBackend"
+    ],
+    "framework_version": "2.9",
+    "title-ja": "",
+    "title-en": "Backend Memo",
+    "description-ja": "",
+    "description-en": "",
+    "category": "User Template",
+    "platform": [
+
+    ],
+    "name": "generated-1403834916-53aa7df1657e4dee4a9e6a7e"
+}

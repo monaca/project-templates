@@ -1,0 +1,8 @@
+<div class="page center" ng-controller="Profile_Ctrl">
+    <h3>Currently logged in as:</h3>
+    <h1>{{user_name}}</h1>
+    <br/>
+    <img width="100px" src='{{profile_pic}}'/>
+    <br/><br/><br/>
+    <ons-button type="cta" ng-click="ons.navigator.pushPage('list.html',{ title: 'Friends List' })">Show Friend List</ons-button>
+</div>

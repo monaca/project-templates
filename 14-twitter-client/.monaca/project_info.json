@@ -1,0 +1,15 @@
+{
+    "plugins": [
+        "mobi.monaca.plugins.ChildBrowser"
+    ],
+    "framework_version": "2.9",
+    "title-ja": "",
+    "title-en": "Twitter Client",
+    "description-ja": "",
+    "description-en": "",
+    "category": "User Template",
+    "platform": [
+
+    ],
+    "name": "generated-1403835800-5397b975657e4d153de9cb90"
+}

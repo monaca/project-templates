@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="%%%VERSION_CODE%%%" android:versionName="%%%VERSION_NAME%%%" package="%%%PACKAGE_NAME%%%">
+  <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="17"/>
+  <supports-screens android:anyDensity="true" android:largeScreens="true" android:resizeable="true" android:normalScreens="true" android:smallScreens="true"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+  <uses-feature android:name="android.hardware.camera" android:required="false"/>
+  <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+  <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+  <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+  <uses-feature android:name="android.hardware.location" android:required="false"/>
+  <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+  <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+  <application android:hardwareAccelerated="false" android:icon="@drawable/icon" android:label="%%%APPLICATION_NAME%%%" android:name="mobi.monaca.framework.MonacaApplication">
+    <activity android:name="mobi.monaca.framework.MonacaNotifActivity" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale">
+        </activity>
+    <activity android:name="mobi.monaca.framework.MonacaSScreenActivity" android:label="%%%APPLICATION_NAME%%%" android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="unspecified">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity android:name="mobi.monaca.framework.MonacaPageActivity" android:label="MonacaPageActivity" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|uiMode" android:screenOrientation="unspecified">
+        </activity>
+  </application>
+</manifest>
