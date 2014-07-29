@@ -1,6 +1,6 @@
 {
   "name": "monaca-core-utils",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Monaca core APIs necessary for running Monaca apps.",
   "main": "monaca-core-utils.js",
   "monaca" : {
