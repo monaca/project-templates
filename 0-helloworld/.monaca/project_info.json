@@ -19,5 +19,5 @@
       "org.apache.cordova.contacts",
       "org.apache.cordova.splashscreen",
       "org.apache.cordova.statusbar.StatusBar"
-        ]
+   ]
 }

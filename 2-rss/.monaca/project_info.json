@@ -13,5 +13,5 @@
         "org.apache.cordova.inappbrowser",
         "org.apache.cordova.statusbar.StatusBar",
         "org.apache.cordova.splashscreen"
-      ]
+   ]
 }
