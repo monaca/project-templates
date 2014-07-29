@@ -10,7 +10,6 @@
    "framework_version": "3.5",
    "plugins": [
       "mobi.monaca.plugins.Monaca",
-      "org.apache.cordova.splashscreen",
-      "org.apache.cordova.statusbar.StatusBar"
+      "org.apache.cordova.splashscreen"
    ]
 }
