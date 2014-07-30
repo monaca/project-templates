@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": null,
-    "description": null,
-    "version": null,
+    "name": "MyApp",
+    "description": "Description of the app",
+    "version": "0.1.0",
     "app": {
         "background": {
             "scripts": [
@@ -14,20 +14,15 @@
         "128": "icon.png"
     },
     "permissions": [
-
-    ],
-    "short_name": null,
-    "offline_enabled": false,
-    "optional_permissions": [
-
-    ],
-    "externally_connectable": {
-        "ids": [
-
-        ],
-        "matches": [
-
-        ],
-        "accepts_tls_channel_id": false
-    }
+        "clipboardWrite",
+        "clipboardRead",
+        {
+            "fileSystem": [
+                "write",
+                "retainEntries",
+                "directory"
+            ]
+        },
+        "unlimitedStorage"
+    ]
 }
