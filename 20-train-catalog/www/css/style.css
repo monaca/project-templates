@@ -1,0 +1,35 @@
+.tabbar .ui-btn .ui-btn-inner {
+    padding-top: 40px !important; 
+}
+
+.tabbar .ui-btn .ui-icon { 
+    width: 32px!important; 
+    height: 32px!important; 
+    margin-left: -16px !important; 
+    box-shadow: none!important; 
+    -moz-box-shadow: none!important; 
+    -webkit-box-shadow: none!important;
+    -webkit-border-radius: none !important;
+    border-radius: none !important; 
+}
+
+#train .ui-icon { 
+    background-image: url(../images/icon.png);
+    background-repeat: no-repeat;
+    background-size : 32px 32px;
+}
+
+#train-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 90%;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 3px #000;
+}
+    
+#credit {
+    text-align: right;
+    font-size: 90%;
+}

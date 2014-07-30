@@ -1,0 +1,11 @@
+{
+   "name": "facebook-client",
+   "title-ja": "Facebook Client",
+   "title-en": "Facebook Client",
+   "description-ja": "A sample app connecting to Facebook from Monaca by using Onsen UI and InAppBrowser.",
+   "description-en": "A sample app connecting to Facebook from Monaca by using Onsen UI and InAppBrowser.",
+   "category": "Sample App",
+   "platform": ["ios", "android"],
+   "num_screenshots": 1,
+   "preview_url": "https://monaca.github.io/project-templates/15-facebook-client/www/index.html"
+}
