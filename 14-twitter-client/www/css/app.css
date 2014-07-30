@@ -1,0 +1,96 @@
+.navigation-bar {
+  position: fixed;
+}
+.navi-fontsize {
+  font-size: 20px;
+}
+.navi-rightadjust {
+  padding: 0px 3px;
+}
+.margin-little {
+  margin: 8px;
+}
+.font-bold {
+font-weight: 500;
+}
+.width-full {
+  width: 100%;
+}
+.scroll-area {
+  margin-top: 44px;
+}
+.list-item-container {
+  line-height: 14px;
+  min-height: 14px;
+  font-size: 12px;
+}
+.border-bottom-less {
+  border-bottom: none;
+}
+.list-item-main {
+  padding: 10px 0px 10px 0px;
+}
+.list-item-main:after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size:0;
+  clear: both;
+  visibility:hidden;
+}
+.list-item-left {
+  float: left;
+  width: 60px;
+}
+/*
+.list-item-right {
+  float: left;
+}
+*/
+.list-item-face {
+  width: 40px;
+  height: 40px;
+}
+.list-item-name {
+  line-height: 16px;
+  min-height: 16px;
+}
+.lucent {
+  opacity: 0.4;
+}
+.list-item-text {
+  line-height: 14px;
+  min-height: 14px;
+}
+.list-item-text-image {
+  margin-top: 5px;
+}
+.list-item-time {
+  position: absolute;
+  right: 10px;
+  top: 8px; 
+  line-height: 26px;
+  opacity: 0.4;
+}
+.list-item-button1 {
+  position: absolute;
+  left: 60px;
+  bottom: 4px;
+  opacity: 0.4;
+}
+.list-item-button2 {
+  position: absolute;
+  margin: auto;
+  bottom: 4px;
+  opacity: 0.4;
+}
+.list-item-button3 {
+  position: absolute;
+  right: 60px;
+  bottom: 4px;
+  opacity: 0.4;
+}
+
+#btnLogin {
+    padding-top : 20px;
+}

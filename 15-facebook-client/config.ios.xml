@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="com.example.monaca" version="1.0.0">
+  <name>Monaca</name>
+  <description>Monaca App</description>
+  <author/>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <preference name="FadeSplashScreenDuration" value=".25"/>
+  
+  <preference name="BackupWebStorage" value="cloud"/>
+  <preference name="HideKeyboardFormAccessoryBar" value="false"/>
+  <preference name="AllowInlineMediaPlayback" value="false"/>
+  <preference name="KeyboardDisplayRequiresUserAction" value="true"/>
+  <preference name="KeyboardShrinksView" value="false"/>
+  <preference name="MediaPlaybackRequiresUserAction" value="false"/>
+  <preference name="SuppressesIncrementalRendering" value="false"/>
+  <preference name="TopActivityIndicator" value="gray"/>
+  
+  
+  <feature name="Geolocation">
+    <param name="ios-package" value="CDVLocation"/>
+  </feature>
+  <feature name="Device">
+    <param name="ios-package" value="CDVDevice"/>
+  </feature>
+  <feature name="Accelerometer">
+    <param name="ios-package" value="CDVAccelerometer"/>
+  </feature>
+  <feature name="Compass">
+    <param name="ios-package" value="CDVLocation"/>
+  </feature>
+  <feature name="Media">
+    <param name="ios-package" value="CDVSound"/>
+  </feature>
+  <feature name="Camera">
+    <param name="ios-package" value="CDVCamera"/>
+  </feature>
+  <feature name="Contacts">
+    <param name="ios-package" value="CDVContacts"/>
+  </feature>
+  <feature name="File">
+    <param name="ios-package" value="CDVFile"/>
+  </feature>
+  <feature name="NetworkStatus">
+    <param name="ios-package" value="CDVConnection"/>
+  </feature>
+  <feature name="Notification">
+    <param name="ios-package" value="CDVNotification"/>
+  </feature>
+  <feature name="FileTransfer">
+    <param name="ios-package" value="CDVFileTransfer"/>
+  </feature>
+  <feature name="Capture">
+    <param name="ios-package" value="CDVCapture"/>
+  </feature>
+  <feature name="Battery">
+    <param name="ios-package" value="CDVBattery"/>
+  </feature>
+  <feature name="SplashScreen">
+    <param name="ios-package" value="CDVSplashScreen"/>
+  </feature>
+  <feature name="Echo">
+    <param name="ios-package" value="CDVEcho"/>
+  </feature>
+  <feature name="Globalization">
+    <param name="ios-package" value="CDVGlobalization"/>
+  </feature>
+  <feature name="InAppBrowser">
+    <param name="ios-package" value="CDVInAppBrowser"/>
+  </feature>
+  <feature name="Logger">
+    <param name="ios-package" value="CDVLogger"/>
+  </feature>
+  <feature name="LocalStorage">
+    <param name="ios-package" value="CDVLocalStorage"/>
+  </feature>
+  <feature name="mobi.monaca.nativecomponent">
+    <param name="ios-package" value="MFPGNativeComponent"/>
+  </feature>
+  <feature name="Transit">
+    <param name="ios-package" value="MFTransitPlugin"/>
+  </feature>
+  <feature name="ChildBrowserCommand">
+    <param name="ios-package" value="ChildBrowserCommand"/>
+  </feature>
+  <feature name="org.apache.cordova.barcodeScanner">
+    <param name="ios-package" value="CDVBarcodeScanner"/>
+  </feature>
+  <feature name="DatePicker">
+    <param name="ios-package" value="DatePicker"/>
+  </feature>
+  <feature name="Monaca">
+    <param name="ios-package" value="MFDevicePlugin"/>
+  </feature>
+<preference name="monaca:iosApplicationName" value="Monaca with Facebook"/><preference name="monaca:targetFamilyiPhone" value="1"/><preference name="monaca:targetFamilyiPad" value="1"/><preference name="AutoHideSplashScreen" value="true"/><preference name="FadeSplashScreen" value="true"/><preference name="ShowSplashScreenSpinner" value="false"/><access origin="*"/><preference name="DisallowOverscroll" value="true"/><preference name="EnableViewportScale" value="true"/></widget>

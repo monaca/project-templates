@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "MyApp",
+    "description": "Description of the app",
+    "version": "0.1.0",
+    "app": {
+        "background": {
+            "scripts": [
+                "background.js"
+            ]
+        }
+    },
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": [
+        "clipboardWrite",
+        "clipboardRead",
+        {
+            "fileSystem": [
+                "write",
+                "retainEntries",
+                "directory"
+            ]
+        },
+        "unlimitedStorage"
+    ]
+}

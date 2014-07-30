@@ -1,0 +1,11 @@
+{
+   "name": "clock-app",
+   "title-ja": "Clock App",
+   "title-en": "Clock App",
+   "description-ja": "A simple clock app displaying current Date and time.",
+   "description-en": "A simple clock app displaying current Date and time.",
+   "category": "Sample App",
+   "platform": ["ios", "android"],
+   "num_screenshots": 1,
+   "preview_url": "https://monaca.github.io/project-templates/21-clock-app/www/index.html"
+}

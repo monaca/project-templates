@@ -1,0 +1,11 @@
+{
+   "name": "twitter-client",
+   "title-ja": "Twitter Client",
+   "title-en": "Twitter Client",
+   "description-ja": "A sample app showing the Twitter Timeline of a specifice user.",
+   "description-en": "A sample app showing the Twitter Timeline of a specifice user.",
+   "category": "Sample App",
+   "platform": ["ios", "android"],
+   "num_screenshots": 1,
+   "preview_url": "https://monaca.github.io/project-templates/14-twitter-client/www/index.html"
+}
