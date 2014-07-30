@@ -17,6 +17,7 @@
       "org.apache.cordova.network-information",
       "org.apache.cordova.vibration",
       "org.apache.cordova.contacts",
-      "org.apache.cordova.splashscreen"
+      "org.apache.cordova.splashscreen",
+      "org.apache.cordova.device"
    ]
 }
