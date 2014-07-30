@@ -2,10 +2,14 @@
    "name": "ons-minimum",
    "title-ja": "Onsen UI最小限のテンプレート",
    "title-en": "Onsen UI Minimum Template",
-   "description-ja": "Onsen UIを使用したMonacaアプリのひな形としてお使いいただけます。",
+   "description-ja": "Onsen UIを使用したMonacaアプリのひな形です。",
    "description-en": "Onsen UI Minimum template for Monaca.",
    "category": "Onsen UI",
    "platform": ["ios", "android"],
    "preview_url": "https://monaca.github.io/project-templates/7-ons-minimum/www/index.html",
-   "framework_version": "2.9"
+   "framework_version": "3.5",
+   "plugins": [
+      "mobi.monaca.plugins.Monaca",
+      "org.apache.cordova.splashscreen"
+   ]
 }

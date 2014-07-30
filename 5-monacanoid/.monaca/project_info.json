@@ -2,9 +2,14 @@
    "name": "monacanoid",
    "title-ja": "ブロック崩し",
    "title-en": "Break the Bricks",
-   "description-ja": "enchant.jsを用いたブロック崩しゲームです。難易度やシナリオはプレイ後ご自由に調整してください。",
-   "description-en": "This is a sample game application using motion sensor. Feel free to modify the source code to adjust game difficulty.",
+   "description-ja": "pixi.jsを用いたブロック崩しゲームです。難易度やシナリオはプレイ後ご自由に調整してください。",
+   "description-en": "This is a sample game application using pixi.js. Feel free to modify the source code to adjust game difficulty.",
    "category": "Sample App",
    "platform": ["ios", "android"],
-   "preview_url": "https://monaca.github.io/project-templates/5-monacanoid/www/index.html"
+   "preview_url": "https://monaca.github.io/project-templates/5-monacanoid/www/index.html",
+   "framework_version": "3.5",
+   "plugins": [
+      "mobi.monaca.plugins.Monaca",
+      "org.apache.cordova.splashscreen"
+   ]
 }

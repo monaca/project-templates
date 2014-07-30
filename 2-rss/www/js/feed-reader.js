@@ -11,10 +11,10 @@ var Feed = Feed || {
     $('#feed-list').on('click', 'li', function() {
       var url = $(this).data('link');
       if (/^http/.test(url)) {
-        window.plugins.childBrowser.onClose = function() {};
-        window.plugins.childBrowser.showWebPage(url);
+        var ref = window.open(url, '_blank', 'location=yes');
+        ref.addEventListener("exit", function() {});
       } else {
-        alert('Invalid URL.');
+       alert('Invalid URL.');
       }
     });
   },

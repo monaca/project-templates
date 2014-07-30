@@ -1,9 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "Hello World",
-    "short_name": "Hello World",
-    "description": "Hello World App",
-    "version": "1.0.0",
+    "name": "MyApp",
+    "description": "Description of the app",
+    "version": "0.1.0",
     "app": {
         "background": {
             "scripts": [
@@ -15,21 +14,15 @@
         "128": "icon.png"
     },
     "permissions": [
-        "*://*.monaca.mobi/*",
         "clipboardWrite",
         "clipboardRead",
-        "unlimitedStorage",
-        "storage"
-    ],
-    "offline_enabled": false,
-    "optional_permissions": null,
-    "externally_connectable": {
-        "ids": [
-            ""
-        ],
-        "matches": [
-            ""
-        ],
-        "accepts_tls_channel_id": false
-    }
+        {
+            "fileSystem": [
+                "write",
+                "retainEntries",
+                "directory"
+            ]
+        },
+        "unlimitedStorage"
+    ]
 }
