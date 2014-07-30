@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=650, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     
@@ -26,16 +26,23 @@
     </script>
     <style>
         body {
-            background: url("images/omikuji-bg.png") 100% 100%;
+            background-image: url("images/omikuji-bg.png");
+            background-size: cover;
+            background-repeat: no-repeat;
             margin: 0;
             padding: 0;
             text-align: center;
         }
         #hako {
-            position: absolute;
-            width: 100%;
-            top: 10%;
+            margin-top: 15%;
+            margin-left : 0;
+            margin-right : 0;
         }
+        
+        img {
+           width: 70%; 
+        }
+
         #bottombar {
             position: absolute;
             bottom: 30px;
