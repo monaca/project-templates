@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <!-- Login Page -->
+  <div data-role="page" id="LoginPage">
+    <header data-role="header" data-position="fixed">
+      <h1>Backend Memo</h1>
+    </header>
+      <section data-role="content">
+      <h1>Sign in</h1>
+      Email:
+        <input type="text" id="login_email">
+      Password:
+        <input type="password" id="login_password">
+      New to Backend Memo?
+        <a href="#RegisterPage" data-role="button" data-mini="true" data-inline="true" data-theme="b">Register</a>
+        <a href="#" id="LoginBtn" data-role="button" data-inline="false" data-theme="b">Login</a>
+      </section>
+  </div>
+
+  <!-- Register Page -->
+  <div data-role="page" id="RegisterPage">
+    <header data-role="header" data-position="fixed">
+      <h1>Backend Memo</h1>
+    </header>
+      <section data-role="content">
+      <h1>Sign up</h1>
+      Email:
+        <input type="text" id="reg_email">
+      Password:
+        <input type="password" id="reg_password">
+        <a href="#" id="RegisterBtn" data-role="button" data-inline="false" data-theme="b">Register</a>
+      </section>
+  </div>
+
+  <!-- List Page -->
+  <div data-role="page" id="ListPage">
+    <header data-role="header" data-position="fixed">
+      <h1>Backend Memo</h1>
+      <a href="#AddPage" data-theme="b" data-icon="plus" class="ui-btn-right">Add</a>
+      <a href="#yesNoDialog_logout" class="ui-btn-left" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop" data-theme="b">Logout</a>
+    </header>
+    <section data-role="content">
+      <ul id="TopListView" data-role="listview"
+        data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-split-icon="delete">
+      </ul>
+
+      <!--Dialog box confirming logout-->
+      <div data-role="popup" id="yesNoDialog_logout" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+        <div data-role="header" data-theme="a" class="ui-corner-top">
+          <h1>Confirmation:</h1>
+        </div>
+        <div align="middle" data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+          <h3 class="ui-title">
+          <p>Are you sure you want to logout?</p>
+          <a href="#" id="YesBtn_logout" data-role="button" data-inline="true" data-transition="flow" data-theme="b">Yes</a>
+          <a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">No</a>
+        </div>
+      </div>
+
+      <!--Dialog box confirming delete-->
+      <div data-role="popup" id="yesNoDialog_delete" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+        <div data-role="header" data-theme="a" class="ui-corner-top">
+          <h1>Confirmation:</h1>
+        </div>
+        <div align="middle" data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+          <h3 class="ui-title">
+          <p>Are you sure you want to delete this memo?</p>
+          <a href="#" id="YesBtn_delete" data-role="button" data-inline="true" data-transition="flow" data-theme="b">Yes</a>
+          <a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">No</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Add Memo Page -->
+  <div data-role="page" id="AddPage">
+    <header data-role="header" data-position="fixed">
+      <a data-role="button" data-theme="b" data-rel="back" data-icon="back">Back</a>
+      <h1>Add Memo</h1>
+    </header>
+    <section data-role="content">
+      <label for="title">Title:</label>
+      <input type="text" id="title">
+      <label for="Memo">Memo:</label>
+      <textarea id="content" style="height: 8em"></textarea>
+      <a href="#" data-rel="dialog" data-transition="pop" data-theme="b" data-role="button" data-icon="check" id="SaveBtn">Save</a>
+
+      <!--Dialog box of successful adding-->
+      <div data-role="popup" id="okDialog_add" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+        <div align="middle" data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+          <p>A memo is successfully added!</p>
+          <a href="#" data-role="button" id="OkBtn" data-inline="true" data-transition="flow" data-theme="b">OK</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Detail Page -->
+  <div data-role="page" id="ShowPage">
+    <header data-role="header" data-position="fixed">
+      <a data-role="button" data-theme="b" data-rel="back" data-icon="back">Back</a>
+      <a href="#" data-theme="b" class="ui-btn-right" id="EditBtn">Edit</a>
+      <h1 id="title_show"></h1>
+    </header>
+    <section data-role="content">
+      <p id="content_show"></p>
+    </section>
+  </div>
+
+   <!-- Edit Memo Page -->
+  <div data-role="page" id="EditPage" data-cache="never">
+    <header data-role="header" data-position="fixed">
+      <a data-role="button" data-theme="b" data-rel="back" data-icon="back">Back</a>
+      <h1>Edit Memo</h1>
+    </header>
+    <section data-role="content">
+      <label for="title_edit">Title:</label>
+      <input type="text" id="title_edit">
+      <label for="Memo">Memo:</label>
+      <textarea id="content_edit" style="height: 8em"></textarea>
+      <a href="#" data-theme="b" data-role="button" data-icon="check" id="UpdateBtn">Update</a>
+
+     <!--Dialog box of successful updating-->
+      <div data-role="popup" id="okDialog_edit" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+        <div align="middle" data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+          <p>A memo is successfully updated!</p>
+          <a href="#" data-role="button" id="OkBtn" data-inline="true" data-transition="flow" data-theme="b">OK</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

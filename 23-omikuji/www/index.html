@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=650, user-scalable=no">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    
+    <script>
+        function omikuji (){
+            var dice = Math.floor(Math.random() * 3);
+            var image_name;
+            if (dice == 0) {
+                image_name = "omikuji-daikichi.png";
+            } else if  (dice == 1) {
+                image_name = "omikuji-chuukichi.png";
+            } else {
+                image_name = "omikuji-hei.png";
+            }
+        
+            document.getElementById("saisyo").style["display"] = "none";
+            document.getElementById("kekka").src = "images/" + image_name;
+            document.getElementById("kekka").style["display"] = "inline";
+            document.getElementById("button").src = "images/omikuji-btn-yarinaosu.png";
+        }
+    </script>
+    <style>
+        body {
+            background: url("images/omikuji-bg.png") 100% 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        #hako {
+            position: absolute;
+            width: 100%;
+            top: 10%;
+        }
+        #bottombar {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="hako">
+        <img id="saisyo" src="images/omikuji-box.png" />
+        <img id="kekka" style="display : none;"/>
+    </div>
+    <div id="bottombar">
+        <img id="button" src="images/omikuji-btn-hajimeru.png" onclick="omikuji()">
+    </div>
+</body>
+</html>

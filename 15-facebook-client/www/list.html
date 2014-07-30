@@ -1,0 +1,8 @@
+<div class="page center" ng-controller="List_Ctrl">
+    <ons-list align="left">
+    <p align="center">Showing 20 of {{len}} friends.</p>
+        <ons-list-item style="padding-left:10%" ng-repeat="friend in friends">
+            <img src='{{friend.pic_src}}'/><span style="padding-left:5%">{{friend.name}}</span>
+        </ons-list-item>
+    </ons-list>
+</div>

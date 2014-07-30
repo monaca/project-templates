@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>ja_JP</string>
+  <key>CFBundleDisplayName</key>
+  <string>${APP_NAME}</string>
+  <key>CFBundleExecutable</key>
+  <string>${EXECUTABLE_NAME}</string>
+  <key>CFBundleIconFile</key>
+  <string>Icon.png</string>
+  <key>CFBundleIconFiles</key>
+  <array>
+    <string>Icon-60</string>
+    <string>Icon.png</string>
+    <string>Icon@2x.png</string>
+    <string>Icon-72.png</string>
+  </array>
+  <key>CFBundleIconFiles~ipad</key>
+  <array>
+    <string>Icon-76</string>
+    <string>Icon-60</string>
+    <string>Icon.png</string>
+    <string>Icon@2x.png</string>
+    <string>Icon-72.png</string>
+  </array>
+  <key>UILaunchImages~ipad</key>
+  <array>
+    <dict>
+      <key>UILaunchImageMinimumOSVersion</key>
+      <string>7.0</string>
+      <key>UILaunchImageName</key>
+      <string>Default-Landscape-768h</string>
+      <key>UILaunchImageOrientation</key>
+      <string>Landscape</string>
+      <key>UILaunchImageSize</key>
+      <string>{768, 1024}</string>
+    </dict>
+    <dict>
+      <key>UILaunchImageMinimumOSVersion</key>
+      <string>7.0</string>
+      <key>UILaunchImageName</key>
+      <string>Default-Portrait-1024h</string>
+      <key>UILaunchImageOrientation</key>
+      <string>Portrait</string>
+      <key>UILaunchImageSize</key>
+      <string>{768, 1024}</string>
+    </dict>
+  </array>
+  <key>CFBundleIdentifier</key>
+  <string>${APP_ID}</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleName</key>
+  <string>${APP_NAME}</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>${VERSION}</string>
+  <key>CFBundleSignature</key>
+  <string>????</string>
+  <key>CFBundleVersion</key>
+  <string>1.0</string>
+  <key>LSRequiresIPhoneOS</key>
+  <true/>
+  <key>UIStatusBarHidden</key>
+  <true/>
+  <key>UIViewControllerBasedStatusBarAppearance</key>
+  <true/>
+  <key>UISupportedInterfaceOrientations</key>
+  <array>
+    <string>UIInterfaceOrientationPortrait</string>
+    <string>UIInterfaceOrientationLandscapeLeft</string>
+    <string>UIInterfaceOrientationLandscapeRight</string>
+  </array>
+  <key>UISupportedInterfaceOrientations~ipad</key>
+  <array>
+    <string>UIInterfaceOrientationPortrait</string>
+    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+    <string>UIInterfaceOrientationLandscapeLeft</string>
+    <string>UIInterfaceOrientationLandscapeRight</string>
+  </array>
+</dict>
+</plist>
