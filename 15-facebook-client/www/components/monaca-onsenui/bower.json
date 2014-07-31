@@ -1,23 +1,18 @@
 {
   "name": "monaca-onsenui",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Dist version of OnsenUI for Monaca Component.",
   "main": "onsenui.js",
   "monaca" : {
     "main": [
-      "js/onsenui_all.js"
+      "js/onsenui_all.js",
+      "css/onsenui.css"
     ],
     "option": [
-      "css/topcoat-mobile-dark.css",
-      "css/topcoat-mobile-light.css",
-      "css/topcoat-mobile-onsen-android4_4.css",
-      "css/topcoat-mobile-onsen-blue.css",
-      "css/topcoat-mobile-onsen-green.css",
-      "css/topcoat-mobile-onsen-ios7.css",
-      "css/topcoat-mobile-onsen-orange.css",
-      "css/topcoat-mobile-onsen-pink.css",
-      "css/topcoat-mobile-onsen-purple.css",
-      "css/topcoat-mobile-onsen-yellow.css"
+      "css/onsen-css-components.css",
+      "css/onsen-css-components-dark.css",
+      "css/onsen-css-components-red.css",
+      "css/onsen-css-components-purple.css"
     ]
   },
   "keywords": [

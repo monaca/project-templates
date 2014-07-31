@@ -18,7 +18,7 @@ function onRegisterBtn()
 {
   var email = $("#reg_email").val();
   var password = $("#reg_password").val();
-
+console.log(MC);
   MC.User.register(email, password)
     .done(function()
     {
@@ -27,6 +27,7 @@ function onRegisterBtn()
     })
     .fail(function(err)
     {
+        console.log('FAILED');
       alert('Registration failed!');
       console.error(JSON.stringify(err));
     });

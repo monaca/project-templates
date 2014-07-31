@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     
-    <link rel="stylesheet" href="css/style.css">
+    <script src="js/inmobi.js"></script>
     <script>
         var inmobi_conf = {
-            siteid : "", // your Property ID
+            siteid : "c1849be9429a43408a1bf12254fc1a97", // your Property ID
             slot: 15,
             test: true,
             manual: true,
@@ -25,10 +25,8 @@
         document.addEventListener("deviceready", onDeviceReady, false);
 
         function onDeviceReady(){
-            console.log('device ready');
-            $.getScript("js/inmobi.js", function(){
-                showAds();
-            });
+            console.log('device is ready');
+            showAds();
         }
 
         function showAds(){
@@ -38,25 +36,17 @@
     </script>
 </head>
 
-<body>
-  
+<body> 
     <div data-role="page">
         <header data-role="header" data-position="fixed">
           <h1>Inmobi Client</h1>
         </header>
-
-        <section data-role="content">
-            <div id="wrap">
-                <div id="main">
-                    <img src="images/logo.png" width="300px">
-                </div>
-            </div>
-
-            <div id="footer">
-                <div id="ads" class="ads_slot"></div>
-            </div>
-        </section>
+        <div data-role="content">
+            <img src="images/logo.png" width="300px">
+        </div>
+        <div data-role="footer" data-position="fixed"> 
+            <div id="ads"></div>
+        </div>
     </div>
-
 </body>
 </html>

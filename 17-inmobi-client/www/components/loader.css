@@ -1,5 +1,5 @@
 /**
- * This is a auto-generated code by Monaca HTML5 component manager.
+ * This is an auto-generated code by Monaca JS/CSS Components.
  * Please do not edit by hand.
  */
 
@@ -12,4 +12,10 @@
 /*** <Start:monaca-jquery-mobile LoadCss:"components/monaca-jquery-mobile/css/jquery.mobile.css"> ***/
 @import url("monaca-jquery-mobile/css/jquery.mobile.css");
 /*** <End:monaca-jquery-mobile LoadCss:"components/monaca-jquery-mobile/css/jquery.mobile.css"> ***/
+/*** <Start:monaca-jquery-mobile LoadCss:"components/monaca-jquery-mobile/css/jquery.mobile.structure.css"> ***/
+@import url("monaca-jquery-mobile/css/jquery.mobile.structure.css");
+/*** <End:monaca-jquery-mobile LoadCss:"components/monaca-jquery-mobile/css/jquery.mobile.structure.css"> ***/
+/*** <Start:monaca-jquery-mobile LoadCss:"components/monaca-jquery-mobile/css/jquery.mobile.theme.css"> ***/
+@import url("monaca-jquery-mobile/css/jquery.mobile.theme.css");
+/*** <End:monaca-jquery-mobile LoadCss:"components/monaca-jquery-mobile/css/jquery.mobile.theme.css"> ***/
 /*** <End:monaca-jquery-mobile> ***/

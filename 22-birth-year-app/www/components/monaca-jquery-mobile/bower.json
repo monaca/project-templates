@@ -6,6 +6,11 @@
   "monaca" : {
     "main": [
       "jquery.mobile.js"
+    ],
+    "option": [
+      "css/jquery.mobile.css",
+      "css/jquery.mobile.structure.css",
+      "css/jquery.mobile.theme.css"
     ]
   },
   "dependencies": {
