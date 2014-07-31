@@ -8,13 +8,14 @@
     <script src="components/loader.js"></script>    
     <link rel="stylesheet" href="components/loader.css"> 
     
-    
     <link rel="stylesheet" href="css/onsen-css-components-default.css">
     <link rel="stylesheet" href="css/app.css">
+    
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="js/jsoauth.js"></script>
     <script src="js/underscore.js"></script>
     <script>
+   // jQuery(function(){    
       // URL to be redirected after the OAuth authentication is done
       var callbackUrl = "http://example.com";
       
@@ -44,7 +45,9 @@
       // When the user logs in, obtain a verifier and get Access Token
       function showAuthWindow(url) {
         var browser = window.open(url, '_blank', 'location=yes');
+        
         browser.addEventListener('loadstart', function(event) {
+            
           if (event.url.indexOf(callbackUrl) >= 0) {
             event.url.match(/oauth_verifier=([a-zA-Z0-9]+)/);
             oauth.setVerifier(RegExp.$1);
@@ -56,6 +59,7 @@
             });
           }
         });
+        
       }
       
       // Call API and get a specific user's timeline
@@ -77,6 +81,7 @@
           document.getElementById("item-list").innerHTML += template(item);
         });
       }
+//});
     </script>
   </head>
   <body class="page">

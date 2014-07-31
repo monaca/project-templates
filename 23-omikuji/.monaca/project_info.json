@@ -1,11 +1,16 @@
 {
-   "name": "omikuji",
-   "title-ja": "Omikuji Fortune Telling App",
-   "title-en": "Omikuji Fortune Telling App",
-   "description-ja": "A Japanese Fortune telling application.",
-   "description-en": "A Japanese Fortune telling application.",
-   "category": "Sample App",
-   "platform": ["ios", "android"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/23-omikuji/www/index.html"
+    "plugins": [
+        "mobi.monaca.plugins.Monaca",
+        "org.apache.cordova.splashscreen"
+    ],
+    "framework_version": "3.5",
+    "title-ja": "",
+    "title-en": "Omikuji",
+    "description-ja": "",
+    "description-en": "",
+    "category": "User Template",
+    "platform": [
+
+    ],
+    "name": "generated-1406811724-53da3df57e21938104b7610b"
 }

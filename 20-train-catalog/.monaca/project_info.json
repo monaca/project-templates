@@ -1,11 +1,16 @@
 {
-   "name": "train-catalog",
-   "title-ja": "Train Catalog",
-   "title-en": "Train Catalog",
-   "description-ja": "A train catalog app displaying the types trains towards Tokaido and Tohoku areas.",
-   "description-en": "A train catalog app displaying the types trains towards Tokaido and Tohoku areas.",
-   "category": "Sample App",
-   "platform": ["ios", "android"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/20-train-catalog/www/index.html"
+    "plugins": [
+        "mobi.monaca.plugins.Monaca",
+        "org.apache.cordova.splashscreen"
+    ],
+    "framework_version": "3.5",
+    "title-ja": "",
+    "title-en": "Train Catalog",
+    "description-ja": "",
+    "description-en": "",
+    "category": "User Template",
+    "platform": [
+
+    ],
+    "name": "generated-1406810698-53da39a77e219332015f3352"
 }

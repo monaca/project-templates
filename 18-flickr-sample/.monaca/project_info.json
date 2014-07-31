@@ -1,11 +1,16 @@
 {
-   "name": "flickr-sample",
-   "title-ja": "Flickr Sample",
-   "title-en": "Flickr Sample",
-   "description-ja": "A sample app retrieving pictures from Flickr and displaying them as a slide show.",
-   "description-en": "A sample app retrieving pictures from Flickr and displaying them as a slide show.",
-   "category": "Sample App",
-   "platform": ["ios", "android"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/18-flickr-sample/www/index.html"
+    "plugins": [
+        "mobi.monaca.plugins.Monaca",
+        "org.apache.cordova.splashscreen"
+    ],
+    "framework_version": "3.5",
+    "title-ja": "",
+    "title-en": "Flickr",
+    "description-ja": "",
+    "description-en": "",
+    "category": "User Template",
+    "platform": [
+
+    ],
+    "name": "generated-1406810988-53da3a6a7e21935715b01cab"
 }

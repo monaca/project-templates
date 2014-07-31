@@ -1,11 +1,17 @@
 {
-   "name": "backend-memo",
-   "title-ja": "Backend Memo",
-   "title-en": "Backend Memo",
-   "description-ja": "A simple memo app using Monaca Backend API.",
-   "description-en": "A simple memo app using Monaca Backend API.",
-   "category": "Sample App",
-   "platform": ["ios", "android"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/16-backend-memo/www/index.html"
+    "plugins": [
+        "mobi.monaca.plugins.Monaca",
+        "org.apache.cordova.splashscreen",
+        "mobi.monaca.plugins.MonacaBackend"
+    ],
+    "framework_version": "3.5",
+    "title-ja": "",
+    "title-en": "backend",
+    "description-ja": "",
+    "description-en": "",
+    "category": "User Template",
+    "platform": [
+
+    ],
+    "name": "generated-1406812072-53da325b7e21938604aa9d70"
 }
