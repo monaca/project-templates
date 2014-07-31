@@ -1431,6 +1431,12 @@ window.monaca.cloud = window.monaca.cloud || {};
 
 
 
+
+
+
+
+
+
 /*** <Start:monaca-onsenui> ***/
 /*** <Start:monaca-onsenui LoadJs:"components/monaca-onsenui/js/onsenui_all.js"> ***/
 /*! onsenui - v1.1.1 - 2014-07-31 */
@@ -27281,7 +27287,7 @@ limitations under the License.
        * Show modal view.
        */
       show: function() {
-        this._element.css('display', null);
+        this._element.css('display', 'table');
         $onsen.backButtonHandlerStack.push(this._backButtonHandler);
       },
 

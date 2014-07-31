@@ -36,7 +36,7 @@
   "_resolution": {
     "type": "version",
     "tag": "1.1.1",
-    "commit": "11958617b5421d7f845f2fd4423ccddae65ad1ad"
+    "commit": "f914c709a684dc510759da82282b6edda2d1a47a"
   },
   "_source": "git://github.com/monaca/monaca-component-onsenui.git",
   "_target": "~1.1.1",
