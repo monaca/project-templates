@@ -1,17 +1,16 @@
 {
-    "plugins": [
+   "name": "twitter-client",
+   "title-ja": "Twitter Client",
+   "title-en": "Twitter Client",
+   "description-ja": "A sample app showing the Twitter Timeline of a specifice user.",
+   "description-en": "A sample app showing the Twitter Timeline of a specifice user.",
+   "category": "Sample App",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/14-twitter-client/www/index.html",
+   "framework_version": "3.5",
+   "plugins": [
         "mobi.monaca.plugins.Monaca",
         "org.apache.cordova.splashscreen",
         "org.apache.cordova.inappbrowser"
-    ],
-    "framework_version": "3.5",
-    "title-ja": "",
-    "title-en": "Twitter Client",
-    "description-ja": "",
-    "description-en": "",
-    "category": "User Template",
-    "platform": [
-
-    ],
-    "name": "generated-1406808094-53da207cfd173463250f91f0"
+    ]
 }
