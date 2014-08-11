@@ -1,16 +1,15 @@
 {
-    "plugins": [
+   "name": "inmobi-client",
+   "title-ja": "Inmobi Client",
+   "title-en": "Inmobi Client",
+   "description-ja": "A sample app integrating the mobile ads network Inmobi with Monaca.",
+   "description-en": "A sample app integrating the mobile ads network Inmobi with Monaca.",
+   "category": "Sample App",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/17-inmobi-client/www/index.html",
+   "framework_version": "3.5",
+   "plugins": [
         "mobi.monaca.plugins.Monaca",
         "org.apache.cordova.splashscreen"
-    ],
-    "framework_version": "3.5",
-    "title-ja": "",
-    "title-en": "Inmobi Client",
-    "description-ja": "",
-    "description-en": "",
-    "category": "User Template",
-    "platform": [
-
-    ],
-    "name": "generated-1406809327-53da30457e21932b54fb954d"
+    ]
 }

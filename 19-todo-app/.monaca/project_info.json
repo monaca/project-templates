@@ -1,16 +1,15 @@
 {
-    "plugins": [
+   "name": "todo-app",
+   "title-ja": "TODO App",
+   "title-en": "TODO App",
+   "description-ja": "A simple app allowing you to add a todo list.",
+   "description-en": "A simple app allowing you to add a todo list.",
+   "category": "Sample App",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/19-todo-app/www/index.html",
+   "framework_version": "3.5",
+   "plugins": [
         "mobi.monaca.plugins.Monaca",
         "org.apache.cordova.splashscreen"
-    ],
-    "framework_version": "3.5",
-    "title-ja": "",
-    "title-en": "Todo App",
-    "description-ja": "",
-    "description-en": "",
-    "category": "User Template",
-    "platform": [
-
-    ],
-    "name": "generated-1406811602-53da3c5c7e21933e0351e286"
+    ]
 }

@@ -1,17 +1,16 @@
 {
-    "plugins": [
+   "name": "facebook-client",
+   "title-ja": "Facebook Client",
+   "title-en": "Facebook Client",
+   "description-ja": "A sample app connecting to Facebook from Monaca by using Onsen UI and InAppBrowser.",
+   "description-en": "A sample app connecting to Facebook from Monaca by using Onsen UI and InAppBrowser.",
+   "category": "Sample App",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/15-facebook-client/www/index.html",
+   "framework_version": "3.5",
+   "plugins": [
         "mobi.monaca.plugins.Monaca",
         "org.apache.cordova.splashscreen",
         "org.apache.cordova.inappbrowser"
-    ],
-    "framework_version": "3.5",
-    "title-ja": "",
-    "title-en": "Facebook Client",
-    "description-ja": "",
-    "description-en": "",
-    "category": "User Template",
-    "platform": [
-
-    ],
-    "name": "generated-1406804021-53d9bc837e2193d20c0d4581"
+    ]
 }
