@@ -1,16 +1,15 @@
 {
-    "plugins": [
+   "name": "clock-app",
+   "title-ja": "Clock App",
+   "title-en": "Clock App",
+   "description-ja": "A simple clock app displaying current Date and time.",
+   "description-en": "A simple clock app displaying current Date and time.",
+   "category": "Sample App",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/21-clock-app/www/index.html",
+   "framework_version": "3.5",
+   "plugins": [
         "mobi.monaca.plugins.Monaca",
         "org.apache.cordova.splashscreen"
-    ],
-    "framework_version": "3.5",
-    "title-ja": "",
-    "title-en": "Clock App",
-    "description-ja": "",
-    "description-en": "",
-    "category": "User Template",
-    "platform": [
-
-    ],
-    "name": "generated-1406811200-53da3b8a7e2193a7096b90fb"
+    ]
 }

@@ -18,6 +18,7 @@
   <preference name="monaca:WebViewEngine" value="default"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="1000"/>
+  <preference name="Orientation" value="default"/>
 
   <feature name="App">
     <param name="android-package" value="org.apache.cordova.App" />
