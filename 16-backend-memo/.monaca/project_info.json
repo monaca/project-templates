@@ -11,6 +11,7 @@
    "plugins": [
         "mobi.monaca.plugins.Monaca",
         "org.apache.cordova.splashscreen",
-        "mobi.monaca.plugins.MonacaBackend"
+        "mobi.monaca.plugins.MonacaBackend",
+        "org.apache.cordova.statusbar"
     ]
 }
