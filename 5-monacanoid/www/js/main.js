@@ -86,7 +86,7 @@ var BB = {
                 break;
         }
         
-        var texture = PIXI.Texture.fromImage(imgPath["block_" + color]);
+        var texture = PIXI.Texture.fromImage(imgPath["block_" + color], false);
         var block = new PIXI.Sprite(texture);
      
         block.anchor.x = 0.5;
@@ -108,7 +108,7 @@ var BB = {
     
     // Create a ball and add it to PIXI.Stage
     addBall: function() {
-        var texture = PIXI.Texture.fromImage(imgPath["ball"]);
+        var texture = PIXI.Texture.fromImage(imgPath["ball"], false);
         var ball = new PIXI.Sprite(texture);
      
         ball.anchor.x = 0.5;
@@ -131,7 +131,7 @@ var BB = {
     
     // Create a paddle and add it to PIXI.Stage
     addPaddle: function() {
-        var texture = PIXI.Texture.fromImage(imgPath["paddle"]);
+        var texture = PIXI.Texture.fromImage(imgPath["paddle"], false);
         BB.paddle = new PIXI.Sprite(texture);
      
         BB.paddle.anchor.x = 0.5;
