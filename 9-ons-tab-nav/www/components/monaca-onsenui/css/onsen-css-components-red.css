@@ -49,7 +49,7 @@ h6 {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 17px;
-  background-color: #fff;
+  background-color: #f9f9f9;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -57,13 +57,13 @@ h6 {
   bottom: 0px;
   overflow: visible;
   font-size: 17px;
-  color: #fa3737;
+  color: #333;
 }
 .page::-webkit-scrollbar {
   display: none;
 }
 .page__content {
-  background-color: #fff;
+  background-color: #f9f9f9;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -72,6 +72,7 @@ h6 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin-top: -1px;
 }
 .content-padded {
   padding: 8px;
@@ -145,7 +146,7 @@ h6 {
   transition: all 0.2s linear;
 }
 .switch__toggle {
-  background-color: #f0d3d3;
+  background-color: #ddd;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -161,10 +162,10 @@ h6 {
   -moz-transition-duration: 0.35s;
   -o-transition-duration: 0.35s;
   transition-duration: 0.35s;
-  -webkit-transition-timing-function: cubic-bezier(0.5, 1.6, 0.5, 1);
-  -moz-transition-timing-function: cubic-bezier(0.5, 1.6, 0.5, 1);
-  -o-transition-timing-function: cubic-bezier(0.5, 1.6, 0.5, 1);
-  transition-timing-function: cubic-bezier(0.5, 1.6, 0.5, 1);
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 .switch__toggle:before {
   -webkit-box-sizing: border-box;
@@ -195,7 +196,7 @@ h6 {
   transition-timing-function: cubic-bezier(0.5, 1.6, 0.5, 1);
 }
 .switch__input:checked + .switch__toggle {
-  background-color: #4cd964;
+  background-color: #e69e33;
 }
 .switch__input:checked + .switch__toggle:before {
   -webkit-transform: translateX(18px);
@@ -274,11 +275,11 @@ h6 {
   border-radius: 0;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0d3d3), to(#f0d3d3));
-  background-image: -webkit-linear-gradient(#f0d3d3, #f0d3d3);
-  background-image: -moz-linear-gradient(#f0d3d3, #f0d3d3);
-  background-image: -o-linear-gradient(#f0d3d3, #f0d3d3);
-  background-image: linear-gradient(#f0d3d3, #f0d3d3);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#ddd));
+  background-image: -webkit-linear-gradient(#ddd, #ddd);
+  background-image: -moz-linear-gradient(#ddd, #ddd);
+  background-image: -o-linear-gradient(#ddd, #ddd);
+  background-image: linear-gradient(#ddd, #ddd);
   background-position: left center;
   -webkit-background-size: 100% 2px;
   background-size: 100% 2px;
@@ -289,7 +290,7 @@ h6 {
 .range::-moz-range-track {
   position: relative;
   border: none;
-  background-color: #f0d3d3;
+  background-color: #ddd;
   height: 2px;
   border-radius: 30px;
   box-shadow: none;
@@ -304,7 +305,7 @@ h6 {
   height: 29px;
   width: 29px;
   background-color: #fff;
-  border: 1px solid #f0d3d3;
+  border: 1px solid #ddd;
   -webkit-border-radius: 30px;
   border-radius: 30px;
   -webkit-box-shadow: none;
@@ -319,7 +320,7 @@ h6 {
   height: 29px;
   width: 29px;
   background-color: #fff;
-  border: 1px solid #f0d3d3;
+  border: 1px solid #ddd;
   border-radius: 30px;
   box-shadow: none;
   margin: 0;
@@ -332,7 +333,7 @@ h6 {
   left: -1024px;
   width: 1024px;
   height: 2px;
-  background-color: #ff4255;
+  background-color: #eb482f;
   content: '';
   margin: 0;
   padding: 0;
@@ -379,20 +380,32 @@ h6 {
   -ms-user-select: none;
   user-select: none;
   z-index: 2;
-  display: table;
-  table-layout: fixed;
+  display: block;
   height: 44px;
   padding-left: 0;
   padding-right: 0;
   background: #fff;
-  color: #fa3737;
+  color: #333;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-bottom: 1px solid rgba(0,0,0,0);
+  border-bottom: 1px solid #ddd;
   font-weight: 400;
   width: 100%;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: visible;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .navigation-bar {
+    border-bottom: none;
+    -webkit-background-size: 100% 1px;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: -webkit-linear-gradient(90deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -moz-linear-gradient(90deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -o-linear-gradient(90deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
+  }
 }
 .navigation-bar__line-height {
   line-height: 44px;
@@ -418,53 +431,53 @@ h6 {
   background: transparent;
   border: none;
   line-height: normal;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   height: 44px;
   vertical-align: top;
-  overflow: hidden;
-  display: table-cell;
+  overflow: visible;
+  display: block;
   vertical-align: middle;
+  float: left;
 }
 .navigation-bar__left {
   max-width: 50%;
+  width: 27%;
   text-align: left;
 }
 .navigation-bar__right {
   max-width: 50%;
+  width: 27%;
   text-align: right;
 }
 .navigation-bar__center {
-  width: 45%;
+  width: 46%;
   text-align: center;
   line-height: 44px;
   font-size: 17px;
   font-weight: 500;
 }
-.navigation-bar__center:first-child:last-child {
-  width: 100%;
-}
 .navigation-bar__title {
   line-height: 44px;
   font-size: 17px;
   font-weight: 500;
-  color: #fa3737;
+  color: #333;
+  width: 46%;
   margin: 0;
   padding: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
+.navigation-bar__center:first-child:last-child {
+  width: 100%;
+}
 /* topdoc
   name: Navigation Bar Item
-  class: navigation-bar__item
-  use: Icon Button, Navigation Bar
+  use: Toolbar Button, Navigation Bar
   markup:
     <div class="navigation-bar">
       <div class="navigation-bar__left">
-        <span class="icon-button--quiet navigation-bar__line-height">
-          <i class="fa fa-bars" style="font-size:20px"></i>
+        <span class="toolbar-button--quiet navigation-bar__line-height">
+          <i class="ion-navicon" style="font-size:32px; vertical-align:-6px;"></i>
         </span>
       </div>
 
@@ -473,23 +486,46 @@ h6 {
       </div>
 
       <div class="navigation-bar__right">
-        <span class="icon-button--quiet navigation-bar__line-height">Label</span>
+        <span class="toolbar-button--quiet navigation-bar__line-height">Label</span>
+      </div>
+    </div>
+*/
+/* topdoc
+  name: Navigation Bar with Outline Button
+  use: Toolbar Button, Navigation Bar
+  markup:
+    <div class="navigation-bar">
+      <div class="navigation-bar__left">
+        <span class="toolbar-button--outline navigation-bar__line-height">
+          <i class="ion-navicon" style="font-size:32px; vertical-align:-6px;"></i>
+        </span>
+      </div>
+
+      <div class="navigation-bar__center">
+        Title
+      </div>
+
+      <div class="navigation-bar__right">
+        <span class="toolbar-button--outline navigation-bar__line-height">Button</span>
       </div>
     </div>
 */
 /* topdoc
   name: Transparent Navigation Bar
-  use: Icon Button, Navigation Bar
+  class: navigation-bar--transparent
+  use: Toolbar Button, Navigation Bar
   markup:
     <div class="navigation-bar navigation-bar--transparent">
       <div class="navigation-bar__left">
-        <span class="icon-button--quiet navigation-bar__line-height">Label</span>
+        <span class="toolbar-button--quiet navigation-bar__line-height">
+          <i class="ion-navicon" style="font-size:32px; vertical-align:-6px;"></i>
+        </span>
       </div>
       <div class="navigation-bar__center">
         <h1 class="navigation-bar__title">Navigation Bar</h1>
       </div>
       <div class="navigation-bar__right">
-        <span class="icon-button--quiet navigation-bar__line-height">Label</span>
+        <span class="toolbar-button--quiet navigation-bar__line-height">Label</span>
       </div>
     </div>
 */
@@ -500,6 +536,7 @@ h6 {
 }
 /* topdoc
   name: Bottom Bar
+  class: bottom-bar
   use: Navigation Bar
   markup:
     <div class="bottom-bar">
@@ -538,16 +575,29 @@ h6 {
   padding-left: 0;
   padding-right: 0;
   background: #fff;
-  color: #fa3737;
+  color: #333;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-weight: 400;
   border-bottom: none;
-  border-top: 1px solid rgba(0,0,0,0);
+  border-top: 1px solid #ddd;
   position: absolute;
   bottom: 0px;
   right: 0px;
   left: 0px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bottom-bar {
+    border-top: none;
+    -webkit-background-size: 100% 1px;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: -webkit-linear-gradient(270deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -moz-linear-gradient(270deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -o-linear-gradient(270deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%);
+  }
 }
 .bottom-bar__line-height {
   line-height: 44px;
@@ -630,10 +680,10 @@ h6 {
   color: #fff;
   text-shadow: 0 1px none;
   vertical-align: middle;
-  background-color: #ff4255;
+  background-color: #eb482f;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: none;
+  border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: none;
@@ -648,7 +698,7 @@ h6 {
   transition: none;
 }
 .button:active {
-  background-color: #ff4255;
+  background-color: #eb482f;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #fff;
@@ -663,10 +713,37 @@ h6 {
   box-shadow: none;
   outline: 0;
 }
-.button:disabled {
+.button:disabled,
+.button[disabled] {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
+}
+/* topdoc
+  name: Outline Button
+  class: button--outline
+  use: Button
+  markup:
+    <button class="button button--outline">Button</button>
+    <button class="button button--outline" disabled>Button</button>
+*/
+.button--outline {
+  background-color: transparent;
+  border: 1px solid #eb482f;
+  color: #eb482f;
+}
+.button--outline:active {
+  background-color: rgba(235,72,47,0.2);
+  border: 1px solid #eb482f;
+  color: #eb482f;
+  opacity: 1;
+}
+.button--outline:hover {
+  border: 1px solid #eb482f;
+  -webkit-transition: 0;
+  -moz-transition: 0;
+  -o-transition: 0;
+  transition: 0;
 }
 /* topdoc
   name: Light Button
@@ -732,10 +809,10 @@ h6 {
   color: #fff;
   text-shadow: 0 1px none;
   vertical-align: middle;
-  background-color: #ff4255;
+  background-color: #eb482f;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: none;
+  border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: none;
@@ -747,10 +824,11 @@ h6 {
   -webkit-box-shadow: none;
   box-shadow: none;
   background: transparent;
-  color: #ff4255;
+  color: #eb482f;
   border: none;
 }
-.button--quiet:disabled {
+.button--quiet:disabled,
+.button--quiet[disabled] {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -778,15 +856,16 @@ h6 {
   -o-transition: none;
   transition: none;
   opacity: 0.2;
-  color: #ff4255;
+  color: #eb482f;
 }
 /* topdoc
-  name: Large Button
-  class: button--large
+  name: Call To Action Button
+  class: button--cta
   markup:
-    <button class="button--large">Button</button>
+    <button class="button--cta">Button</button>
+    <button class="button--cta" disabled>Button</button>
 */
-.button--large {
+.button--cta {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -824,25 +903,69 @@ h6 {
   color: #fff;
   text-shadow: 0 1px none;
   vertical-align: middle;
-  background-color: #ff4255;
+  background-color: #eb482f;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: none;
+  border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
   transition: none;
+  border: none;
+  background-color: #f28227;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  text-shadow: none;
+}
+.button--cta:hover {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.button--cta:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
+}
+.button--cta:active {
+  color: #fff;
+  background-color: #f28227;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  opacity: 0.2;
+}
+.button--cta:disabled,
+.button--cta[disabled] {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+/* topdoc
+  name: Large Button
+  class: button--large
+  use: Button
+  markup:
+    <button class="button button--large">Button</button>
+*/
+.button--large {
   font-size: 17px;
   font-weight: 500;
   line-height: 36px;
   padding: 4px 12px;
   display: block;
   width: 100%;
+  text-align: center;
 }
 .button--large:active {
-  background-color: #ff4255;
+  background-color: #eb482f;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #fff;
@@ -856,7 +979,8 @@ h6 {
   -o-transition: none;
   transition: none;
 }
-.button--large:disabled {
+.button--large:disabled,
+.button--large[disabled] {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -916,10 +1040,10 @@ h6 {
   color: #fff;
   text-shadow: 0 1px none;
   vertical-align: middle;
-  background-color: #ff4255;
+  background-color: #eb482f;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: none;
+  border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: none;
@@ -936,7 +1060,8 @@ h6 {
   border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #ff4255;
+  color: #eb482f;
+  text-align: center;
 }
 .button--large--quiet:active {
   -webkit-transition: none;
@@ -944,13 +1069,14 @@ h6 {
   -o-transition: none;
   transition: none;
   opacity: 0.2;
-  color: #ff4255;
+  color: #eb482f;
   background: transparent;
   border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.button--large--quiet:disabled {
+.button--large--quiet:disabled,
+.button--large--quiet[disabled] {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -963,95 +1089,6 @@ h6 {
 }
 .button--large--quiet:focus {
   outline: 0;
-}
-/* topdoc
-  name: Call To Action Button
-  class: button--cta
-  markup:
-    <button class="button--cta">Button</button>
-    <button class="button--cta" disabled>Button</button>
-*/
-.button--cta {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  line-height: normal;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 17px;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  height: auto;
-  text-decoration: none;
-  padding: 4px 10px;
-  font-size: 17px;
-  line-height: 32px;
-  letter-spacing: 0;
-  color: #fff;
-  text-shadow: 0 1px none;
-  vertical-align: middle;
-  background-color: #ff4255;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: none;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none;
-  border: none;
-  background-color: #ff4c5e;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  color: #fff;
-  text-shadow: none;
-}
-.button--cta:hover {
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-.button--cta:focus {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  outline: 0;
-}
-.button--cta:active {
-  color: #fff;
-  background-color: #ff4c5e;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none;
-  opacity: 0.2;
-}
-.button--cta:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
 }
 /* topdoc
   name: Large Call To Action Button
@@ -1097,10 +1134,10 @@ h6 {
   color: #fff;
   text-shadow: 0 1px none;
   vertical-align: middle;
-  background-color: #ff4255;
+  background-color: #eb482f;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: none;
+  border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: none;
@@ -1108,7 +1145,7 @@ h6 {
   -o-transition: none;
   transition: none;
   border: none;
-  background-color: #ff4c5e;
+  background-color: #f28227;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #fff;
@@ -1118,6 +1155,7 @@ h6 {
   line-height: 36px;
   padding: 4px 12px;
   width: 100%;
+  text-align: center;
   display: block;
 }
 .button--large--cta:hover {
@@ -1133,7 +1171,7 @@ h6 {
 }
 .button--large--cta:active {
   color: #fff;
-  background-color: #ff4c5e;
+  background-color: #f28227;
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-transition: none;
@@ -1142,7 +1180,8 @@ h6 {
   transition: none;
   opacity: 0.2;
 }
-.button--large--cta:disabled {
+.button--large--cta:disabled,
+.button--large--cta[disabled] {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -1217,15 +1256,15 @@ h6 {
   appearance: none;
 }
 .button-bar__item:first-child > .button-bar__button {
-  border-left: 1px solid #ff1a33;
-  border-right: 1px solid #ff1a33;
+  border-left: 1px solid rgba(235,94,47,0.84);
+  border-right: 1px solid rgba(235,94,47,0.84);
   -webkit-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
   -webkit-border-bottom-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 .button-bar__item:last-child > .button-bar__button {
-  border-right: 1px solid #ff1a33;
+  border-right: 1px solid rgba(235,94,47,0.84);
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
   -webkit-border-bottom-right-radius: 4px;
@@ -1240,11 +1279,11 @@ h6 {
   -webkit-border-radius: inherit;
   border-radius: inherit;
   background-color: transparent;
-  color: #ff1a33;
-  border: 0px solid #ff1a33;
-  border-top: 1px solid #ff1a33;
-  border-bottom: 1px solid #ff1a33;
-  border-right: 1px solid #ff1a33;
+  color: rgba(235,94,47,0.84);
+  border: 0px solid rgba(235,94,47,0.84);
+  border-top: 1px solid rgba(235,94,47,0.84);
+  border-bottom: 1px solid rgba(235,94,47,0.84);
+  border-right: 1px solid rgba(235,94,47,0.84);
   font-weight: 400;
   padding: 0 8px;
   height: 27px;
@@ -1261,11 +1300,11 @@ h6 {
 }
 .button-bar__button:active,
 :active + .button-bar__button {
-  background-color: rgba(255,26,51,0.2);
-  border: 0px solid #ff1a33;
-  border-top: 1px solid #ff1a33;
-  border-bottom: 1px solid #ff1a33;
-  border-right: 1px solid #ff1a33;
+  background-color: rgba(235,94,47,0.2);
+  border: 0px solid rgba(235,94,47,0.84);
+  border-top: 1px solid rgba(235,94,47,0.84);
+  border-bottom: 1px solid rgba(235,94,47,0.84);
+  border-right: 1px solid rgba(235,94,47,0.84);
   height: 27px;
   line-height: 27px;
   font-size: 13px;
@@ -1277,7 +1316,7 @@ h6 {
 }
 .button-bar__item.active > .button-bar__button,
 :checked + .button-bar__button {
-  background-color: #ff1a33;
+  background-color: rgba(235,94,47,0.84);
   color: #fff;
   -webkit-transition: none;
   -moz-transition: none;
@@ -1330,7 +1369,7 @@ h6 {
       <label class="tab-bar__item">
         <input type="radio" name="tab-bar-a" checked="checked">
         <button class="tab-bar__button">
-          <i class="tab-bar__icon fa fa-stop"></i>
+          <i class="tab-bar__icon ion-stop"></i>
           <div class="tab-bar__label">One</div>
         </button>
       </label>
@@ -1338,7 +1377,7 @@ h6 {
       <label class="tab-bar__item">
         <input type="radio" name="tab-bar-a">
         <button class="tab-bar__button">
-          <i class="tab-bar__icon fa fa-circle"></i>
+          <i class="tab-bar__icon ion-record"></i>
           <div class="tab-bar__label">Two</div>
         </button>
       </label>
@@ -1346,7 +1385,7 @@ h6 {
       <label class="tab-bar__item">
         <input type="radio" name="tab-bar-a">
         <button class="tab-bar__button">
-          <i class="tab-bar__icon fa fa-play fa-rotate-270"></i>
+          <i class="tab-bar__icon ion-star"></i>
           <div class="tab-bar__label">Three</div>
         </button>
       </label>
@@ -1398,8 +1437,21 @@ h6 {
   padding: 0;
   height: 49px;
   background-color: #fff;
-  border-top: 1px solid rgba(0,0,0,0);
+  border-top: 1px solid #ddd;
   width: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .tab-bar {
+    border-top: none;
+    -webkit-background-size: 100% 1px;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: -webkit-linear-gradient(270deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -moz-linear-gradient(270deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -o-linear-gradient(270deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%);
+  }
 }
 .tab-bar__item {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
@@ -1465,19 +1517,24 @@ h6 {
   text-decoration: none;
   padding: 0;
   height: 49px;
-  line-height: 49px;
   letter-spacing: 0;
-  color: #c79090;
+  color: #ccc;
   text-shadow: 0 1px none;
   vertical-align: top;
-  background-color: #fff;
+  background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-top: none;
   width: 100%;
   font-weight: 400;
+  line-height: 49px;
 }
-.tab-bar__button > .tab-bar__icon {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .tab-bar__button {
+    border-top: none;
+  }
+}
+.tab-bar__icon {
   font-size: 24px;
   padding: 0;
   margin: 0;
@@ -1505,19 +1562,17 @@ h6 {
   padding: 0;
 }
 .tab-bar__button {
-  color: #c79090;
+  color: #ccc;
 }
-.tab-bar__button:active,
 :checked + .tab-bar__button {
-  color: #ff4255;
-  background-color: #fff;
+  color: #eb5e2f;
+  background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-top: none;
 }
-.tab-bar__button:active > .tab-bar__icon,
 :checked + .tab-bar__button > .tab-bar__icon {
-  color: #ff4255;
+  color: #eb5e2f;
 }
 .tab-bar__button:disabled {
   opacity: 0.3;
@@ -1531,6 +1586,14 @@ h6 {
   box-shadow: none;
   outline: 0;
 }
+.tab-bar__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 49px;
+  z-index: 0;
+}
 /* topdoc
   name: Icon Only Tab Bar
   use: Tab Bar
@@ -1543,41 +1606,135 @@ h6 {
       <label class="tab-bar__item">
         <input type="radio" name="tab-bar-b" checked="checked">
         <button class="tab-bar__button">
-          <i class="tab-bar__icon fa fa-stop"></i>
+          <i class="tab-bar__icon ion-stop"></i>
         </button>
       </label>
 
       <label class="tab-bar__item">
         <input type="radio" name="tab-bar-b">
         <button class="tab-bar__button">
-          <i class="tab-bar__icon fa fa-circle"></i>
+          <i class="tab-bar__icon ion-record"></i>
         </button>
       </label>
 
       <label class="tab-bar__item">
         <input type="radio" name="tab-bar-b">
         <button class="tab-bar__button">
-          <i class="tab-bar__icon fa fa-play fa-rotate-270"></i>
+          <i class="tab-bar__icon ion-star"></i>
         </button>
       </label>
 
       <label class="tab-bar__item">
         <input type="radio" name="tab-bar-b">
         <button class="tab-bar__button">
-          <i class="tab-bar__icon fa fa-comment"></i>
+          <i class="tab-bar__icon ion-ios7-cloud-outline"></i>
         </button>
       </label>
 
       <label class="tab-bar__item">
         <input type="radio" name="tab-bar-b">
         <button class="tab-bar__button">
-          <i class="tab-bar__icon fa fa-cloud"></i>
+          <i class="tab-bar__icon ion-ios7-pie"></i>
         </button>
       </label>
     </div>
 */
 /* topdoc
+  name: Top Tab Bar
+  class: tab-bar--top
+  use: Tab Bar
+  markup:
+    <div class="tab-bar tab-bar--top">
+      <label class="tab-bar__item">
+        <input type="radio" name="top-tab-bar-a" checked="checked">
+        <button class="tab-bar__button">
+          <i class="tab-bar__icon ion-stop"></i>
+        </button>
+      </label>
+
+      <label class="tab-bar__item">
+        <input type="radio" name="top-tab-bar-a">
+        <button class="tab-bar__button">
+          <i class="tab-bar__icon ion-record"></i>
+        </button>
+      </label>
+
+      <label class="tab-bar__item">
+        <input type="radio" name="top-tab-bar-a">
+        <button class="tab-bar__button">
+          <i class="tab-bar__icon ion-star"></i>
+        </button>
+      </label>
+    </div>
+*/
+.tab-bar--top {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: auto;
+  border-top: none;
+  border-bottom: 1px solid #ddd;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .tab-bar--top {
+    border-bottom: none;
+    -webkit-background-size: 100% 1px;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: -webkit-linear-gradient(90deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -moz-linear-gradient(90deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -o-linear-gradient(90deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
+  }
+}
+.tab-bar--top__content {
+  top: 49px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+/* topdoc
+  name: Bordered Top Tab Bar
+  class: tab-bar--top-border
+  use: Top Tab Bar
+  markup:
+    <div class="tab-bar tab-bar--top tab-bar--top-border">
+      <label class="tab-bar__item tab-bar--top-border__item">
+        <input type="radio" name="top-tab-bar-b" checked="checked">
+        <button class="tab-bar__button tab-bar--top-border__button">
+          Home
+        </button>
+      </label>
+
+      <label class="tab-bar__item tab-bar--top-border__item">
+        <input type="radio" name="top-tab-bar-b">
+        <button class="tab-bar__button tab-bar--top-border__button">
+          Comments
+        </button>
+      </label>
+
+      <label class="tab-bar__item tab-bar--top-border__item">
+        <input type="radio" name="top-tab-bar-b">
+        <button class="tab-bar__button tab-bar--top-border__button">
+          Activity
+        </button>
+      </label>
+    </div>
+*/
+.tab-bar--top-border__button {
+  background-color: transparent;
+  border-bottom: 4px solid transparent;
+}
+:checked + .tab-bar--top-border__button {
+  background-color: transparent;
+  border-bottom: 4px solid #eb5e2f;
+}
+/* topdoc
   name: Notification
+  class: notification
   markup:
     <span class="notification">1</span>
     <span class="notification">10</span>
@@ -1618,7 +1775,7 @@ h6 {
   height: 19px;
   -webkit-border-radius: 19px;
   border-radius: 19px;
-  background-color: #666;
+  background-color: #eb5e2f;
   color: #fff;
   text-align: center;
   font-size: 16px;
@@ -1627,23 +1784,24 @@ h6 {
   font-weight: 400;
 }
 /* topdoc
-  name: Icon Button
-  class: icon-button
+  name: Toolbar Button
+  class: toolbar-button
   modifiers:
     :active: Active state
     :disabled: Disabled state
     :focus: Focused
   markup:
-    <button class="icon-button">
+    <button class="toolbar-button">
       <i class="fa fa-bell" style="font-size:17px"></i> Label
     </button>
 
-    <button class="icon-button--quiet">
+    <button class="toolbar-button toolbar-button--outline">
       <i class="fa fa-bell" style="font-size:17px"></i> Label
     </button>
 */
-.icon-button,
-.icon-button--quiet {
+.toolbar-button,
+.toolbar-button--outline,
+.toolbar-button--quiet {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1651,23 +1809,24 @@ h6 {
   font-size: 17px;
   padding: 4px 10px;
   letter-spacing: 0;
-  color: #ff4255;
+  color: #eb5e2f;
   text-shadow: 0 1px none;
   vertical-align: baseline;
   background-color: rgba(0,0,0,0);
-  border: 1px solid #ff4255;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid transparent;
   font-weight: 400;
   font-size: 17px;
-  -webkit-transition: opacity 0.2s linear;
-  -moz-transition: opacity 0.2s linear;
-  -o-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
   vertical-align: middle;
 }
-.icon-button:active,
-.icon-button--quiet:active {
+.toolbar-button:active,
+.toolbar-button--outline:active,
+.toolbar-button--quiet:active {
   background-color: rgba(0,0,0,0);
   -webkit-transition: none;
   -moz-transition: none;
@@ -1675,43 +1834,33 @@ h6 {
   transition: none;
   opacity: 0.2;
 }
-.icon-button:disabled,
-.icon-button--quiet:disabled {
+.toolbar-button:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
-.icon-button:focus,
-.icon-button--quiet:focus {
+.toolbar-button:focus,
+.toolbar-button--outline:focus,
+.toolbar-button--quiet:focus {
   outline: 0;
-}
-.icon-button:hover {
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
   transition: none;
 }
-.icon-button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background-color: transparent;
-  border: none;
-  color: #ff4255;
-}
-.icon-button--quiet:active {
-  color: #ff4255;
-  text-shadow: 0 1px none;
-  background-color: transparent;
-  border: none;
-  opacity: 0.2;
-}
-.icon-button--quiet:hover {
+.toolbar-button:hover,
+.toolbar-button--outline:hover,
+.toolbar-button--quiet:hover {
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
   transition: none;
+}
+.toolbar-button--outline {
+  border: 1px solid #eb5e2f;
+  margin: auto 8px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 /* topdoc
   name: Checkbox
@@ -1800,11 +1949,11 @@ h6 {
   width: 0;
 }
 .checkbox > input[type="checkbox"]:checked {
-  background: #ff4255;
+  background: #eb482f;
 }
 .checkbox > input[type="checkbox"]:checked + .checkbox__checkmark:before {
-  background: #ff4255;
-  border: 1px solid #ff4255;
+  background: #eb482f;
+  border: 1px solid #eb482f;
 }
 .checkbox > input[type="checkbox"]:checked + .checkbox__checkmark:after {
   opacity: 1;
@@ -1820,7 +1969,7 @@ h6 {
   width: 24px;
   height: 24px;
   background: transparent;
-  border: 1px solid #ff4255;
+  border: 1px solid #eb482f;
   -webkit-border-radius: 16px;
   border-radius: 16px;
   -webkit-box-shadow: none;
@@ -1854,13 +2003,13 @@ h6 {
 .checkbox > .checkbox__checkmark:after {
   content: '';
   position: absolute;
-  top: 5px;
-  left: 4px;
+  top: 6px;
+  left: 5px;
   width: 12px;
   height: 6px;
   background: transparent;
   border: 3px solid #fff;
-  border-width: 3px;
+  border-width: 2px;
   border-top: none;
   border-right: none;
   -webkit-border-radius: 0px;
@@ -2023,14 +2172,14 @@ h6 {
 .checkbox--noborder > .checkbox__checkmark:after {
   content: '';
   position: absolute;
-  top: 5px;
-  left: 4px;
+  top: 6px;
+  left: 5px;
   opacity: 0;
   width: 12px;
   height: 6px;
   background: transparent;
-  border: 3px solid #ff4255;
-  border-width: 3px;
+  border: 3px solid #eb482f;
+  border-width: 2px;
   border-top: none;
   border-right: none;
   -webkit-border-radius: 0px;
@@ -2187,14 +2336,14 @@ h6 {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  top: 5px;
-  left: 4px;
+  top: 6px;
+  left: 5px;
   opacity: 0;
   width: 12px;
   height: 6px;
   background: transparent;
-  border: 3px solid #ff4255;
-  border-width: 3px;
+  border: 3px solid #eb482f;
+  border-width: 2px;
   border-top: none;
   border-right: none;
   -webkit-border-radius: 0px;
@@ -2240,12 +2389,25 @@ h6 {
   font-size: 15px;
   font-weight: 500;
   background-color: #eee;
-  color: #fa3737;
+  color: #333;
   text-shadow: none;
   border-top: none;
   border-bottom: none;
   min-height: 24px;
   line-height: 24px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .list__header:first-child {
+    border-top: none;
+    -webkit-background-size: 100% 1px;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: -webkit-linear-gradient(270deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -moz-linear-gradient(270deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -o-linear-gradient(270deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%);
+  }
 }
 .list {
   padding: 0;
@@ -2274,9 +2436,22 @@ h6 {
   -webkit-overflow-scrolling: touch;
   padding: 0;
   background-color: #fff;
-  border-top: 1px solid #f0d3d3;
-  border-bottom: 1px solid #f0d3d3;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   background-color: #fff;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .list {
+    border: none;
+    -webkit-background-size: 100% 1px, 100% 1px;
+    background-size: 100% 1px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom, top;
+    background-image: -webkit-linear-gradient(90deg, #ddd, #ddd 50%, transparent 50%), -webkit-linear-gradient(270deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -moz-linear-gradient(90deg, #ddd, #ddd 50%, transparent 50%), -moz-linear-gradient(270deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -o-linear-gradient(90deg, #ddd, #ddd 50%, transparent 50%), -o-linear-gradient(270deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%), linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%);
+  }
 }
 .list__item {
   margin: 0;
@@ -2287,14 +2462,17 @@ h6 {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
-  padding: 0 0 0 10px;
+  padding: 0 10px 0 10px;
   margin: 0 0 0 0;
   border-top: none;
-  border-bottom: 1px solid #f0d3d3;
-  color: #fa3737;
-  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  background-color: transparent;
   min-height: 44px;
   line-height: 44px;
+}
+.list__item--no-padding {
+  padding: 0;
 }
 .list__item__line-height,
 .list__item--line-height {
@@ -2308,19 +2486,28 @@ h6 {
   transition: none;
 }
 .list__item:first-child {
-  padding-left: 10px;
-  margin: 0;
   border-top: none;
-  border-bottom: 1px solid #f0d3d3;
+  border-bottom: 1px solid #ddd;
 }
 .list__item:last-child {
-  padding-left: 10px;
-  margin: 0;
   border-bottom: none;
 }
 .list__item:first-child:last-child {
   border-top: none;
   border-bottom: none;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .list__item:not(:last-child) {
+    border-bottom: none;
+    -webkit-background-size: 100% 1px;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: -webkit-linear-gradient(90deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -moz-linear-gradient(90deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: -o-linear-gradient(90deg, #ddd, #ddd 50%, transparent 50%);
+    background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
+  }
 }
 /* topdoc
   name: Noborder List
@@ -2340,6 +2527,7 @@ h6 {
   background-color: #fff;
   border-top: none;
   border-bottom: none;
+  background-image: none;
 }
 /* topdoc
   name: Category List Header
@@ -2456,7 +2644,7 @@ h6 {
   position: absolute;
   right: 16px;
   top: 50%;
-  color: #f0d3d3;
+  color: #ddd;
   line-height: 28px;
   height: 28px;
   -webkit-transform: translateY(-50%);
@@ -2475,10 +2663,10 @@ h6 {
   use: List, List Item with Chevron
   markup:
     <ul class="list list--inset">
-      <li class="list__item list__item--chevron">
+      <li class="list__item list--inset__item list__item--chevron">
         List Item with Chevron
       </li>
-      <li class="list__item list__item--chevron">
+      <li class="list__item list--inset__item list__item--chevron">
         List Item with Chevron
       </li>
     </ul>
@@ -2486,9 +2674,14 @@ h6 {
 .list--inset {
   margin-left: 8px;
   margin-right: 8px;
-  border: 1px solid #f0d3d3;
+  border: 1px solid #ddd;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  background-image: none;
+}
+.list--inset__item:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+  background-image: none;
 }
 /* topdoc
   name: Radio Button in List Item
@@ -2556,6 +2749,7 @@ h6 {
 /* topdoc
   name: No border Checkbox in List Item
   use: Checkbox in List Item, No border Checkbox
+  class: chckbox--list-item
   markup:
     <ul class="list">
       <li class="list__item list__item--tappable">
@@ -2574,6 +2768,46 @@ h6 {
       </li>
     </ul>
 */
+/* topdoc
+  name: Text Input in List Item
+  use: List, Transparent Text Input
+  markup:
+    <ul class="list">
+      <li class="list__item">
+        <input type="text" class="text-input text-input--transparent" style="width:100%; margin-top:4px;" placeholder="name">
+      </li>
+      <li class="list__item">
+        <input type="text" class="text-input text-input--transparent" style="width:100%; margin-top:4px;" placeholder="email">
+      </li>
+    </ul>
+*/
+/* topdoc
+  name: Textarea in List Item
+  use: List, Textarea Transparent
+  markup:
+    <ul class="list">
+      <li class="list__item">
+        <textarea class="textarea textarea--transparent" style="width:100%;height:50px;margin-top:4px;" placeholder="text message"></textarea>
+      </li>
+    </ul>
+*/
+/* topdoc
+  name: Right Label in List Item
+  use: List
+  class: list__right-label
+  markup:
+    <ul class="list">
+      <li class="list__item">
+        <div class="list__right-label">Label</div>
+        Label
+      </li>
+    </ul>
+*/
+.list__right-label {
+  font-size: 14px;
+  padding-right: 8px;
+  float: right;
+}
 /* topdoc
   name: Search Input
   class: search-input
@@ -2613,11 +2847,11 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   box-sizing: border-box;
   height: 31px;
   font-size: 15px;
-  border: 1px solid #f0d3d3;
-  background-color: #fff;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #fa3737;
+  color: #333;
   padding: 4px 0 0 28px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -2631,9 +2865,9 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   width: 100%;
 }
 .search-input:focus {
-  background-color: #fff;
-  color: #fa3737;
-  border: 1px solid #f0d3d3;
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #ddd;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -2644,7 +2878,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 .search-input::-webkit-input-placeholder,
 .search-input::-moz-placeholder,
 .search-input::-ms-input-placeholder {
-  color: #c79090;
+  color: #999;
 }
 .search-input:disabled {
   opacity: 0.3;
@@ -2685,13 +2919,13 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   font-weight: 400;
   font-size: 17px;
   letter-spacing: 0;
-  border: 1px solid #f0d3d3;
+  border: 1px solid #ddd;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #f9f9f9;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #fa3737;
+  color: #333;
   padding: 4px 8px 0 8px;
   margin: 0;
   font-size: 15px;
@@ -2704,7 +2938,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 .text-input::-webkit-input-placeholder,
 .text-input::-moz-placeholder,
 .text-input::-ms-input-placeholder {
-  color: #c79090;
+  color: #999;
 }
 .text-input:disabled {
   opacity: 0.3;
@@ -2714,11 +2948,11 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 .text-input:disabled::-webkit-input-placeholder,
 .text-input:disabled::-moz-placeholder,
 .text-input:disabled:-ms-input-placeholder {
-  color: #c79090;
+  color: #999;
 }
 .text-input:invalid {
-  border: 1px solid #f0d3d3;
-  color: #fa3737;
+  border: 1px solid #ddd;
+  color: #333;
 }
 /* topdoc
   name: Transparent Text Input
@@ -2750,13 +2984,13 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   font-weight: 400;
   font-size: 17px;
   letter-spacing: 0;
-  border: 1px solid #f0d3d3;
+  border: 1px solid #ddd;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #f9f9f9;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #fa3737;
+  color: #333;
   padding: 4px 8px 0 8px;
   margin: 0;
   font-size: 15px;
@@ -2779,14 +3013,14 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 }
 .text-input--transparent:disabled::-webkit-input-placeholder,
 .text-input--transparent:disabled::-moz-placeholder,
-.text-input--transparent:disabled:-ms-input-placeholder,
-webkit-input-placeholder() {
+.text-input--transparent:disabled:-ms-input-placeholder {
+  color: #999;
   border: none;
   background-color: transparent;
 }
 .text-input--transparent:invalid {
-  border: 1px solid #f0d3d3;
-  color: #fa3737;
+  border: 1px solid #ddd;
+  color: #333;
   border: none;
   background-color: transparent;
 }
@@ -2820,13 +3054,13 @@ webkit-input-placeholder() {
   font-weight: 400;
   font-size: 17px;
   letter-spacing: 0;
-  border: 1px solid #f0d3d3;
+  border: 1px solid #ddd;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #f9f9f9;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #fa3737;
+  color: #333;
   padding: 4px 8px 0 8px;
   margin: 0;
   font-size: 15px;
@@ -2837,7 +3071,7 @@ webkit-input-placeholder() {
   box-sizing: border-box;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #f0d3d3;
+  border-bottom: 1px solid #ddd;
   -webkit-border-radius: 0px;
   border-radius: 0px;
 }
@@ -2847,21 +3081,21 @@ webkit-input-placeholder() {
   pointer-events: none;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #f0d3d3;
+  border-bottom: 1px solid #ddd;
 }
 .text-input--underbar:disabled::-webkit-input-placeholder,
 .text-input--underbar:disabled::-moz-placeholder,
 .text-input--underbar:disabled:-ms-input-placeholder {
-  color: #c79090;
+  color: #999;
   border: none;
   background-color: transparent;
 }
 .text-input--underbar:invalid {
-  border: 1px solid #f0d3d3;
-  color: #fa3737;
+  border: 1px solid #ddd;
+  color: #333;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #fa3737;
+  border-bottom: 1px solid #ddd;
 }
 /* topdoc
   name: Textarea
@@ -2898,9 +3132,9 @@ webkit-input-placeholder() {
   font-weight: 400;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  border: 1px solid #f0d3d3;
-  background-color: #fff;
-  color: #fa3737;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  color: #333;
   letter-spacing: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -2914,7 +3148,7 @@ webkit-input-placeholder() {
 .textarea::-webkit-input-placeholder,
 .textarea::-moz-placeholder,
 .textarea:-ms-input-placeholder {
-  color: #c79090;
+  color: #999;
 }
 /* topdoc
   name: Textarea Transparent
@@ -2947,13 +3181,15 @@ webkit-input-placeholder() {
   resize: none;
   outline: none;
   padding: 5px 5px 5px 5px;
+  padding-left: 0;
+  padding-right: 0;
   font-size: 15px;
   font-weight: 400;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border: none;
   background-color: transparent;
-  color: #fa3737;
+  color: #333;
   letter-spacing: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -2967,10 +3203,11 @@ webkit-input-placeholder() {
 .textarea--transpanret::-webkit-input-placeholder,
 .textarea--transparent::-moz-placeholder,
 .textarea--transparent:-ms-input-placeholder {
-  color: #c79090;
+  color: #999;
 }
 /* topdoc
   name: Modal
+  class: modal
   markup:
     <div class="modal">
       <div class="modal__content">
@@ -3005,7 +3242,7 @@ webkit-input-placeholder() {
   font-weight: 400;
   font-size: 17px;
   overflow: hidden;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.7);
   position: absolute;
   left: 0;
   right: 0;
