@@ -20,6 +20,7 @@
   <preference name="SplashScreenDelay" value="1000"/>
   <preference name="Orientation" value="default"/>
   <preference name="monaca:DisableCookie" value="false"/>
+  <preference name="monaca:AndroidIsPackageNameSeparate" value="false"/>
 
   <feature name="App">
     <param name="android-package" value="org.apache.cordova.App" />
