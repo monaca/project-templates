@@ -1,0 +1,16 @@
+{
+   "name": "ons-master-detail",
+   "title-ja": "Onsen UI Master-Detail",
+   "title-en": "Onsen UI Master-Detail",
+   "description-ja": "一覧と詳細画面を持つテンプレートです。AngularJSを使用しています。",
+   "description-en": "AngularJS driven template with master-detail navigation style.",
+   "category": "Onsen UI",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/10-ons-master-detail/www/index.html",
+   "framework_version": "3.5",
+   "plugins": [
+      "mobi.monaca.plugins.Monaca",
+      "org.apache.cordova.splashscreen",
+      "org.apache.cordova.statusbar"
+   ]
+}
