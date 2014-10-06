@@ -1,0 +1,45 @@
+{
+  "name": "monaca-onsenui",
+  "version": "1.1.4",
+  "description": "Dist version of OnsenUI for Monaca Component.",
+  "main": "onsenui.js",
+  "monaca": {
+    "main": [
+      "js/onsenui_all.min.js",
+      "css/onsenui.css"
+    ],
+    "option": [
+      "css/onsen-css-components.css",
+      "css/onsen-css-components-dark.css",
+      "css/onsen-css-components-red.css",
+      "css/onsen-css-components-purple.css"
+    ]
+  },
+  "keywords": [
+    "monaca"
+  ],
+  "authors": [
+    "Monaca"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:monaca/monaca-component-onsenui.git"
+  },
+  "homepage": "http://onsenui.io/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "README.md"
+  ],
+  "_release": "1.1.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.1.4",
+    "commit": "5990591790a0adcfc1069f958334f86140678a6b"
+  },
+  "_source": "git://github.com/monaca/monaca-component-onsenui.git",
+  "_target": "~1.1.4",
+  "_originalSource": "monaca-onsenui",
+  "_direct": true
+}

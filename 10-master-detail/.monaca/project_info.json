@@ -1,0 +1,16 @@
+{
+   "name": "ons-sliding-menu-nav",
+   "title-ja": "Onsen UI Sliding Menu",
+   "title-en": "Onsen UI Sliding Menu",
+   "description-ja": "スライドメニューをトグルボタンやスワイプで表示するサンプルです。",
+   "description-en": "Onsen UI sliding menu with navigation example.",
+   "category": "Onsen UI",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/8-ons-sliding-menu-nav/www/index.html",
+   "framework_version": "3.5",
+   "plugins": [
+      "mobi.monaca.plugins.Monaca",
+      "org.apache.cordova.splashscreen",
+      "org.apache.cordova.statusbar"
+   ]
+}
