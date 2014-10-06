@@ -33,13 +33,15 @@
 
 
 
+
+
 /*** <Start:monaca-core-utils> ***/
 /*** <Start:monaca-core-utils LoadJs:"components/monaca-core-utils/monaca-core-utils.js"> ***/
 /**
  * Monaca Core Utility Library
  * This library requires cordova.js
  *
- * @version 2.0.2
+ * @version 2.0.3
  * @author  Asial Corporation
  */
 window.monaca = window.monaca || {};
@@ -559,19 +561,17 @@ window.monaca.cloud = window.monaca.cloud || {};
     $.ajax(o);
   };
 
+  var _sessionId = '';
+
   monaca.cloud._getSessionId = function() {
-    if (typeof(document.cookie) != 'undefined' && document.cookie.match(/monaca_cloud_session=([a-zA-Z0-9]+)/)) {
-      return RegExp.$1;
-    } else {
-      return '';
-    }
+    return _sessionId;
   };
 
   monaca.cloud._setSessionId = function(id) {
     if (typeof id != 'string') {
       id = '';
     }
-    document.cookie = 'monaca_cloud_session=' + id;
+    _sessionId = id;
   };
 
 })(window);
