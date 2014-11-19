@@ -1,56 +1,25 @@
 (function(){
   'use strict';
-  var module = angular.module('app', ['onsen']);
 
-  module.controller('AppController', function($scope, $data) {
-    $scope.doSomething = function() {
-      setTimeout(function() {
-        alert('tappaed');
-      }, 100);
-    };
+  var currentItem = {};
+
+  $(document).on('pageinit', '#detail-page', function() {
+    $('.item-title', this).text(currentItem.title);
+    $('.item-desc', this).text(currentItem.desc);
+    $('.item-label', this).text(currentItem.label);
   });
 
-  module.controller('DetailController', function($scope, $data) {
-    $scope.item = $data.selectedItem;
+  $(document).on('pageinit', '#list-page', function() {
+    $('.item', this).on('click', function() {
+      currentItem = {
+        title : $('.item-title', this).text(),
+        desc : $('.item-desc', this).text(),
+        label : $('.item-label', this).text()
+      };
+
+      app.navi.pushPage('detail.html');
+    });
   });
 
-  module.controller('MasterController', function($scope, $data) {
-    $scope.items = $data.items;  
-    
-    $scope.showDetail = function(index) {
-      var selectedItem = $data.items[index];
-      $data.selectedItem = selectedItem;
-      $scope.ons.navigator.pushPage('detail.html', {title : selectedItem.title});
-    };
-  });
-
-  module.factory('$data', function() {
-      var data = {};
-      
-      data.items = [
-          { 
-              title: 'Item 1 Title',
-              label: '4h',
-              desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          },
-          { 
-              title: 'Another Item Title',
-              label: '6h',
-              desc: 'Ut enim ad minim veniam.'
-          },
-          { 
-              title: 'Yet Another Item Title',
-              label: '1day ago',
-              desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
-          },
-          { 
-              title: 'Yet Another Item Title',
-              label: '1day ago',
-              desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
-          }
-      ]; 
-      
-      return data;
-  });
 })();
 

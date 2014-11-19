@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html ng-app="app">
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -42,35 +42,68 @@
 </head>
 
 
-<body ng-controller="AppController">    
+<body>    
 
-  <ons-navigator>
-    <ons-page>
+  <ons-navigator page="list.html" var="app.navi"></ons-navigator>
+
+  <ons-template id="list.html">
+    <ons-page id="list-page">
       <ons-toolbar>
         <div class="center">Master Details</div>
       </ons-toolbar>
 
-      <ons-list ng-controller="MasterController">
-        <ons-list-item modifier="chevron" class="item" ng-repeat="item in items" ng-click="showDetail($index)">
+      <ons-list>
+
+        <ons-list-item modifier="chevron" class="item">
           <ons-row>
             <ons-col width="60px"> 
               <div class="item-thum"></div>
             </ons-col>
             <ons-col>
               <header>
-                <span class="item-title">{{item.title}}</span>
-                <span class="item-label">{{item.label}}</span>
+                <span class="item-title">Item Title</span>
+                <span class="item-label">4h</span>
               </header>
-              <p class="item-desc">{{item.desc}}</p>
+              <p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </ons-col>
+          </ons-row>                          
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div class="item-thum"></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">Another Item Title</span>
+                <span class="item-label">6h</span>
+              </header>
+              <p class="item-desc">Ut enim ad minim veniam.</p>
+            </ons-col>
+          </ons-row>                          
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div class="item-thum"></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">Yet Another Item Title</span>
+                <span class="item-label">1day ago</span>
+              </header>
+              <p class="item-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </ons-col>
           </ons-row>                          
         </ons-list-item>
       </ons-list>
     </ons-page>
-  </ons-navigator>
+  </ons-template>
 
   <ons-template id="detail.html">
-    <ons-page ng-controller="DetailController">
+    <ons-page id="detail-page">
 
       <ons-toolbar>
         <div class="left"><ons-back-button>Back</ons-back-button></div>
@@ -85,22 +118,34 @@
             </ons-col>
             <ons-col>
               <header>
-                <span class="item-title">{{item.title}}</span>
-                <span class="item-label">{{item.label}}</span>
+                <span class="item-title">Title</span>
+                <span class="item-label">Foobar</span>
               </header>
-              <p class="item-desc">{{item.desc}}</p>
+              <p class="item-desc">desc</p>
             </ons-col>
           </ons-row>
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" ng-click="doSomething()">
+        <ons-list-item modifier="chevron" id="add-note-action">
           <ons-icon icon="ion-chatboxes" fixed-width="true" style="color: #ccc"></ons-icon>
           Add a note
         </ons-list-item>
       </ons-list>
 
       <ons-list style="margin-top: 10px">
-        <ons-list-item class="item" ng-repeat="i in [1,2,3]">
+        <ons-list-item class="item">
+          <header>
+            <span class="item-title">Lorem ipsum dolor sit amet</span>
+          </header>
+          <p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </ons-list-item>
+        <ons-list-item class="item">
+          <header>
+            <span class="item-title">Lorem ipsum dolor sit amet</span>
+          </header>
+          <p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </ons-list-item>
+        <ons-list-item class="item">
           <header>
             <span class="item-title">Lorem ipsum dolor sit amet</span>
           </header>
