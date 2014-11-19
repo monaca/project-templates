@@ -45,7 +45,8 @@ var beep = function() {
         // error callback
         function(err) {
             console.log("playAudio():Audio Error: "+err);
-    }).play();
+        }
+    ).play();
 };
 
 var vibrate = function() {
@@ -91,12 +92,11 @@ var preventBehavior = function(e) {
 
 function dump_pic(data) {
     var viewport = document.getElementById('viewport');
-    console.log(data);
     viewport.style.display = "";
     viewport.style.position = "absolute";
     viewport.style.top = "10px";
     viewport.style.left = "10px";
-    document.getElementById("test_img").src = data;
+    document.getElementById("test_img").src = "data:image/jpeg;base64," + data;
 }
 
 function fail(msg) {
@@ -105,7 +105,8 @@ function fail(msg) {
 
 function show_pic() {
     navigator.camera.getPicture(dump_pic, fail, {
-        quality : 50
+        quality : 50,
+        destinationType: Camera.DestinationType.DATA_URL
     });
 }
 
