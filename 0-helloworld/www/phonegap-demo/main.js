@@ -91,7 +91,6 @@ var preventBehavior = function(e) {
 
 function dump_pic(data) {
     var viewport = document.getElementById('viewport');
-    console.log(data);
     viewport.style.display = "";
     viewport.style.position = "absolute";
     viewport.style.top = "10px";
@@ -106,7 +105,7 @@ function fail(msg) {
 function show_pic() {
     navigator.camera.getPicture(dump_pic, fail, {
         quality : 50,
-        destinationType: 0,
+        destinationType: Camera.DestinationType.DATA_URL,
         targetWidth: 100,
         targetHeight: 100
     });
