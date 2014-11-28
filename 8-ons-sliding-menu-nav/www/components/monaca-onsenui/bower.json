@@ -1,6 +1,6 @@
 {
   "name": "monaca-onsenui",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "Dist version of OnsenUI for Monaca Component.",
   "main": "onsenui.js",
   "monaca" : {
@@ -9,10 +9,10 @@
       "css/onsenui.css"
     ],
     "option": [
-      "css/onsen-css-components.css",
-      "css/onsen-css-components-dark.css",
-      "css/onsen-css-components-red.css",
-      "css/onsen-css-components-purple.css"
+      "css/onsen-css-components-blue-theme.css",
+      "css/onsen-css-components-dark-theme.css",
+      "css/onsen-css-components-purple-theme.css",
+      "css/onsen-css-components-sunshine-theme.css"
     ]
   },
   "keywords": [
