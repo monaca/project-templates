@@ -6,6 +6,12 @@
    "description-en": "A simple memo app using Monaca Backend API.",
    "category": "Sample App",
    "platform": ["ios", "android"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/16-backend-memo/www/index.html"
+   "preview_url": "https://monaca.github.io/project-templates/16-backend-memo/www/index.html",
+   "framework_version": "3.5",
+   "plugins": [
+        "mobi.monaca.plugins.Monaca",
+        "org.apache.cordova.splashscreen",
+        "mobi.monaca.plugins.MonacaBackend",
+        "org.apache.cordova.statusbar"
+    ]
 }

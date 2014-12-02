@@ -6,6 +6,11 @@
    "description-en": "A sample app retrieving pictures from Flickr and displaying them as a slide show.",
    "category": "Sample App",
    "platform": ["ios", "android"],
-   "num_screenshots": 1,
-   "preview_url": "https://monaca.github.io/project-templates/18-flickr-sample/www/index.html"
+   "preview_url": "https://monaca.github.io/project-templates/18-flickr-sample/www/index.html",
+   "framework_version": "3.5",
+   "plugins": [
+        "mobi.monaca.plugins.Monaca",
+        "org.apache.cordova.splashscreen",
+        "org.apache.cordova.statusbar"
+    ]
 }

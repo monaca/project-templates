@@ -16,23 +16,26 @@ body {
 }
 #container {
     position: absolute;
-    width: 680px;
-    height: 210px;
     margin-top: -105px;
-    margin-left: -340px;
-    left: 50%;
-    top: 50%;
+    padding-left : 0;
+    padding-right : 0;
+    display : block;
+    top: 60%;
     text-align: center;
 }
 #container img {
     display: block;
     float: left;
+    width: 15%;
+}
+#container img.colon{
+    width: 10px;
 }
 #date {
     color: #10efef;
-    font-size: 50px;
+    float : left;
+    font-size: 13pt;
     opacity: 0.5;
-    margin-top: 30px;
     text-align: left;
     font-family: 'Helvetica';
 }

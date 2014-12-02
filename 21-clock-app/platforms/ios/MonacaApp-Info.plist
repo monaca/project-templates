@@ -9,45 +9,45 @@
   <key>CFBundleExecutable</key>
   <string>${EXECUTABLE_NAME}</string>
   <key>CFBundleIconFile</key>
-  <string>Icon.png</string>
-  <key>CFBundleIconFiles</key>
-  <array>
-    <string>Icon-60</string>
-    <string>Icon.png</string>
-    <string>Icon@2x.png</string>
-    <string>Icon-72.png</string>
-  </array>
-  <key>CFBundleIconFiles~ipad</key>
-  <array>
-    <string>Icon-76</string>
-    <string>Icon-60</string>
-    <string>Icon.png</string>
-    <string>Icon@2x.png</string>
-    <string>Icon-72.png</string>
-  </array>
-  <key>UILaunchImages~ipad</key>
-  <array>
+  <string>icon.png</string>
+  <key>CFBundleIcons</key>
+  <dict>
+    <key>CFBundlePrimaryIcon</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>icon-40</string>
+          <string>icon-small</string>
+          <string>icon-60</string>
+          <string>icon.png</string>
+          <string>icon@2x</string>
+          <string>icon-72</string>
+          <string>icon-72@2x</string>
+        </array>
+        <key>UIPrerenderedIcon</key>
+        <false/>
+      </dict>
+  </dict>
+  <key>CFBundleIcons~ipad</key>
+  <dict>
+    <key>CFBundlePrimaryIcon</key>
     <dict>
-      <key>UILaunchImageMinimumOSVersion</key>
-      <string>7.0</string>
-      <key>UILaunchImageName</key>
-      <string>Default-Landscape-768h</string>
-      <key>UILaunchImageOrientation</key>
-      <string>Landscape</string>
-      <key>UILaunchImageSize</key>
-      <string>{768, 1024}</string>
+      <key>CFBundleIconFiles</key>
+      <array>
+        <string>icon-small</string>
+        <string>icon-40</string>
+        <string>icon-50</string>
+        <string>icon-76</string>
+        <string>icon-60</string>
+        <string>icon</string>
+        <string>icon@2x</string>
+        <string>icon-72</string>
+        <string>icon-72@2x</string>
+      </array>
+      <key>UIPrerenderedIcon</key>
+      <false/>
     </dict>
-    <dict>
-      <key>UILaunchImageMinimumOSVersion</key>
-      <string>7.0</string>
-      <key>UILaunchImageName</key>
-      <string>Default-Portrait-1024h</string>
-      <key>UILaunchImageOrientation</key>
-      <string>Portrait</string>
-      <key>UILaunchImageSize</key>
-      <string>{768, 1024}</string>
-    </dict>
-  </array>
+  </dict>
   <key>CFBundleIdentifier</key>
   <string>${APP_ID}</string>
   <key>CFBundleInfoDictionaryVersion</key>
@@ -61,13 +61,13 @@
   <key>CFBundleSignature</key>
   <string>????</string>
   <key>CFBundleVersion</key>
-  <string>1.0</string>
+  <string>${VERSION}</string>
   <key>LSRequiresIPhoneOS</key>
   <true/>
   <key>UIStatusBarHidden</key>
   <false/>
   <key>UIViewControllerBasedStatusBarAppearance</key>
-  <true/>
+  <false/>
   <key>UISupportedInterfaceOrientations</key>
   <array>
     <string>UIInterfaceOrientationPortrait</string>
