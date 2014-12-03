@@ -1434,6 +1434,8 @@ window.monaca.cloud = window.monaca.cloud || {};
 
 
 
+
+
 /*** <Start:monaca-onsenui> ***/
 /*** <Start:monaca-onsenui LoadJs:"components/monaca-onsenui/js/onsenui_all.min.js"> ***/
 /*! onsenui - v1.2.1 - 2014-12-01 */
