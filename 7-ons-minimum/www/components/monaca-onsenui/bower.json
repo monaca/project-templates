@@ -9,6 +9,7 @@
       "css/onsenui.css"
     ],
     "option": [
+      "css/onsen-css-components-blue-basic-theme.css",
       "css/onsen-css-components-blue-theme.css",
       "css/onsen-css-components-dark-theme.css",
       "css/onsen-css-components-purple-theme.css",

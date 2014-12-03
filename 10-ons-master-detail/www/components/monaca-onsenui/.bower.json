@@ -9,6 +9,7 @@
       "css/onsenui.css"
     ],
     "option": [
+      "css/onsen-css-components-blue-basic-theme.css",
       "css/onsen-css-components-blue-theme.css",
       "css/onsen-css-components-dark-theme.css",
       "css/onsen-css-components-purple-theme.css",
@@ -36,7 +37,7 @@
   "_resolution": {
     "type": "version",
     "tag": "1.2.1",
-    "commit": "b3581249242be983d3fee7adf3502174c18c2051"
+    "commit": "c7c0f2889d5be4ddb49c4b4b6120b63462eae084"
   },
   "_source": "git://github.com/monaca/monaca-component-onsenui.git",
   "_target": "~1.2.1",

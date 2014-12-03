@@ -8,11 +8,13 @@
 
 
 
+
+
 /*** <Start:monaca-onsenui> ***/
 /*** <Start:monaca-onsenui LoadCss:"components/monaca-onsenui/css/onsenui.css"> ***/
 @import url("monaca-onsenui/css/onsenui.css");
 /*** <End:monaca-onsenui LoadCss:"components/monaca-onsenui/css/onsenui.css"> ***/
-/*** <Start:monaca-onsenui LoadCss:"components/monaca-onsenui/css/onsen-css-components-blue-theme.css"> ***/
-@import url("monaca-onsenui/css/onsen-css-components-blue-theme.css");
-/*** <End:monaca-onsenui LoadCss:"components/monaca-onsenui/css/onsen-css-components-blue-theme.css"> ***/
+/*** <Start:monaca-onsenui LoadCss:"components/monaca-onsenui/css/onsen-css-components-blue-basic-theme.css"> ***/
+@import url("monaca-onsenui/css/onsen-css-components-blue-basic-theme.css");
+/*** <End:monaca-onsenui LoadCss:"components/monaca-onsenui/css/onsen-css-components-blue-basic-theme.css"> ***/
 /*** <End:monaca-onsenui> ***/
