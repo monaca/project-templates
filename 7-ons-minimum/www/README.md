@@ -30,7 +30,7 @@ Here is the code snippet that you can copy & paste for quicker setup.
     </script>
 </head>
 <body>
-    <ons-navigator title="Navigator" var="myNavigator" page="page1.html">
+    <ons-navigator var="myNavigator" page="page1.html">
     </ons-navigator> 
 </body>
 </html>
