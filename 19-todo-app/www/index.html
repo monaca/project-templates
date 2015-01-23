@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
-
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/cssua.min.js"></script>
     <script src="js/app.js"></script>
+    
 </head>
 <body>
     <div data-role="page" id="list-page">
-        <div data-role="header" data-position="fixed">
+        <div data-role="header" data-position="fixed" data-theme="c">
             <h1>TODO App</h1>
             <a href="#add-page" data-icon="add" class="ui-btn-right">Add</a>
         </div>
@@ -20,8 +22,9 @@
     </div>
 
     <div data-role="page" id="add-page">
-        <div data-role="header">
+        <div data-role="header" data-position="fixed" data-theme="c">
             <h1>Add TODO</h1>
+            <a href="#list-page" data-icon="back" class="ui-btn-left">back</a>
         </div>
         <div data-role="content">
             <input id="todo-title" type="text" placeholder="TODO Title">
