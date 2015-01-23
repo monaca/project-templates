@@ -65,17 +65,11 @@ header {
   z-index: -1; 
 }
 
-.button:before { 
-  content: ""; 
-  position: absolute; 
-  left: -6px; 
-  top: -5px; 
-  width: 100%; 
-  height: 100%; 
-  padding: 5px 5px 4px 5px; 
-  border-radius: 14px; 
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #545454), color-stop(1, #9e9e9e)); 
-  z-index: -2; 
-  -webkit-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.3), 0 1.3px 0 rgba(0, 0, 0, 0.2); 
-  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.3), 0 1.3px 0 rgba(0, 0, 0, 0.2); 
+/* set padding for iOS7 status bar */
+.ua-ios-7 .ui-page, .ua-ios-8, .ui-page {
+    padding-top: 63px !important;
+}
+
+.ua-ios-7 .ui-header, .ua-ios-8 .ui-header {
+    top: 20px;
 }
