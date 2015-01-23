@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <script src="components/loader.js"></script>
   <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="css/styles.css">
   <script src="js/app.js"></script>
+  <script src="js/cssua.min.js"></script>
 </head>
 <body>
+
   <!-- Login Page -->
   <div data-role="page" id="LoginPage">
-    <header data-role="header" data-position="fixed">
+    <header data-role="header" data-position="fixed" data-theme="c">
       <h1>Backend Memo</h1>
     </header>
       <section data-role="content">
@@ -27,7 +30,7 @@
 
   <!-- Register Page -->
   <div data-role="page" id="RegisterPage">
-    <header data-role="header" data-position="fixed">
+    <header data-role="header" data-position="fixed" data-theme="c">
       <h1>Backend Memo</h1>
     </header>
       <section data-role="content">
@@ -42,7 +45,7 @@
 
   <!-- List Page -->
   <div data-role="page" id="ListPage">
-    <header data-role="header" data-position="fixed">
+    <header data-role="header" data-position="fixed" data-theme="c">
       <h1>Backend Memo</h1>
       <a href="#AddPage" data-theme="b" data-icon="plus" class="ui-btn-right">Add</a>
       <a href="#yesNoDialog_logout" class="ui-btn-left" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop" data-theme="b">Logout</a>
@@ -54,7 +57,7 @@
 
       <!--Dialog box confirming logout-->
       <div data-role="popup" id="yesNoDialog_logout" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
-        <div data-role="header" data-theme="a" class="ui-corner-top">
+        <div data-role="header" data-theme="c" class="ui-corner-top" style="top: 0 !important;">
           <h1>Confirmation:</h1>
         </div>
         <div align="middle" data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
@@ -67,7 +70,7 @@
 
       <!--Dialog box confirming delete-->
       <div data-role="popup" id="yesNoDialog_delete" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
-        <div data-role="header" data-theme="a" class="ui-corner-top">
+        <div data-role="header" data-theme="c" class="ui-corner-top" data-theme="c" style="top: 0 !important;">
           <h1>Confirmation:</h1>
         </div>
         <div align="middle" data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
@@ -82,7 +85,7 @@
 
   <!-- Add Memo Page -->
   <div data-role="page" id="AddPage">
-    <header data-role="header" data-position="fixed">
+    <header data-role="header" data-position="fixed" data-theme="c">
       <a data-role="button" data-theme="b" data-rel="back" data-icon="back">Back</a>
       <h1>Add Memo</h1>
     </header>
@@ -105,7 +108,7 @@
 
   <!-- Detail Page -->
   <div data-role="page" id="ShowPage">
-    <header data-role="header" data-position="fixed">
+    <header data-role="header" data-position="fixed" data-theme="c">
       <a data-role="button" data-theme="b" data-rel="back" data-icon="back">Back</a>
       <a href="#" data-theme="b" class="ui-btn-right" id="EditBtn">Edit</a>
       <h1 id="title_show"></h1>
@@ -117,7 +120,7 @@
 
    <!-- Edit Memo Page -->
   <div data-role="page" id="EditPage" data-cache="never">
-    <header data-role="header" data-position="fixed">
+    <header data-role="header" data-position="fixed" data-theme="c">
       <a data-role="button" data-theme="b" data-rel="back" data-icon="back">Back</a>
       <h1>Edit Memo</h1>
     </header>
