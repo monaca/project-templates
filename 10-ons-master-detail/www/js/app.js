@@ -7,6 +7,9 @@
     $('.item-title', this).text(currentItem.title);
     $('.item-desc', this).text(currentItem.desc);
     $('.item-label', this).text(currentItem.label);
+    $('.add-note-action-item', this).click(function () {
+        alert('dummy message');
+    });
   });
 
   $(document).on('pageinit', '#list-page', function() {
