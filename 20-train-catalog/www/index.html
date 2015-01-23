@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
-    
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/cssua.min.js"></script>
     <script>
         function showDetail(filename, trainname) {
             $("#title").text(trainname);
@@ -22,7 +22,7 @@
 </head>
 <body>
     <div data-role="page" id="tokaido-page">
-        <div data-role="header" data-position="fixed">
+        <div data-role="header" data-position="fixed" class="jqm-header-custom" data-theme="c">
             <h1>Train Catalog</h1>
         </div>
         <div data-role="content">
@@ -39,15 +39,15 @@
         <div data-role="footer" data-position="fixed"> 
             <div data-role="navbar" class="tabbar">
                 <ul>
-                	<li><a href="#tokaido-page" class="ui-btn-active ui-state-persist" data-icon="custom" id="train">Tokaido</a></li>
-        			<li><a href="#tohoku-page" data-icon="custom" id="train">Tohoku</a></li>
-        		</ul>
-        	</div>
+                    <li><a href="#tokaido-page" class="ui-btn-active ui-state-persist" data-icon="custom" id="train">Tokaido</a></li>
+                    <li><a href="#tohoku-page" data-icon="custom" id="train">Tohoku</a></li>
+                </ul>
+            </div>
         </div> 
     </div>
     
     <div data-role="page" id="tohoku-page">
-        <div data-role="header" data-position="fixed">
+        <div data-role="header" data-position="fixed" data-theme="c">
             <h1>Train Catalog</h1>
         </div>
         <div data-role="content">
@@ -63,15 +63,15 @@
         <div data-role="footer" data-position="fixed"> 
             <div data-role="navbar" class="tabbar">
                 <ul>
-        			<li><a href="#tokaido-page" data-icon="custom" id="train">Tokaido</a></li>
-        			<li><a href="#tohoku-page" class="ui-btn-active ui-state-persist" data-icon="custom" id="train">Tohoku</a></li>
-        		</ul>
-        	</div>
+                    <li><a href="#tokaido-page" data-icon="custom" id="train">Tokaido</a></li>
+                    <li><a href="#tohoku-page" class="ui-btn-active ui-state-persist" data-icon="custom" id="train">Tohoku</a></li>
+                </ul>
+            </div>
         </div> 
     </div>
     
     <div data-role="page" id="detail-page">
-        <div data-role="header" data-position="fixed">
+        <div data-role="header" data-position="fixed" data-theme="c">
             <h1 id="title"></h1> 
             <a href="index.html" data-icon="back" data-rel="back" class="ui-btn-left">Back</a>
         </div>
