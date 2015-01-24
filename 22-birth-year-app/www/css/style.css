@@ -17,7 +17,6 @@ body {
 }
 
 header {
-  padding: 10px 0;
   border-top: solid 1px #bec5cf;
   border-bottom: solid 1px #3f4e63;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #acb9c9), color-stop(0.5, #8395af), color-stop(0.5, #7388a5), color-stop(1, #7488a1));
