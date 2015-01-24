@@ -2,12 +2,12 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <title>ニフティクラウドmobile backend チュートリアルアプリ</title>
     <link rel="stylesheet" href="css/styles.css">
-    
     <script src="components/loader.js"></script>
+    <script src="js/cssua.min.js"></script>
+    <script>monaca.viewport({width : 640})</script>    
 </head>
 <body>
 
@@ -20,6 +20,8 @@
 
 <div class="table">
     <div class="table-body">
+    
+    
 
         <!--
         <div class="table-cell">
@@ -50,6 +52,7 @@
     </div>
 </div>
 
+
 <div class="no-border-button tappable" id="add-todo">
     ＋ TODOを追加する
 </div>
@@ -66,7 +69,7 @@
 
 </div>
 
-<script src="js/vendor/ncmb-1.2.1.min.js"></script>
+<script src="js/vendor/ncmb-1.0.1.min.js"></script>
 <script src="js/vendor/tappable.js"></script>
 <script src="js/vendor/zepto.min.js"></script>
 <script src="js/vendor/spin.min.js"></script>
