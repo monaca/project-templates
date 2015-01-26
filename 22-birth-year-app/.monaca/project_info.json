@@ -1,0 +1,16 @@
+{
+   "name": "birth-year-app",
+   "title-ja": "BirthYear App",
+   "title-en": "BirthYear App",
+   "description-ja": "The app to calculate a user’s birthyear.",
+   "description-en": "The app to calculate a user’s birthyear.",
+   "category": "Sample App",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/22-birth-year-app/www/index.html",
+   "framework_version": "3.5",
+   "plugins": [
+        "mobi.monaca.plugins.Monaca",
+        "org.apache.cordova.splashscreen",
+        "org.apache.cordova.dialogs"
+    ]
+}

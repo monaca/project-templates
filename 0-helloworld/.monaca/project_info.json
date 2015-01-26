@@ -18,7 +18,6 @@
       "org.apache.cordova.vibration",
       "org.apache.cordova.contacts",
       "org.apache.cordova.splashscreen",
-      "org.apache.cordova.device",
-      "org.apache.cordova.statusbar"
+      "org.apache.cordova.device"
    ]
 }

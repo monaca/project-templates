@@ -1,0 +1,38 @@
+{
+  "name": "monaca-jquery",
+  "version": "2.0.3",
+  "description": "Dist version of jQuery for Monaca Component.",
+  "main": "jquery.js",
+  "monaca": {
+    "main": [
+      "jquery.js"
+    ]
+  },
+  "keywords": [
+    "monaca"
+  ],
+  "authors": [
+    "Monaca"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:monaca/monaca-component-jquery.git"
+  },
+  "homepage": "http://monaca.mobi/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "README.md"
+  ],
+  "_release": "2.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.3",
+    "commit": "3643c320af1a96e10f16a802e0f1ff8477d4065e"
+  },
+  "_source": "git://github.com/monaca/monaca-component-jquery.git",
+  "_target": "2.0.3",
+  "_originalSource": "monaca-jquery",
+  "_direct": true
+}
