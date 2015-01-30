@@ -26,6 +26,7 @@ app.controller("HomeCtrl", ["$http", function($http){
             var loc = event.url;
             if(loc.indexOf(redirect_uri + "?") >= 0)
             {
+                ref.close();
                 var result = loc.split("#")[0];
                 var accessToken = result.split("&")[0].split("=")[1];
                 
@@ -40,7 +41,6 @@ app.controller("HomeCtrl", ["$http", function($http){
                     url = "https://graph.facebook.com/v2.0/me/taggable_friends?access_token=" + accessToken;
                     $http.get(url).success(function(data){
                         this.friendsList = data.data;
-                        ref.close();
                         ons.navigator.pushPage('list.html',{});
                     });
                 });
