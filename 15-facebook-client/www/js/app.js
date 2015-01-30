@@ -12,7 +12,7 @@ app.controller("HomeCtrl", ["$http", function($http){
         console.log('connect');
         var client_id = 'XXXXXXXXXXXXXXXXXXXXXXX'; //YOUR App ID or API Key
         var client_secret = 'XXXXXXXXXXXXXXXXXXXXXXX'; //// YOUR App Secret
-        var redirect_uri = 'http://www.facebook.com/connect/login_success.html';  //// YOUR CALLBACK URL
+        var redirect_uri = 'https://www.facebook.com/connect/login_success.html';  //// YOUR CALLBACK URL
         var display = 'touch';
         var authorize_url = "https://graph.facebook.com/v2.0/oauth/authorize?";
         authorize_url += "client_id=" + client_id;
