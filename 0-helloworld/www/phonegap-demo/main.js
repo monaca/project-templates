@@ -49,8 +49,7 @@ var beep = function() {
 };
 
 var vibrate = function() {
-    //iOS ignore time 3000 and just vibrates for a OS pre-set amount of time.
-    navigator.vibrate(3000);
+    navigator.notification.vibrate(500);
 };
 
 function roundNumber(num) {
