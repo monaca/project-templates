@@ -1,6 +1,6 @@
 {
   "name": "monaca-onsenui",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Dist version of OnsenUI for Monaca Component.",
   "main": "onsenui.js",
   "monaca" : {
