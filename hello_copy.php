@@ -13,7 +13,7 @@ foreach (glob('*-*', GLOB_ONLYDIR) as $dir) {
     $template = $dir;
     echo "Copy to $template\n";
 
-    foreach (['platforms', 'config.android.xml', 'config.ios.xml'] as $path) {
+    foreach (['platforms', 'config.xml'] as $path) {
       system(sprintf('cp -r %s %s', escapeshellarg($helloTemplate . '/' . $path), escapeshellarg($template . '/')));
     }
   }
