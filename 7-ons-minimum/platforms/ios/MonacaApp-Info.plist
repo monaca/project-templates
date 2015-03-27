@@ -190,8 +190,8 @@
       </dict>
   </array>
   <key>CFBundleLocalizations</key>
-    <array>
-      <string>English</string>
-    </array>
+  <array>
+    <string>en</string>
+  </array>
 </dict>
 </plist>
