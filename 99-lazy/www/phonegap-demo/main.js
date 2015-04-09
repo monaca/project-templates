@@ -49,7 +49,7 @@ var beep = function() {
 };
 
 var vibrate = function() {
-    navigator.notification.vibrate(0);
+    navigator.notification.vibrate(500);
 };
 
 function roundNumber(num) {

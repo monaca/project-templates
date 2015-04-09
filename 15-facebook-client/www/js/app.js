@@ -12,7 +12,7 @@ app.controller("HomeCtrl", ["$http", function($http){
         console.log('connect');
         var client_id = 'XXXXXXXXXXXXXXXXXXXXXXX'; //YOUR App ID or API Key
         var client_secret = 'XXXXXXXXXXXXXXXXXXXXXXX'; //// YOUR App Secret
-        var redirect_uri = 'http://www.facebook.com/connect/login_success.html';  //// YOUR CALLBACK URL
+        var redirect_uri = 'https://www.facebook.com/connect/login_success.html';  //// YOUR CALLBACK URL
         var display = 'touch';
         var authorize_url = "https://graph.facebook.com/v2.0/oauth/authorize?";
         authorize_url += "client_id=" + client_id;
@@ -26,6 +26,7 @@ app.controller("HomeCtrl", ["$http", function($http){
             var loc = event.url;
             if(loc.indexOf(redirect_uri + "?") >= 0)
             {
+                ref.close();
                 var result = loc.split("#")[0];
                 var accessToken = result.split("&")[0].split("=")[1];
                 
@@ -40,7 +41,6 @@ app.controller("HomeCtrl", ["$http", function($http){
                     url = "https://graph.facebook.com/v2.0/me/taggable_friends?access_token=" + accessToken;
                     $http.get(url).success(function(data){
                         this.friendsList = data.data;
-                        ref.close();
                         ons.navigator.pushPage('list.html',{});
                     });
                 });

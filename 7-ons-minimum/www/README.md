@@ -21,7 +21,7 @@ Here is the code snippet that you can copy & paste for quicker setup.
 <html ng-app="myApp">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
@@ -30,7 +30,7 @@ Here is the code snippet that you can copy & paste for quicker setup.
     </script>
 </head>
 <body>
-    <ons-navigator title="Navigator" var="myNavigator" page="page1.html">
+    <ons-navigator var="myNavigator" page="page1.html">
     </ons-navigator> 
 </body>
 </html>

@@ -8868,13 +8868,15 @@ if ( typeof window === "object" && typeof window.document === "object" ) {
 /*** <End:monaca-jquery LoadJs:"components/monaca-jquery/jquery.js"> ***/
 /*** <End:monaca-jquery> ***/
 
+
+
 /*** <Start:monaca-core-utils> ***/
 /*** <Start:monaca-core-utils LoadJs:"components/monaca-core-utils/monaca-core-utils.js"> ***/
 /**
  * Monaca Core Utility Library
  * This library requires cordova.js
  *
- * @version 2.0.3
+ * @version 2.0.4
  * @author  Asial Corporation
  */
 window.monaca = window.monaca || {};
@@ -8886,7 +8888,7 @@ window.monaca = window.monaca || {};
     monaca.apiQueue = monaca.apiQueue || {};
     monaca.apiQueue.paramsArray = [];
     monaca.apiQueue.exec = function(a,b,c,d,e){
-        if (typeof device == 'undefined') {
+        if (!monaca.isDeviceReady) {
             monaca.apiQueue.paramsArray.push([a,b,c,d,e]);
         } else {
             window.cordova.exec(a,b,c,d,e);

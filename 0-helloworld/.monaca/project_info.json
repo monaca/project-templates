@@ -8,6 +8,7 @@
    "platform": ["ios", "android"],
    "preview_url": "https://monaca.github.io/project-templates/0-helloworld/www/index.html",
    "framework_version": "3.5",
+   "cordova_version": "4.1",
    "plugins": [
       "mobi.monaca.plugins.Monaca",
       "org.apache.cordova.device-motion",
@@ -18,7 +19,6 @@
       "org.apache.cordova.vibration",
       "org.apache.cordova.contacts",
       "org.apache.cordova.splashscreen",
-      "org.apache.cordova.device",
-      "org.apache.cordova.statusbar"
+      "org.apache.cordova.device"
    ]
 }

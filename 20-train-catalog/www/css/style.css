@@ -33,3 +33,12 @@
     text-align: right;
     font-size: 90%;
 }
+
+/* set padding for iOS7 status bar */
+.ua-ios-7 .ui-page, .ua-ios-8, .ui-page {
+    padding-top: 63px !important;
+}
+
+.ua-ios-7 .ui-header, .ua-ios-8 .ui-header {
+    top: 20px;
+}

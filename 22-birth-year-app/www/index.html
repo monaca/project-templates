@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
   <script src="components/loader.js"></script>
   <link rel="stylesheet" href="components/loader.css">
-  
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/cssua.min.js"></script>
   <script>
     function calculate() {
         var myname = $("#myname").val();
@@ -19,19 +19,19 @@
 </head>
 <body>
   <div data-role="page" id="TopPage"> 
-    <header data-role="header" data-position="fixed">
+    <header data-role="header" data-position="fixed" data-theme="c">
       <h1>BirthYear App</h1>
     </header>
       <section data-role="content">
 
         What's your name?
-        <input type="text" id="myname" class="input-text" style="width: 40%">
+        <input type="text" id="myname" class="input-text">
         
         How old are you?
-        <input type="text" id="myage" class="input-text" style="width: 20%">
+        <input type="text" id="myage" class="input-text">
 
         <a class="button" onclick="calculate();">calculate your birth year!</a>
-  	</section> 
+    </section>
   </div> 
 </body>
 </html>

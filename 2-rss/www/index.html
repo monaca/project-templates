@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
-    
     <script src="js/feed-reader.js"></script>
     <link rel="stylesheet" href="css/style.css">
     
@@ -16,6 +15,12 @@
     $(function() {
         Feed.watchClick();
         Feed.load();
+        
+        if (monaca.isIOS) {
+            $('.toolbar').css('margin-top', '20px');
+            $('.button').css('top', '20px');
+        }
+        
     });
     
     document.addEventListener("deviceready", onDeviceReady, false);
