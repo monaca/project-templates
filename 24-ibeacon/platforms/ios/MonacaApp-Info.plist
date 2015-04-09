@@ -81,6 +81,7 @@
     <string>UIInterfaceOrientationLandscapeLeft</string>
     <string>UIInterfaceOrientationLandscapeRight</string>
   </array>
+  
   <key>NSMainNibFile</key>
   <string></string>
   <key>NSMainNibFile~ipad</key>
@@ -187,6 +188,10 @@
           <key>UILaunchImageSize</key>
           <string>{768, 1024}</string>
       </dict>
+  </array>
+  <key>CFBundleLocalizations</key>
+  <array>
+    <string>en</string>
   </array>
 </dict>
 </plist>
