@@ -12,6 +12,8 @@
    "plugins": [
         "mobi.monaca.plugins.Monaca",
         "org.apache.cordova.splashscreen",
-        "org.apache.cordova.inappbrowser"
+        "mobi.monaca.plugins.bluetooth",
+        "org.apache.cordova.device",
+        "org.apache.cordova.camera"
     ]
 }
