@@ -33,37 +33,46 @@ app.service('iBeaconService', function() {
     
     this.watchBeacons = function(callback){
         document.addEventListener("deviceready", function(){
-            var deviceVersion = window.device ? device.version : ''; 
-
-            // required in iOS 8+
-            if (deviceVersion.indexOf('8') > -1) {
-                cordova.plugins.locationManager.requestWhenInUseAuthorization();
-            }
-    
             var beacons = createBeacons();
             
-            try {
-                var delegate = cordova.plugins.locationManager.delegate.implement({
-                    didStartMonitoringForRegion: function(pluginResult) {
-                        console.log('didStartMonitoringForRegion:' + JSON.stringify(pluginResult));
-                    },
+            try {    
+                var delegate = new cordova.plugins.locationManager.Delegate();
+
+                delegate.didDetermineStateForRegion = function (pluginResult) {
                 
-                    didRangeBeaconsInRegion: function(result) {
-                        var beaconData = result.beacons[0];
-                        var uuid = result.region.uuid.toUpperCase();
-                        if (!beaconData || !uuid) {
-                            return;
-                        }
-                        
-                        callback(beaconData, uuid);
+                    console.log('[DOM] didDetermineStateForRegion: ' + JSON.stringify(pluginResult));
+                
+                    cordova.plugins.locationManager.appendToDeviceLog('[DOM] didDetermineStateForRegion: '
+                        + JSON.stringify(pluginResult));
+                };
+                
+                delegate.didStartMonitoringForRegion = function (pluginResult) {
+                    console.log('didStartMonitoringForRegion:', pluginResult);
+                
+                    console.log('didStartMonitoringForRegion:' + JSON.stringify(pluginResult));
+                };
+                
+                delegate.didRangeBeaconsInRegion = function (pluginResult) {
+                    var beaconData = pluginResult.beacons[0];
+                    var uuid = pluginResult.region.uuid.toUpperCase();
+                    if (!beaconData || !uuid) {
+                        return;
                     }
-                });
-    
+                    
+                    callback(beaconData, uuid);
+                    console.log('[DOM] didRangeBeaconsInRegion: ' + JSON.stringify(pluginResult));
+                };
+                
                 cordova.plugins.locationManager.setDelegate(delegate);
+                
+                // required in iOS 8+
+                cordova.plugins.locationManager.requestWhenInUseAuthorization(); 
+                // or cordova.plugins.locationManager.requestAlwaysAuthorization()
                 
                 beacons.forEach(function(beacon) {
                     cordova.plugins.locationManager.startRangingBeaconsInRegion(beacon);
                 });
+                
             } catch (e) {
                 console.log('Delegate err: ' + e);   
             }
