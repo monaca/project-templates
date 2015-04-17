@@ -1,0 +1,24 @@
+<ons-page ng-controller="InfoPageCtrl">
+    <ons-toolbar>
+        <div class="left"><ons-back-button>Back</ons-back-button></div>
+        <div class="center">{{beacon.name}}</div>
+    </ons-toolbar>
+    
+    <ons-list>
+        <ons-list-item class="list-item-container">
+            <ons-row>
+                <ons-col width="110px">
+                    <img src="{{beacon.icon}}" class="info-page-img">
+                </ons-col>
+                <ons-col>
+                    <div class="info-page-description">
+                        <p style="text-decoration: underline;">UUID</p>
+                	    {{beaconUuid}}   
+                	</div>  
+                  
+                </ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+</ons-page>
+
