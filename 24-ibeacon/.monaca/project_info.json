@@ -11,7 +11,6 @@
    "cordova_version": "4.1",
    "plugins": [
         "mobi.monaca.plugins.Monaca",
-        "org.apache.cordova.splashscreen",
-        "org.apache.cordova.inappbrowser"
+        "mobi.monaca.plugins.bluetooth"
     ]
 }

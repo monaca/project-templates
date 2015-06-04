@@ -1,6 +1,6 @@
 {
   "name": "monaca-onsenui",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "Dist version of OnsenUI for Monaca Component.",
   "main": "onsenui.js",
   "monaca": {
@@ -33,14 +33,14 @@
     "test",
     "README.md"
   ],
-  "_release": "1.2.2",
+  "_release": "1.3.0",
   "_resolution": {
     "type": "version",
-    "tag": "1.2.2",
-    "commit": "8f8f64fcfcaffcdb52dba041b0a6a9a195979941"
+    "tag": "1.3.0",
+    "commit": "567f57533054e733ca01b89fc4be8be07ada9d47"
   },
   "_source": "git://github.com/monaca/monaca-component-onsenui.git",
-  "_target": "~1.2.2",
+  "_target": "~1.3.0",
   "_originalSource": "monaca-onsenui",
   "_direct": true
 }

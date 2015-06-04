@@ -10,29 +10,28 @@
     
     <script>
     // CHANGE YOUR URL HERE!
-    Feed.feedUrl = "http://feeds.bbci.co.uk/news/technology/rss.xml";
+    var feedUrl = "http://feeds.bbci.co.uk/news/technology/rss.xml";
 
     $(function() {
-        Feed.watchClick();
-        Feed.load();
         
+        var feed = new Feed({
+            url: feedUrl
+        });
+            
         if (monaca.isIOS) {
             $('.toolbar').css('margin-top', '20px');
             $('.button').css('top', '20px');
         }
         
+        $('.button').click(function() {
+          console.log('Reload.');
+          feed.load();
+        });
+        
+        feed.load();
+        
     });
     
-    document.addEventListener("deviceready", onDeviceReady, false);
-    function onDeviceReady() {
-        // Enable reload button
-        monaca.updateUIStyle("reload-button", "disable", false);
-        
-        $( ".button" ).click(function() {
-          console.log('Reload.');
-          Feed.load();
-        });
-    }
 </script>
 </head>
 <body>
