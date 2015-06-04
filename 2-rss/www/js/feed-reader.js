@@ -49,7 +49,7 @@ var Feed = (function() {
                 });
             },
             error: function() {
-                $(errorEl).text('Failed to load RSS.');
+                $(self.errorEl).text('Failed to load RSS.');
             },
             complete: function() {
                 $(self.maskEl).hide();
