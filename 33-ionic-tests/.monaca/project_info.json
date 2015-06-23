@@ -1,0 +1,17 @@
+{
+    "name": "ionic-tests",
+    "title-ja": "Ionic Template: tests",
+    "title-en": "Ionic Template: tests",
+    "description-ja": "",
+    "description-en": "",
+    "category": "Ionic",
+    "platform": ["android", "ios", "winrt", "chrome"],
+    "preview_url": "https://monaca.github.io/project-templates/10-ons-master-detail/www/index.html",
+    "framework_version": "3.5",
+    "cordova_version": "4.1",
+    "plugins": [
+        "mobi.monaca.plugins.Monaca",
+        "org.apache.cordova.splashscreen",
+        "org.apache.cordova.statusbar"
+    ]
+}

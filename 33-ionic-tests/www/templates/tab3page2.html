@@ -1,0 +1,27 @@
+<ion-view view-title="Tab 3: Page 2">
+  <ion-content class="padding">
+    <div class="paddin">
+      <h2>Tab 3: Page 2</h2>
+      <p>
+        <a class="button button-balanced" ui-sref="tab.tab3page1">Tab 3: Page 1</a>
+        <a class="button button-balanced active" ui-sref="tab.tab3page2">Tab 3: Page 2</a>
+        <a class="button button-balanced" ui-sref="tab.tab3page3">Tab 3: Page 3</a>
+      </p>
+      <p>
+        <a class="button button-balanced" ui-sref="tab.tab4page1">Tab 4: Page 1</a>
+        <a class="button button-balanced" ui-sref="tab.tab4page2">Tab 4: Page 2</a>
+        <a class="button button-balanced" ui-sref="tab.tab4page3">Tab 4: Page 3</a>
+      </p>
+      <p>
+        <a class="button button-balanced" ui-sref="root1">Root 1</a>
+      </p>
+    </div>
+    <ion-refresher on-refresh="doRefresh()">
+
+    </ion-refresher>
+    <ion-list>
+      <ion-item ng-repeat="item in items">{{item}}</ion-item>
+    </ion-list>
+    <img src="http://rs2img.memecdn.com/horse-error-code-45_o_1180602.jpg">
+  </ion-content>
+</ion-view>

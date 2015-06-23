@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <title>Ionic Nav</title>
+
+  <link href="components/loader.css" rel="stylesheet">
+  <script src="components/loader.js"></script>
+
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/app.js"></script>
+  <!--<script src="js/dom-trace.js"></script>-->
+  <!--<script src="cordova.js"></script>-->
+</head>
+<body ng-controller="MainCtrl">
+
+  <ion-nav-bar class="bar-energized" delegate-handle="root">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons side="primary">
+      <button class="button button-icon icon ion-wifi" ng-click="defaultPrimaryButtonClick()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="secondary">
+      <button class="button button-icon icon ion-information-circled" ng-click="defaultSecondaryButtonClick()"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-nav-view name="root"></ion-nav-view>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<ion-view view-title="{{navTitle}}">
+
+  <ion-header-bar class="bar-subheader">
+    <div>My own subheader!!</div>
+  </ion-header-bar>
+
+  <ion-content delegate-handle="root1-scroll-handle">
+
+    <ul class="list">
+      <a class="item active" ui-sref="root1">Root1</a>
+      <a class="item" ui-sref="root2">Root2</a>
+      <a class="item" ui-sref="root3">Root3</a>
+      <a class="item" ui-sref="root4">Root4</a>
+      <a class="item" ui-sref="root5">Root5 (back button hidden)</a>
+      <a class="item" ui-sref="root6">Root6 (custom nav-bar)</a>
+      <a class="item" ui-sref="root7">Root7 (hide-nav-bar="true")</a>
+      <a class="item" ui-sref="root8">Root8 (ion-nav-title)</a>
+    </ul>
+    <p>
+      <a class="button button-dark" ui-sref="menu.page1">Menu: Page 1</a>
+      <a class="button button-dark" ui-sref="menu.page2">Menu: Page 2</a>
+    </p>
+    <p>
+      <a class="button button-dark" ui-sref="menu2.page1">Menu2: Page 1</a>
+      <a class="button button-dark" ui-sref="menu2.page2">Menu2: Page 2</a>
+    </p>
+    <p>
+      <a class="button button-dark" ui-sref="tab.tab1page1">Tab 1: Page 1</a>
+      <a class="button button-dark" ui-sref="tab.tab2page1">Tab 2: Page 1</a>
+      <a class="button button-dark" ui-sref="tab.tab3page1">Tab 3: Page 1</a>
+    </p>
+    <p>
+      <a class="button button-dark" ui-sref="tab.tab4page1">Tab 4: Page 1</a>
+      <a class="button button-dark" ui-sref="tab.tab4page2">Tab 4: Page 2</a>
+      <a class="button button-dark" ui-sref="tab.tab4page3">Tab 4: Page 3</a>
+    </p>
+    <p>
+      <a class="button button-dark" ui-sref="roottab.tab1page1">Root Tab 1: Page 1</a>
+      <a class="button button-dark" ui-sref="roottab.tab2page1">Root Tab 2: Page 1</a>
+      <a class="button button-dark" ui-sref="roottab.tab3page1">Root Tab 3: Page 1</a>
+    </p>
+    <p>
+      <button class="button button-dark" ng-click="modal.show()">Modal</button>
+      <button class="button button-dark" ng-click="scrollToBottom()">Scroll to Bottom</button>
+      <button class="button button-dark" ng-click="clearCache()">Clear Cache</button>
+    </p>
+    <p>
+      Scope Updating: {{ scopeUpdate }}
+    </p>
+
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+    <div style="background: red; width: 50px; height: 50px; margin: 10px 0 10px 0;"></div>
+
+    <p>
+      <a class="button button-stable active" ui-sref="root1">Root1</a>
+      <a class="button button-stable" ui-sref="root2">Root2</a>
+      <a class="button button-stable" ui-sref="root3">Root3</a>
+      <a class="button button-stable" ui-sref="root4">Root4</a>
+      <a class="button button-stable" ui-sref="slidebox1">Slidebox1</a>
+    </p>
+    <p>
+      <button class="button button-dark" ng-click="scrollToTop()">Scroll to top</button>
+    </p>
+
+  </ion-content>
+
+</ion-view>

@@ -1,0 +1,72 @@
+<ion-view view-title="Root {{myTitle}}" hide-back-button="hideBackButton" hide-nav-bar="hideNavBar">
+
+  <ion-nav-buttons side="secondary">
+    <button class="button" ng-click="root3SecondaryButton()">
+      {{ root3BtnText }}
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content>
+
+    <ul class="list">
+      <a class="item" ui-sref="root1">Root1</a>
+      <a class="item" ui-sref="root2">Root2</a>
+      <a class="item active" ui-sref="root3">Root3</a>
+      <a class="item" ui-sref="root4">Root4</a>
+      <a class="item" ui-sref="root5">Root5 (back button hidden)</a>
+      <a class="item" ui-sref="root6">Root6 (custom nav-bar)</a>
+      <a class="item" ui-sref="root7">Root7 (hide-nav-bar="true")</a>
+      <a class="item" ui-sref="root8">Root8 (ion-nav-title)</a>
+    </ul>
+
+    <p>
+      <button class="button" ng-click="changeTitle()">
+        Change Title
+      </button>
+      <button class="button" ng-click="toggleBackButton()">
+        Toggle Back Button
+      </button>
+      <button class="button" ng-click="toggleNavBar()">
+        Toggle Nav Bar
+      </button>
+    </p>
+
+    <p>
+      <a class="button button-dark" ui-sref="menu.page1">Menu: Page 1</a>
+      <a class="button button-dark" ui-sref="menu.page2">Menu: Page 2</a>
+    </p>
+    <p>
+      <a class="button button-dark" ui-sref="menu2.page1">Menu2: Page 1</a>
+      <a class="button button-dark" ui-sref="menu2.page2">Menu2: Page 2</a>
+    </p>
+    <p>
+      <a class="button button-dark" ui-sref="tab.tab1page1">Tab 1: Page 1</a>
+      <a class="button button-dark" ui-sref="tab.tab2page1">Tab 2: Page 1</a>
+      <a class="button button-dark" ui-sref="tab.tab3page1">Tab 3: Page 1</a>
+    </p>
+    <p>
+      <a class="button button-dark" ui-sref="roottab.tab1page1">Root Tab 1: Page 1</a>
+      <a class="button button-dark" ui-sref="roottab.tab2page1">Root Tab 2: Page 1</a>
+      <a class="button button-dark" ui-sref="roottab.tab3page1">Root Tab 3: Page 1</a>
+    </p>
+    <p>
+      <button class="button button-dark" ng-click="clearCache()">Clear Cache</button>
+    </p>
+
+    <div style="background: blue; width: 150px; height: 150px; margin: 100px 0 10px 100px;"></div>
+    <div style="background: blue; width: 150px; height: 150px; margin: 100px 0 10px 100px;"></div>
+    <div style="background: blue; width: 150px; height: 150px; margin: 100px 0 10px 100px;"></div>
+    <div style="background: blue; width: 150px; height: 150px; margin: 100px 0 10px 100px;"></div>
+    <div style="background: blue; width: 150px; height: 150px; margin: 100px 0 10px 100px;"></div>
+    <div style="background: blue; width: 150px; height: 150px; margin: 100px 0 10px 100px;"></div>
+
+    <p>
+      <a class="button button-balanced" ui-sref="root1">Root1</a>
+      <a class="button button-balanced" ui-sref="root2">Root2</a>
+      <a class="button button-balanced active" ui-sref="root3">Root3</a>
+      <a class="button button-balanced" ui-sref="root4">Root4</a>
+    </p>
+
+  </ion-content>
+
+</ion-view>

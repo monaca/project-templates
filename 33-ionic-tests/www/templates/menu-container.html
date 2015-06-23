@@ -1,0 +1,40 @@
+<ion-side-menus enable-menu-with-back-views="false">
+
+  <ion-side-menu-content>
+
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle>
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menu-view"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-assertive">
+      <div class="title">Side Menu</div>
+    </ion-header-bar>
+    <ion-content class="side-menu-left">
+      <ul class="list">
+        <a ui-sref="menu.page1" class="item" menu-close>Menu: Page 1</a>
+        <a ui-sref="menu.page2" class="item" menu-close>Menu: Page 2</a>
+        <a ui-sref="menu.page3" class="item" menu-close>Menu: Page 3</a>
+        <a ui-sref="menu2.page1" class="item" menu-close>Menu2: Page 1</a>
+        <a ui-sref="menu2.page2" class="item" menu-close>Menu2: Page 2</a>
+        <a ui-sref="menu2.page3" class="item" menu-close>Menu2: Page 3</a>
+        <a ui-sref="tab.tab1page1" class="item" menu-close>Tab 1: Page 1</a>
+        <a ui-sref="tab.tab2page1" class="item" menu-close>Tab 2: Page 1</a>
+        <a ui-sref="roottab.tab1page1" class="item" menu-close>Root Tab 1: Page 1</a>
+        <a ui-sref="roottab.tab2page1" class="item" menu-close>Root Tab 2: Page 1</a>
+        <a ui-sref="root1" class="item" menu-close>Root 1</a>
+        <a ui-sref="root2" class="item" menu-close>Root 2</a>
+        <a ui-sref="root3" class="item" menu-close>Root 3</a>
+        <a ui-sref="root4" class="item" menu-close>Root 4</a>
+      </ul>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus>

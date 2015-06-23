@@ -1,0 +1,52 @@
+<ion-view>
+  <ion-nav-buttons side="primary">
+    <button class="button button-icon icon ion-ios7-minus-outline"
+            ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
+  </ion-nav-buttons>
+  <ion-nav-title>Ionic Delete/Option Buttons</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+    <button class="button"
+            ng-click="data.showDelete = false; data.showReorder = !data.showReorder">
+      Reorder
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="padding">
+      <h2>Tab 3: Page 1</h2>
+      <p>
+        <a class="button button-royal active" ui-sref="tab.tab3page1">Tab 3: Page 1</a>
+        <a class="button button-royal" ui-sref="tab.tab3page2">Tab 3: Page 2</a>
+        <a class="button button-royal" ui-sref="tab.tab3page3">Tab 3: Page 3</a>
+      </p>
+      <p>
+        <a class="button button-royal" ui-sref="tab.tab4page1">Tab 4: Page 1</a>
+        <a class="button button-royal" ui-sref="tab.tab4page2">Tab 4: Page 2</a>
+        <a class="button button-royal" ui-sref="tab.tab4page3">Tab 4: Page 3</a>
+      </p>
+      <p>
+        <a class="button button-royal" ui-sref="root1">Root 1</a>
+      </p>
+    </div>
+    <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+
+      <ion-item ng-repeat="item in items"
+                item="item"
+                href="#/item/{{item.id}}" class="item-remove-animate">
+        Item {{ item.id }}
+        <ion-delete-button class="ion-minus-circled"
+                           ng-click="onItemDelete(item)">
+        </ion-delete-button>
+        <ion-option-button class="button-assertive"
+                           ng-click="edit(item)">
+          Edit
+        </ion-option-button>
+        <ion-option-button class="button-calm"
+                           ng-click="share(item)">
+          Share
+        </ion-option-button>
+        <ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
+      </ion-item>
+    </ion-list>
+    <img src="http://files.abovetopsecret.com/files/img/lx50d43f71.jpg">
+  </ion-content>
+</ion-view>
