@@ -1,0 +1,17 @@
+{
+   "name": "nifty-mbaas-minimum",
+   "title-ja": "ニフティクラウド mobile backend用テンプレート",
+   "title-en": "NIFTY Cloud mobile backend",
+   "description-ja": "ニフティクラウド mobile backendを用いるアプリの最小限のひな形です。",
+   "description-en": "Minimum app template for NIFTY Cloud mobile backend.",
+   "category": "Service Integration",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/25-nifty-mbaas/www/index.html",
+   "framework_version": "3.5",
+   "cordova_version": "4.1",
+   "plugins": [
+      "mobi.monaca.plugins.Monaca",
+      "org.apache.cordova.splashscreen",
+      "plugin.push.nifty"
+   ]
+}
