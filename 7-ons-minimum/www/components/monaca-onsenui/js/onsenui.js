@@ -1,4 +1,4 @@
-/*! onsenui - v1.3.4 - 2015-07-01 */
+/*! onsenui - v1.3.6 - 2015-07-23 */
 // Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 // JavaScript Dynamic Content shim for Windows Store apps
 (function () {
@@ -5591,7 +5591,7 @@ window.ons = (function(){
         var module = angular.module(name, deps);
 
         var doc = window.document;
-        if (doc.readyState == 'loading' || doc.readyState == 'uninitialized') {
+        if (doc.readyState == 'loading' || doc.readyState == 'uninitialized' || doc.readyState == 'interactive') {
           doc.addEventListener('DOMContentLoaded', function() {
             angular.bootstrap(doc.documentElement, [name]);
           }, false);
@@ -12446,6 +12446,10 @@ limitations under the License.
         }.bind(this), 400);
 
         scope.$on('$destroy', this._destroy.bind(this));
+
+        if (!attrs.swipeable) {
+          this.setSwipeable(true);
+        }
       },
 
       getDeviceBackButtonHandler: function() {
@@ -21134,6 +21138,10 @@ limitations under the License.
             }
 
             container[names[names.length - 1]] = object;
+
+            if (container[names[names.length -1]] !== object) {
+              throw new Error('Cannot set var="' + object._attrs.var + '" because it will overwrite a read-only variable.');
+            }
           }
 
           if (ons.componentBase) {
