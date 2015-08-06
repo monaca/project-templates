@@ -5,7 +5,7 @@
    "description-ja": "HelloWorldを表示するだけのアプリです。PhoneGapのデモも同梱しています。",
    "description-en": "This is a simple HelloWorld demo app.",
    "category": "Sample App",
-   "platform": ["ios", "android"],
+   "platform": ["ios", "android", "winrt"],
    "preview_url": "https://monaca.github.io/project-templates/0-helloworld/www/index.html",
    "framework_version": "3.5",
    "cordova_version": "4.1",
