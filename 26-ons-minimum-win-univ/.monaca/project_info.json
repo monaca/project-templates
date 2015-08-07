@@ -1,0 +1,16 @@
+{
+   "name": "ons-minimum-win-univ",
+   "title-ja": "Onsen UI最小限のテンプレート(ユニバーサルアプリ対応版)",
+   "title-en": "Onsen UI Minimum Template for Universal App",
+   "description-ja": "ユニバーサルアプリに対応したOnsen UIを使用したMonacaアプリのひな形です。iOS,Android, Windows8.1以降に対応しています",
+   "description-en": "Onsen UI Minimum template for iOS, Android, and Windows8.1 and later",
+   "category": "Onsen UI",
+   "platform": ["ios", "android", "winrt" ],
+   "preview_url": "https://monaca.github.io/project-templates/26-ons-minimum-win-univ/www/index.html",
+   "framework_version": "3.5",
+   "cordova_version": "4.1",
+   "plugins": [
+      "mobi.monaca.plugins.Monaca",
+      "org.apache.cordova.splashscreen"
+   ]
+}
