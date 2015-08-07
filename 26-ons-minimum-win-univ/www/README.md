@@ -18,11 +18,13 @@ Here is the code snippet that you can copy & paste for quicker setup.
 
 ```
 <!DOCTYPE HTML>
-<html ng-app="myApp">
+<html ng-app="myApp" ng-csp>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="components/loader.js"></script>
+    <script src="js/winstore-jscompat.js"></script>
+    <link rel="stylesshet" href="components/monaca-onsenui/js/angular/angular-csp.css">
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
      <script>
