@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" id="com.example.helloworld" version="1.0.0">
-  <name>Onsen UI Master-Detail</name>
-  <description>Onsen UI Master-Detail Template</description>
+  <name>HelloWorld</name>
+  <description>Hello World App</description>
   <author></author>
   <access origin="*"/>
   <content src="index.html" />
