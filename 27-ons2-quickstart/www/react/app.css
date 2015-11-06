@@ -1,0 +1,14 @@
+.todo-checkbox {
+  display: inline !important;
+  margin-right: 30px;
+}
+
+.todo-text {
+  cursor: text;
+}
+
+.todo-text--done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
