@@ -3,11 +3,13 @@
   <name>Omikuji Fortune Telling App</name>
   <description></description>
   <author></author>
-  <access origin="*"/>
   <content src="index.html" />
+  <access origin="*"/>
+  <allow-navigation href="*" />
+  <allow-intent href="itms:*" />
+  <allow-intent href="itms-apps:*" />
 
   <preference name="DisallowOverscroll" value="true"/>
-  <preference name="BackgroundColor" value="0xffffffff"/>
   <preference name="Orientation" value="default"/>
 
   <preference name="loglevel" value="DEBUG" />
@@ -37,8 +39,6 @@
     <param name="ios-package" value="CDVLocalStorage" />
   </feature>
   <preference name="UIWebViewDecelerationSpeed" value="normal" />
-  <allow-intent href="itms:*" />
-  <allow-intent href="itms-apps:*" />
 
   <preference name="monaca:AndroidIsPackageNameSeparate" value="false"/>
   <preference name="monaca:targetFamilyiPhone" value="1"/>
