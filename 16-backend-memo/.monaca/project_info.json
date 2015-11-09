@@ -10,8 +10,8 @@
    "framework_version": "3.5",
    "cordova_version": "5.2",
    "plugins": [
-      "mobi.monaca.plugins.Monaca@2.0.0",
-      "mobi.monaca.plugins.MonacaBackend@1.0.1"
+      "mobi.monaca.plugins.Monaca",
+      "mobi.monaca.plugins.MonacaBackend"
    ],
    "external_plugins": [
       "cordova-plugin-whitelist@1.0.0",
