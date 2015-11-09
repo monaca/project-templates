@@ -13,6 +13,7 @@
       "mobi.monaca.plugins.Monaca@2.0.0"
    ],
    "external_plugins": [
+      "cordova-plugin-whitelist@1.0.0",
       "cordova-plugin-inappbrowser@1.0.1",
       "cordova-plugin-splashscreen@2.1.0"
    ]

@@ -11,5 +11,8 @@
    "cordova_version": "5.2",
    "plugins": [
         "mobi.monaca.plugins.Monaca"
+    ],
+    "external_plugins": [
+        "cordova-plugin-whitelist@1.0.0"
     ]
 }

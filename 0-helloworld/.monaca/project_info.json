@@ -13,6 +13,7 @@
       "mobi.monaca.plugins.Monaca@2.0.0"
    ],
    "external_plugins": [
+      "cordova-plugin-whitelist@1.0.0",
       "cordova-plugin-device-motion@1.1.1",
       "cordova-plugin-camera@1.2.0",
       "cordova-plugin-device-orientation@1.0.1",
