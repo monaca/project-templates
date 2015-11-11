@@ -51,12 +51,12 @@
             <input type="checkbox" ng-model="item.done" class="checkbox__input checkbox--material__input">
             <div class="checkbox__checkmark checkbox--material__checkmark"></div>
           </label>
-          <ons-material-input type="text" ng-show="todo.selectedItem == $index" ng-model="item.title" ng-blur="todo.selectedItem = -1"></ons-material-input>
+          <ons-material-input label="Title" type="text" ng-show="todo.selectedItem == $index" ng-model="item.title" ng-blur="todo.selectedItem = -1"></ons-material-input>
           <span id="todo-title" class="title" ng-class="{ 'done': item.done }" ng-hide="todo.selectedItem == $index" ng-click="todo.selectedItem = $index; todo.focusInput($event)">{{ item.title || 'Untitled item' }}</span>
         </ons-list-item>
         <ons-list-item style="text-align: center;">
           <ons-button ng-click="todo.clearCompleted()" modifier="material--flat">
-          <ons-ripple color="rgba(0, 0, 0, 0.1)"></ons-ripple>
+          <ons-ripple color="rgba(0, 150, 136, 0.1)"></ons-ripple>
           Clear completed items
         </ons-button>
         </ons-list-item>

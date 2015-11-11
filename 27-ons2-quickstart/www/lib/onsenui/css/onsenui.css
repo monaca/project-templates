@@ -1,4 +1,4 @@
-/*! onsenui - v2.0.0-alpha.5 - 2015-10-20 */
+/*! onsenui - v2.0.0-beta - 2015-11-11 */
 /*
 Copyright 2013-2015 ASIAL CORPORATION
 
@@ -66,6 +66,7 @@ input, textarea {
 }
 
 ons-toolbar + .page__background + .page__content {
+  margin-top: -1px;
   top: 44px;
 }
 
@@ -169,7 +170,7 @@ ons-material-input {
 ons-material-input > .text-input--material__label {
   position: absolute;
   left: 0px;
-  top: 0px;
+  top: 2px;
   font-size: 16px;
   font-weight: 400;
   font-family: 'Roboto', 'Noto', sans-serif;
@@ -667,6 +668,7 @@ ons-scroller {
   overflow: scroll;
   -webkit-overflow-scrolling: touch;   
   -ms-overflow-style: none;
+  -ms-scroll-snap-type: mandatory;
 }
 
 ons-scroller::-webkit-scrollbar {

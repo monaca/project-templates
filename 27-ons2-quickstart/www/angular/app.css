@@ -1,6 +1,6 @@
 .checkbox--material {
   display: inline !important;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 .page__background {
@@ -9,6 +9,18 @@
 
 ons-material-input {
   display: inline;
+  position: relative;
+  top: -3px;
+}
+
+ons-list-item[modifier="material"] {
+  min-height: 52px !important;
+}
+
+ons-list-item[modifier="material"] #todo-title {
+  position: relative;
+  top: -2px;
+  letter-spacing: -0.4px;
 }
 
 #todo-title {

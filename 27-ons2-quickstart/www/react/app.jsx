@@ -25,7 +25,7 @@ class TodoTitle extends React.Component {
     return (
       <span>
         { this.state.edit ?
-          <ons-material-input ref="titleInput" value={this.props.title} onBlur={this.toggleEdit.bind(this)}></ons-material-input> :
+          <ons-material-input ref="titleInput" value={this.props.title} label="Title" onBlur={this.toggleEdit.bind(this)}></ons-material-input> :
           <span className={this.props.done ? 'todo-text todo-text--done' : 'todo-text'} onClick={this.toggleEdit.bind(this)}>{this.props.title || 'Untitled'}</span>
         }
       </span>
@@ -123,7 +123,10 @@ class TodoApp extends React.Component {
               </TodoItem>
           }.bind(this))}
           <ons-list-item style={{textAlign: 'center'}} modifier="material">
-            <ons-button onClick={this.clearCompleted.bind(this)} modifier="material--flat">Clear completed</ons-button>
+            <ons-button onClick={this.clearCompleted.bind(this)} modifier="material--flat">
+              <ons-ripple color="rgba(0, 150, 136, 0.1)"></ons-ripple>
+              Clear completed
+            </ons-button>
           </ons-list-item>
         </ons-list>
         <ons-fab onClick={this.addTodo.bind(this)} position="bottom right">
