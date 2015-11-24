@@ -8,9 +8,11 @@
    "platform": ["ios", "android"],
    "preview_url": "https://monaca.github.io/project-templates/24-ibeacon/www/index.html",
    "framework_version": "3.5",
-   "cordova_version": "4.1",
+   "cordova_version": "5.2",
    "plugins": [
-        "mobi.monaca.plugins.Monaca",
-        "mobi.monaca.plugins.bluetooth"
+        "mobi.monaca.plugins.Monaca"
+    ],
+    "external_plugins": [
+        "cordova-plugin-whitelist@1.0.0"
     ]
 }

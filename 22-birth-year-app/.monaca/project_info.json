@@ -8,10 +8,13 @@
    "platform": ["ios", "android"],
    "preview_url": "https://monaca.github.io/project-templates/22-birth-year-app/www/index.html",
    "framework_version": "3.5",
-   "cordova_version": "4.1",
+   "cordova_version": "5.2",
    "plugins": [
-        "mobi.monaca.plugins.Monaca",
-        "org.apache.cordova.splashscreen",
-        "org.apache.cordova.dialogs"
-    ]
+      "mobi.monaca.plugins.Monaca"
+   ],
+   "external_plugins": [
+      "cordova-plugin-whitelist@1.0.0",
+      "cordova-plugin-dialogs@1.1.1",
+      "cordova-plugin-splashscreen@2.1.0"
+   ]
 }
