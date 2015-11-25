@@ -8,17 +8,20 @@
    "platform": ["ios", "android", "winrt"],
    "preview_url": "https://monaca.github.io/project-templates/0-helloworld/www/index.html",
    "framework_version": "3.5",
-   "cordova_version": "4.1",
+   "cordova_version": "5.2",
    "plugins": [
-      "mobi.monaca.plugins.Monaca",
-      "org.apache.cordova.device-motion",
-      "org.apache.cordova.camera",
-      "org.apache.cordova.device-orientation",
-      "org.apache.cordova.geolocation",
-      "org.apache.cordova.network-information",
-      "org.apache.cordova.vibration",
-      "org.apache.cordova.contacts",
-      "org.apache.cordova.splashscreen",
-      "org.apache.cordova.device"
+      "mobi.monaca.plugins.Monaca"
+   ],
+   "external_plugins": [
+      "cordova-plugin-whitelist@1.0.0",
+      "cordova-plugin-device-motion@1.1.1",
+      "cordova-plugin-camera@1.2.0",
+      "cordova-plugin-device-orientation@1.0.1",
+      "cordova-plugin-geolocation@1.0.1",
+      "cordova-plugin-network-information@1.0.1",
+      "cordova-plugin-vibration@1.2.0",
+      "cordova-plugin-contacts@1.1.0",
+      "cordova-plugin-splashscreen@2.1.0",
+      "cordova-plugin-device@1.0.1"
    ]
 }

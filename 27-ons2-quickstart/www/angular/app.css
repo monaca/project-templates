@@ -1,0 +1,46 @@
+.checkbox--material {
+  display: inline !important;
+  margin-right: 20px;
+}
+
+.page__background {
+  background-color: white;
+}
+
+ons-material-input {
+  display: inline;
+  position: relative;
+  top: -3px;
+}
+
+ons-list-item[modifier="material"] {
+  min-height: 52px !important;
+}
+
+ons-list-item[modifier="material"] #todo-title {
+  position: relative;
+  top: -2px;
+  letter-spacing: -0.4px;
+}
+
+#todo-title {
+  cursor: text;
+}
+
+.title {
+  transition: all 0.1s linear;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+ons-splitter-side {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.todo-input {
+  font-size: 17px;
+  margin-top: 4px;
+}

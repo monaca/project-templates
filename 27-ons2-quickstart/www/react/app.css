@@ -1,0 +1,27 @@
+.todo-checkbox {
+  display: inline !important;
+  margin-right: 20px;
+}
+
+.todo-text {
+  cursor: text;
+  position: relative;
+  top: -2px;
+  letter-spacing: -0.4px;
+}
+
+.todo-text--done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+ons-material-input {
+  display: inline;
+  position: relative;
+  top: -3px;
+}
+
+ons-list-item {
+  min-height: 52px !important;
+}
+

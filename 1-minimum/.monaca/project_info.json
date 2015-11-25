@@ -8,9 +8,12 @@
    "platform": ["ios", "android", "winrt"],
    "preview_url": "https://monaca.github.io/project-templates/1-minimum/www/index.html",
    "framework_version": "3.5",
-   "cordova_version": "4.1",
+   "cordova_version": "5.2",
    "plugins": [
-      "mobi.monaca.plugins.Monaca",
-      "org.apache.cordova.splashscreen"
+      "mobi.monaca.plugins.Monaca"
+   ],
+   "external_plugins": [
+      "cordova-plugin-whitelist@1.0.0",
+      "cordova-plugin-splashscreen@2.1.0"
    ]
 }

@@ -1,0 +1,19 @@
+{
+   "name": "ons2-quickstart",
+   "title-ja": "Onsen 2.0 クイックスタート",
+   "title-en": "Onsen 2.0 Quick Start",
+   "description-ja": "Onsen 2.0の開発をすばやく始めるためのクイックスタート用テンプレート。",
+   "description-en": "Get up and running quickly with Onsen UI 2.0.",
+   "category": "Onsen UI",
+   "platform": ["ios", "android"],
+   "preview_url": "https://monaca.github.io/project-templates/27-ons2-quickstart/www/index.html",
+   "framework_version": "3.5",
+   "cordova_version": "5.2",
+   "plugins": [
+      "mobi.monaca.plugins.Monaca"
+   ],
+   "external_plugins": [
+      "cordova-plugin-whitelist@1.0.0",
+      "cordova-plugin-splashscreen@2.1.0"
+   ]
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,500,700,700italic,500italic' rel='stylesheet' type='text/css'>
+    <title>Onsen UI 2.0 Quickstart</title>
+
+    <link rel="stylesheet" href="../lib/onsenui/css/onsenui.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../lib/onsenui/css/onsen-css-components.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="app.css" type="text/css" media="all" />
+
+    <script src="../lib/onsenui/js/onsenui.js"></script>
+    <script src="../lib/angular/angular.js"></script>
+    <script src="../lib/onsenui/js/angular-onsenui.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+  <ons-splitter>
+    <ons-splitter-side var="menu" side="left" width="80%" collapse swipeable>
+      <ons-page modifier="material">
+        <ons-list modifier="material">
+          <ons-list-header modifier="material">Menu</ons-list-header>
+          <ons-list-item modifier="material">
+            This is a menu.
+          </ons-list-item>
+        </ons-list>
+      </ons-page>
+    </ons-splitter-side>
+    <ons-splitter-content page="todo.html"></ons-splitter-content>
+  </ons-splitter>
+
+  <ons-template id="todo.html">
+    <ons-page modifier="material" ng-controller="TodoController as todo">
+      <ons-toolbar modifier="material">
+        <div class="left">
+          <ons-toolbar-button ng-click="menu.open()" modifier="material">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">Todos</div>
+      </ons-toolbar>
+
+      <ons-list modifier="material">
+        <ons-list-header modifier="material">Things to do</ons-list-header>
+        <ons-list-item modifier="material" ng-repeat="item in todo.items">
+          <label class="checkbox checkbox--material">
+            <input type="checkbox" ng-model="item.done" class="checkbox__input checkbox--material__input">
+            <div class="checkbox__checkmark checkbox--material__checkmark"></div>
+          </label>
+          <ons-material-input label="Title" type="text" ng-show="todo.selectedItem == $index" ng-model="item.title" ng-blur="todo.selectedItem = -1"></ons-material-input>
+          <span id="todo-title" class="title" ng-class="{ 'done': item.done }" ng-hide="todo.selectedItem == $index" ng-click="todo.selectedItem = $index; todo.focusInput($event)">{{ item.title || 'Untitled item' }}</span>
+        </ons-list-item>
+        <ons-list-item style="text-align: center;">
+          <ons-button ng-click="todo.clearCompleted()" modifier="material--flat">
+          <ons-ripple color="rgba(0, 150, 136, 0.1)"></ons-ripple>
+          Clear completed items
+        </ons-button>
+        </ons-list-item>
+      </ons-list>
+
+      <ons-fab position="bottom right" ng-click="todo.newTodo()">
+        <ons-ripple color="rgba(255, 255, 255, 0.2)"></ons-ripple>
+        <ons-icon icon="md-plus" size="24px" style="line-height: 56px;"></ons-icon>
+      </ons-fab>
+    </ons-page>
+  </ons-template>
+</body>
+</html>

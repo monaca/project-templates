@@ -3,26 +3,22 @@
   <name>Onsen UI Tabbar</name>
   <description></description>
   <author></author>
-  <access origin="*"/>
   <content src="index.html" />
+  <access origin="*"/>
+  <allow-navigation href="*" />
+  <allow-intent href="itms:*" />
+  <allow-intent href="itms-apps:*" />
+
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="Orientation" value="default"/>
 
   <preference name="loglevel" value="DEBUG" />
   <preference name="AndroidLaunchMode" value="singleTop" />
-  <preference name="BackgroundColor" value="0xffffffff"/>
-  <preference name="DisallowOverscroll" value="true"/>
   <preference name="ErrorUrl" value=""/>
   <preference name="Fullscreen" value="false"/>
   <preference name="KeepRunning" value="true"/>
-  <preference name="monaca:WebViewEngine" value="default"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="1000"/>
-  <preference name="Orientation" value="default"/>
-  <preference name="monaca:DisableCookie" value="false"/>
-  <preference name="monaca:AndroidIsPackageNameSeparate" value="false"/>
-
-  <feature name="App">
-    <param name="android-package" value="org.apache.cordova.App" />
-  </feature>
 
   <preference name="AllowInlineMediaPlayback" value="false" />
   <preference name="AutoHideSplashScreen" value="true" />
@@ -42,7 +38,9 @@
   <feature name="LocalStorage">
     <param name="ios-package" value="CDVLocalStorage" />
   </feature>
+  <preference name="UIWebViewDecelerationSpeed" value="normal" />
 
+  <preference name="monaca:AndroidIsPackageNameSeparate" value="false"/>
   <preference name="monaca:targetFamilyiPhone" value="1"/>
   <preference name="monaca:targetFamilyiPad" value="1"/>
 </widget>
