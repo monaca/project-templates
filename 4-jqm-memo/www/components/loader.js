@@ -21,7 +21,7 @@
       }
       document.write("<script src=\"" + cordovaJsUrl+ "cordova.js" + "\"></script>");
     }
-  } else if ((navigator.userAgent.match(/MSIE\s10.0/)) && (navigator.userAgent.match(/Windows\sNT\s6.2/))) {
+  } else if ( ((navigator.userAgent.match(/MSIE\s10.0/)) && (navigator.userAgent.match(/Windows\sNT\s6.2/)) ) || navigator.userAgent.match(/MSAppHost/) ) {
     var elm = document.createElement('script');
     elm.setAttribute("src", "cordova.js");
     document.getElementsByTagName("head")[0].appendChild(elm);
