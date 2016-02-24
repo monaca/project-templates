@@ -9,6 +9,26 @@
 /*** <Start:monaca-cordova-loader> ***/
 /*** <Start:monaca-cordova-loader LoadJs:"components/monaca-cordova-loader/cordova-loader.js"> ***/
 (function(){
+  function getDeviceObjectForPreview() {
+    var raw_values = window.location.search.substring(1).split('&');
+    var values = {};
+    var device = { platform: "" };
+    
+    if (raw_values) {
+      for (var key in raw_values) {
+        var tmp = raw_values[key].split('=');
+        values[tmp[0]] = decodeURIComponent(tmp[1]);
+      }
+      device.platform = values.platform;
+    }
+    
+    return device;
+  }
+    
+  if (/^https:\/\/preview-.+monaca\.(local||mobi)/.test(location.href)) {
+    window.device = getDeviceObjectForPreview();
+  }
+
   if ((navigator.userAgent.match(/Android/i)) || (navigator.userAgent.match(/iPhone|iPad|iPod/i))) {
     if (typeof location.href === "string") {
       var relativePath = location.href.split("/www")[1];
