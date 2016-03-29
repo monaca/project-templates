@@ -25,7 +25,7 @@
     return device;
   }
     
-  if (/^https:\/\/preview-.+monaca\.(local||mobi)/.test(location.href)) {
+  if (location && typeof location.href === "string" && /^https:\/\/preview-.+monaca\.(local||mobi)/.test(location.href)) {
     window.device = getDeviceObjectForPreview();
   }
 
