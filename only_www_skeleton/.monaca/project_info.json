@@ -9,8 +9,10 @@
    "plugins": [
       "mobi.monaca.plugins.Monaca"
    ],
-   "external_plugins": [
-      "cordova-plugin-whitelist@1.0.0",
-      "cordova-plugin-splashscreen@2.1.0"
-   ]
+    "external_plugins": [
+        "cordova-plugin-whitelist@1.2.2",
+        "cordova-plugin-splashscreen@3.2.2",
+        "cordova-custom-config@2.0.3"
+    ],
+    "xcode_version": "7"
 }
