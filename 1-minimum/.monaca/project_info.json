@@ -1,19 +1,13 @@
 {
-   "name": "minimum",
-   "title-ja": "最小限のテンプレート",
-   "title-en": "Minimum Template",
-   "description-ja": "Monacaアプリのひな形としてお使いいただけます。",
-   "description-en": "Minimum template for Monaca.",
-   "category": "Template",
-   "platform": ["ios", "android", "winrt"],
-   "preview_url": "https://monaca.github.io/project-templates/1-minimum/www/index.html",
-   "framework_version": "3.5",
-   "cordova_version": "5.2",
-   "plugins": [
-      "mobi.monaca.plugins.Monaca"
-   ],
-   "external_plugins": [
-      "cordova-plugin-whitelist@1.0.0",
-      "cordova-plugin-splashscreen@2.1.0"
-   ]
+    "framework_version": "3.5",
+    "cordova_version": "6.2",
+    "plugins": [
+        "mobi.monaca.plugins.Monaca"
+    ],
+    "external_plugins": [
+        "cordova-plugin-whitelist@1.2.2",
+        "cordova-plugin-splashscreen@3.2.2",
+        "cordova-custom-config@2.0.3"
+    ],
+    "xcode_version": "7"
 }
