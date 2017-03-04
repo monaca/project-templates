@@ -1,0 +1,19 @@
+{
+   "name": "rpg_tkool_skeleton",
+   "title-ja": "RPG Tkool App",
+   "title-en": "RPG Tkool App",
+   "description-ja": "",
+   "description-en": "",
+   "platform": ["ios", "android"],
+    "framework_version": "3.5",
+    "xcode_version": "7",
+    "cordova_version": "6.2",
+    "plugins": [
+        "mobi.monaca.plugins.Monaca"
+    ],
+    "external_plugins": [
+        "cordova-plugin-whitelist@1.2.2",
+        "cordova-plugin-splashscreen@3.2.2",
+        "cordova-custom-config@2.0.3"
+    ]
+}
