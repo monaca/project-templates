@@ -6,47 +6,14 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <script src="components/loader.js"></script>
     <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="user-scalable=no">
-        <link rel="icon" href="icon/icon.png" type="image/png">
-        <link rel="apple-touch-icon" href="icon/icon.png">
-        <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
-        <title></title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="user-scalable=no">
+    <link rel="icon" href="icon/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon/icon.png">
+    <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
+    <title></title>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        document.addEventListener("deviceready", onDeviceReady, false);
-        function onDeviceReady() {
-            doAutoUpdate();
-            function doAutoUpdate() {
-                monaca.InAppUpdater.autoUpdate({
-                    connectDelay : 0,
-                    connectTimeout : 30000,
-                    readTimeout: 300000,
-                    nextTask : function(res) {
-                        if (res.requireRestart) {
-                          monaca.InAppUpdater.updateAndRestart().then(
-                            function() { },
-                            function(fail) { alert( JSON.stringify(fail) ); }
-                          );
-                        } else {
-                          alert("アプリスタート");
-                        }
-                    },
-                    failTask : function(res) {
-                        monaca.InAppUpdater.showAlertDialog(
-                          { title : "Error Code "+res.error.code,
-                            message : res.error.message,
-                            button : { label : "OK" , handler : function() { } }
-                        }).then(
-                          function(json) { },
-                          function(fail) { }
-                        );
-                    }
-                });
-            }
-        }
-    </script>
 </head>
     <body style="background-color: black">
         <script type="text/javascript" src="js/libs/pixi.js"></script>
