@@ -41,9 +41,8 @@
   <preference name="UIWebViewDecelerationSpeed" value="normal"/>
 
   <preference name="monaca:AndroidIsPackageNameSeparate" value="false"/>
-  <preference name="monaca:targetFamilyiPhone" value="1"/>
-  <preference name="monaca:targetFamilyiPad" value="1"/>
-
+  <preference name="ios-XCBuildConfiguration-TARGETED_DEVICE_FAMILY" value="1,2"/>
+  
   <platform name="ios">
     <icon src="/res/ios/icon/icon.png" width="57" height="57"/>
     <icon src="/res/ios/icon/icon@2x.png" width="114" height="114"/>
