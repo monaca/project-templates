@@ -1,29 +1,40 @@
 {
-   "name": "lazy-registration",
-   "title-ja": "Hello Worldアプリ",
-   "title-en": "Hello World App",
-   "description-ja": "HelloWorldを表示するだけのアプリです。Monacaアプリのひな形としてお使いください。PhoneGapのデモも同梱しています。",
-   "description-en": "This is a simple HelloWorld demo program.",
-   "category": "Sample App",
-   "platform": ["ios", "android"],
-   "preview_url": "https://monaca.github.io/project-templates/0-helloworld/www/index.html",
+    "name": "lazy-registration",
+    "title-ja": "Hello Worldアプリ",
+    "title-en": "Hello World App",
+    "description-ja": "HelloWorldを表示するだけのアプリです。Monacaアプリのひな形としてお使いください。PhoneGapのデモも同梱しています。",
+    "description-en": "This is a simple HelloWorld demo program.",
+    "category": "Sample App",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "preview_url": "https://monaca.github.io/project-templates/0-helloworld/www/index.html",
     "plugins": [
         "mobi.monaca.plugins.Monaca"
     ],
     "framework_version": "3.5",
-    "xcode_version": "7",
-    "cordova_version": "6.2",
+    "xcode_version": "8",
+    "cordova_version": "6.5",
+    "plugin_settings": {
+        "cordova-plugin-camera": {
+            "variables": [
+                "CAMERA_USAGE_DESCRIPTION=\"This app will use the camera\"",
+                "PHOTOLIBRARY_USAGE_DESCRIPTION=\"This app will use the photolibrary\""
+            ]
+        }
+    },
     "external_plugins": [
-        "cordova-plugin-whitelist@1.2.2",
-        "cordova-plugin-device-motion@1.2.1",
-        "cordova-plugin-camera@2.2.0",
-        "cordova-plugin-device-orientation@1.0.3",
-        "cordova-plugin-geolocation@2.2.0",
-        "cordova-plugin-network-information@1.2.1",
-        "cordova-plugin-vibration@2.1.1",
-        "cordova-plugin-contacts@2.1.0",
-        "cordova-plugin-splashscreen@3.2.2",
-        "cordova-plugin-device@1.1.2",
+        "cordova-plugin-whitelist@1.3.1",
+        "cordova-plugin-device-motion@1.2.5",
+        "cordova-plugin-camera@2.4.1",
+        "cordova-plugin-device-orientation@1.0.7",
+        "cordova-plugin-geolocation@2.4.3",
+        "cordova-plugin-network-information@1.3.3",
+        "cordova-plugin-vibration@2.1.5",
+        "cordova-plugin-contacts@2.3.1",
+        "cordova-plugin-splashscreen@4.0.3",
+        "cordova-plugin-device@1.1.6",
         "cordova-custom-config@2.0.3"
     ]
 }
